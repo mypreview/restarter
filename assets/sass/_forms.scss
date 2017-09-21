@@ -1,0 +1,280 @@
+//
+// Forms
+// --------------------------------------------------
+
+.form-control {
+  display: block;
+  width: 100%;
+  line-height: $line-height-base;
+  height: $input-height;
+  font-size: $input-font-size;
+  color: $input-color;
+  text-transform: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $input-border-color;
+  background-color: $input-bg;
+  padding: 0 1px;
+  margin-bottom: $line-height-computed;
+  -webkit-appearance: none;
+  @include transition(all .3s);
+  &:focus {
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+
+	// Placeholder
+	@include placeholder();
+	&.placeholder {
+		color: $input-color-placeholder;
+	}
+}
+
+textarea.form-control {
+  height: auto !important;
+  padding: 12px 1px !important;
+}
+.form-group {
+  margin-bottom: $line-height-computed;
+}
+.form-element {
+  position: relative;
+	margin-bottom: $line-height-computed;
+  padding-left: 30px;
+  > i {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-size: $input-icon-size;
+    color: $input-icon-color;
+  }
+}
+label {
+  display: block;
+  color: $gray-dark;
+  font-size: $font-size-small;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+select::-ms-expand{
+  display: none;
+}
+select option.placeholder {
+	color: $input-color-placeholder;
+}
+select option {
+	color: $input-color;
+}
+
+// Forms Validation
+.form-control.error,
+.form-control.error:focus {
+  border-bottom: 1px solid $brand-danger;
+}
+.form-control.error::-moz-placeholder {
+  color: $brand-danger;
+}
+.form-control.error:-ms-input-placeholder {
+  color: $brand-danger;
+}
+.form-control.error::-webkit-input-placeholder {
+  color: $brand-danger;
+}
+.form-control.valid,
+.form-control.valid:focus {
+  border-bottom: 1px solid $brand-success;
+}
+.form-control.valid::-moz-placeholder {
+  color: $brand-success;
+}
+.form-control.valid:-ms-input-placeholder {
+  color: $brand-success;
+}
+.form-control.valid::-webkit-input-placeholder {
+  color: $brand-success;
+}
+.response-holder {
+  position: absolute;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  padding: 12px 0;
+  font-size: $font-size-small;
+  line-height: 1.8;
+  color: #fff;
+  padding: 10px 20px;
+  top: 0;
+  right: 0;
+  @include transition(all .4s);
+  &.error, &.success {
+    visibility: visible;
+    opacity: 1;
+  }
+  &.error { background-color: $brand-danger; }
+  &.success { background-color: $brand-success; }
+}
+
+
+// Custom Checkboxes / Radios
+// --------------------------------------------------
+.form-control + .checkbox,
+.form-control + .checkbox-inline,
+.form-control + .radio,
+.form-control + .radio-inline {
+  margin-top: 20px;
+}
+.checkbox,
+.radio,
+.checkbox-inline,
+.radio-inline {
+  position: relative;
+  display: table;
+  width: auto;
+  font-size: $checkbox-radio-label-font-size;
+  color: $checkbox-radio-label-color;
+  text-transform: none;
+  font-weight: normal;
+  cursor: default;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  margin-left: 2px;
+  @include user-select(none);
+  &.disabled {
+    color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+.text-light {
+  &.checkbox,
+  &.radio,
+  &.checkbox-inline,
+  &.radio-inline,
+  .checkbox,
+  .radio,
+  .checkbox-inline,
+  .radio-inline { color: #fff; }
+}
+label.hover {
+  cursor: pointer;
+}
+.checkbox-inline,
+.radio-inline {
+  display: inline-block;
+  margin-right: 18px;
+}
+.text-right .checkbox-inline,
+.text-right .radio-inline {
+  margin-left: 15px;
+  margin-right: 0;
+}
+.text-center .checkbox-inline,
+.text-center .radio-inline {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.icheckbox,
+.iradio {
+  position: absolute;
+  z-index: 0;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  left: 0;
+  top: 3px;
+  border: 1px solid $checkbox-radio-bg-color;
+  border-radius: 1px;
+  background-clip: padding-box;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+  &.disabled {
+    border-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+.text-light {
+  .icheckbox,
+  .iradio { border: 1px solid #fff; }
+}
+.icheckbox.checked {
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 18px;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid $checkbox-checked-bg-color;
+  border-bottom: 1px solid $checkbox-checked-bg-color;
+  -webkit-transform: rotateZ(40deg);
+  -moz-transform: rotateZ(40deg);
+  -ms-transform: rotateZ(40deg);
+  -o-transform: rotateZ(40deg);
+  transform: rotateZ(40deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  &.disabled {
+    border-right-color: $disabled-color;
+    border-bottom-color: $disabled-color;
+    cursor: not-allowed;
+  }
+}
+.iradio,
+.iradio:before {
+  border-radius: 50%;
+  -webkit-transition: 0.25s ease;
+          transition: 0.25s ease;
+}
+.iradio:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: $radio-checked-bg-color;
+  opacity: 0;
+  top: 3px;
+  left: 3px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.iradio.checked {
+  border-color: $radio-checked-bg-color;
+  &.disabled {
+    border-color: $disabled-color;
+    cursor: not-allowed;
+    &:before { background-color: $disabled-color; }
+  }
+}
+.text-light {
+  .iradio {
+    &:before { background-color: #fff; }
+    &.checked { border-color: #fff; }
+  }
+}
+.iradio.checked:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.text-right .checkbox-inline,
+.text-right .radio-inline {
+  margin-left: 25px;
+  margin-right: 0;
+}
+.contact-form.container,
+.comment-respond.container {
+  width: 100% !important;
+}
+.comment-respond.container { padding: 0; }

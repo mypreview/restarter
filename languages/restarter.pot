@@ -1,0 +1,296 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Restarter\n"
+"POT-Creation-Date: 2017-09-20 21:51+0400\n"
+"PO-Revision-Date: 2017-09-20 21:51+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "404"
+msgstr ""
+
+#: 404.php:16
+msgid "Oops, the page you're looking for does not exist."
+msgstr ""
+
+#: 404.php:17
+msgid ""
+"You may want to head back to the homepage. If you think something is broken, "
+"please do not hesitate to report a problem."
+msgstr ""
+
+#: 404.php:20
+msgid "Back to Homepage"
+msgstr ""
+
+#: comments.php:29
+msgid "Comments"
+msgstr ""
+
+#: comments.php:37 comments.php:59
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:39 comments.php:61
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:43 comments.php:65
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:73
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:83
+msgid "Name"
+msgstr ""
+
+#: comments.php:85
+msgid "Email"
+msgstr ""
+
+#: comments.php:87
+msgid "Website"
+msgstr ""
+
+#: comments.php:90
+msgid "Comment"
+msgstr ""
+
+#: comments.php:91 template-parts/post-format/content-gallery.php:22
+#: template-parts/post-format/content-gallery.php:38
+#: template-parts/post-format/content-image.php:24
+#: template-parts/post-format/content-image.php:40
+#: template-parts/post-format/content-quote.php:27
+#: template-parts/post-format/content-quote.php:43
+#: template-parts/post-format/content-video.php:24
+#: template-parts/post-format/content-video.php:40
+#: template-parts/post-format/content.php:24
+#: template-parts/post-format/content.php:40
+msgid "Leave a comment"
+msgstr ""
+
+#: comments.php:98
+msgid "Submit comment"
+msgstr ""
+
+#: includes/back-compat.php:42 includes/back-compat.php:55
+#: includes/back-compat.php:71
+#, php-format
+msgid ""
+"Restarter requires at least WordPress version 4.7. You are running version "
+"%s. Please upgrade and try again."
+msgstr ""
+
+#: includes/class-restarter-bootstrap-navwalker.php:164
+msgid "Add a menu"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:46
+msgid "Footer Logo"
+msgstr ""
+
+#: includes/class-restarter-recent-comments-widget.php:27
+msgid "Recent Comments"
+msgstr ""
+
+#: includes/class-restarter-recent-comments-widget.php:52
+#: template-parts/post/meta.php:16
+msgid "by "
+msgstr ""
+
+#: includes/class-restarter.php:151
+msgid "Primary"
+msgstr ""
+
+#: includes/class-restarter.php:152
+msgid "Footer"
+msgstr ""
+
+#: includes/class-restarter.php:153
+msgid "Header Social Links"
+msgstr ""
+
+#: includes/class-restarter.php:154
+msgid "Footer Social Links"
+msgstr ""
+
+#: includes/class-restarter.php:277
+msgid "Sidebar"
+msgstr ""
+
+#: includes/class-restarter.php:279
+msgid "Widgets added to this region will appear in blog archive pages."
+msgstr ""
+
+#: includes/class-restarter.php:433
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: includes/class-restarter.php:595
+msgid "Home"
+msgstr ""
+
+#: includes/class-restarter.php:616 includes/class-restarter.php:623
+#: includes/class-restarter.php:630
+msgid "Archive for "
+msgstr ""
+
+#: includes/class-restarter.php:637
+msgid "Search results for "
+msgstr ""
+
+#: includes/class-restarter.php:711
+#, php-format
+msgid "%s Reply"
+msgstr ""
+
+#: includes/class-restarter.php:723
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: searchform.php:11
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:12
+msgid "Search"
+msgstr ""
+
+#: template-parts/footer/credits.php:24
+msgid "Y"
+msgstr ""
+
+#: template-parts/footer/credits.php:27
+#, php-format
+msgid " | Get %1$s for free."
+msgstr ""
+
+#: template-parts/header/skip-links.php:12
+msgid "Skip to navigation"
+msgstr ""
+
+#: template-parts/header/skip-links.php:15
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/loop/pagination.php:32
+#, php-format
+msgid "%s Prev"
+msgstr ""
+
+#: template-parts/loop/pagination.php:37 template-parts/loop/paging.php:23
+msgid "Prev"
+msgstr ""
+
+#: template-parts/loop/pagination.php:57
+#, php-format
+msgid "Next %s"
+msgstr ""
+
+#: template-parts/loop/pagination.php:61 template-parts/loop/paging.php:22
+msgid "Next"
+msgstr ""
+
+#: template-parts/loop/paging.php:18
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/post-format/content-gallery.php:22
+#: template-parts/post-format/content-gallery.php:38
+#: template-parts/post-format/content-image.php:24
+#: template-parts/post-format/content-image.php:40
+#: template-parts/post-format/content-quote.php:27
+#: template-parts/post-format/content-quote.php:43
+#: template-parts/post-format/content-video.php:24
+#: template-parts/post-format/content-video.php:40
+#: template-parts/post-format/content.php:24
+#: template-parts/post-format/content.php:40
+msgid "One comment so far"
+msgstr ""
+
+#: template-parts/post-format/content-gallery.php:22
+#: template-parts/post-format/content-gallery.php:38
+#: template-parts/post-format/content-image.php:24
+#: template-parts/post-format/content-image.php:40
+#: template-parts/post-format/content-quote.php:27
+#: template-parts/post-format/content-quote.php:43
+#: template-parts/post-format/content-video.php:24
+#: template-parts/post-format/content-video.php:40
+#: template-parts/post-format/content.php:24
+#: template-parts/post-format/content.php:40
+#, php-format
+msgid "View all % comments"
+msgstr ""
+
+#: template-parts/post-format/content-gallery.php:64
+#: template-parts/post-format/content-image.php:61
+#: template-parts/post-format/content-quote.php:71
+#: template-parts/post-format/content-video.php:66
+#: template-parts/post-format/content.php:66 template-parts/post/meta.php:27
+msgid "in "
+msgstr ""
+
+#: template-parts/post-format/content-gallery.php:71
+#: template-parts/post-format/content-gallery.php:73
+#: template-parts/post-format/content-image.php:68
+#: template-parts/post-format/content-image.php:70
+#: template-parts/post-format/content-quote.php:78
+#: template-parts/post-format/content-quote.php:80
+#: template-parts/post-format/content-video.php:73
+#: template-parts/post-format/content-video.php:75
+#: template-parts/post-format/content.php:73
+#: template-parts/post-format/content.php:75
+msgid "Edit"
+msgstr ""
+
+#: template-parts/post-format/content-gallery.php:77
+#: template-parts/post-format/content-image.php:74
+#: template-parts/post-format/content-quote.php:84
+#: template-parts/post-format/content-video.php:79
+#: template-parts/post-format/content.php:79
+msgid "Read More"
+msgstr ""
+
+#: template-parts/post/biography.php:14
+msgid "About author"
+msgstr ""
+
+#: template-parts/post/biography.php:25
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Restarter"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Harmonious, clean and user friendly"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mahdi Yazdani"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.mypreview.one"
+msgstr ""

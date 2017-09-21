@@ -1,0 +1,487 @@
+//
+// Site Navbar (Header)
+// --------------------------------------------------
+// Navbar Base Class
+.navbar {
+    z-index: $navbar-zindex;
+    width: 100%;
+    @include padding($line-height-computed null null null);
+    @include position(absolute, 0 null null 0);
+    .container {
+        @media #{$desktop} {
+            width: 100%;
+        }
+    }
+    .inner {
+        position: relative;
+        width: 100%;
+        min-height: $navbar-min-height;
+        background-color: $navbar-bg;
+        @include padding($navbar-padding);
+        @include box-shadow(3px 4px 9px 0px rgba(0, 0, 0, 0.15));
+    }
+}
+// Site logo
+.site-logo {
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    width: $logo-width;
+    text-decoration: none;
+    img {
+        width: 100%;
+    }
+}
+header .site-logo-text { width: 300px; }
+// Toolbar
+.toolbar {
+    z-index: 5;
+    @include transform(translateY(-50%));
+    @include position(absolute, 50% $navbar-padding null null);
+    .search-btn, .share-btn {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: $tool-btn-font-size;
+        color: $tool-btn-color;
+        cursor: pointer;
+        @include user-select(none);
+        @include transition(color .3s);
+        &:hover, &.active {
+            color: $tool-btn-hover-color;
+        }
+    }
+    .divider {
+        display: inline-block;
+        vertical-align: middle;
+        background-color: $tool-divider-color;
+        @include margin(null 10px null null);
+        @include size(1px, $tool-divider-height);
+    }
+    .btn {
+        @include margin(null 0 null 6px);
+    }
+    // Search
+    .search-btn {
+        @include margin(null 10px null null);
+    }
+    // Share
+    .share-btn {
+        > i {
+            position: relative;
+            z-index: 5;
+            @include padding(null 15px null null);
+        }
+        .dropdown {
+            z-index: 1;
+            width: $tool-dropdown-width;
+            text-align: left;
+            list-style: none;
+            background-color: $submenu-light-bg;
+            @include padding(45px 14px 10px 14px);
+            @include position(absolute, -9px 0 null null);
+            @include box-shadow(-3px 4px 9px 0px rgba(0, 0, 0, 0.15));
+            visibility: hidden;
+            @include opacity(0);
+            @include transform(translate(5px, -15px));
+            @include transition(all .3s);
+            > li {
+                border-top: 1px solid $submenu-divider-color;
+                > a {
+                    display: block;
+                    font-size: $submenu-link-font-size;
+                    font-weight: normal;
+                    text-decoration: none;
+                    @include transition(color .3s);
+                    @include padding(10px 5px);
+                    > span { 
+                        @include transition(color .3s);
+                        > i {
+                            font-size: $font-size-middle;
+                            @include margin(null 6px null null);
+                        }
+                    }
+                }
+            }
+            &.expanded {
+                visibility: visible;
+                @include opacity(1);
+                @include transform(translate(0, 0));
+            }
+        }
+    }
+}
+// Search Box
+.search-box {
+    display: block;
+    visibility: hidden;
+    @include opacity(0);
+    @include position(absolute, -6px 0 null null);
+    @include padding(null null 10px null);
+    @include transition(all .35s);
+    input {
+        width: 0;
+        height: $search-box-height;
+        font-size: $font-size-middle;
+        background-color: $navbar-bg;
+        border: none;
+        border-bottom: 1px solid $search-box-border-color;
+        color: $gray-darker;
+        @include padding(0 15px 0 32px);
+        @include transition(border-color .3s, width .35s);
+        @include placeholder($gray);
+        &:focus {
+            border-color: $input-focus-border-color;
+            outline: none;
+        }
+    }
+    button[type="submit"] {
+        display: block;
+        color: $brand-primary;
+        background: none;
+        border: none;
+        @include position(absolute, 4px null null -8px);
+        &:focus {
+            outline: none;
+        }
+    }
+    &.open {
+        visibility: visible;
+        @include opacity(1);
+        input {
+            width: 767px;
+            @media #{$desktop} {
+                width: 700px;
+            }
+        }
+    }
+    &.static {
+        width: 100%;
+        visibility: visible;
+        @include opacity(1);
+        @include position(relative, auto auto null null);
+        margin-bottom: floor($line-height-computed * 1.2);
+        input {
+            width: 100%;
+            background-color: transparent;
+        }
+        button[type="submit"] {
+            font-size: $tool-btn-font-size;
+            color: $brand-default;
+            @include transition(color .25s);
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+}
+// Main Navigation
+.main-navigation {
+    z-index: 2;
+    width: 100%;
+    @include margin(-25px null null null);
+    @include position(absolute, 50% null null 0);
+    // top level menu
+    > .menu {
+        display: block;
+        list-style: none;
+        text-align: center;
+        @include padding(0);
+        @include margin(null null 2px null);
+        li {
+            > a {
+                display: block;
+                color: $brand-default;
+                text-decoration: none;
+                font-weight: normal;
+                padding: 10px;
+                @include transition(color .3s);
+            }
+            &:hover> a, &.current-menu-item> a, &.current_page_item> a, &.current-menu-ancestor> a, &.current-menu-parent> a {
+                color: $nav-link-hover-color;
+            }
+        }
+        > li {
+            display: inline-block;
+            cursor: pointer;
+            > a {
+                position: relative;
+                font-size: $nav-link-font-size;
+                @include padding(12px 15px);
+            }
+            &.menu-item-has-children {
+                position: relative;
+                > a {
+                    > span {
+                        @include opacity(0);
+                        position: absolute;
+                        @include margin(null null null 4px);
+                        @include transition(opacity .3s);
+                    }
+                    &:after {
+                        display: inline-block;
+                        content: $nav-link-has-dropdown-icon;
+                        font-size: 1.05em;
+                        @include margin(-3px null null 4px);
+                        @include transition(opacity .25s);
+                    }
+                }
+                &.active {
+                    > a {
+                        z-index: 5;
+                        &:after {
+                            @include opacity(0);
+                        }
+                    }
+                }
+                &:hover {
+                    > a > span { @include opacity(1); }
+                }
+            }
+            // Submenu
+            .sub-menu {
+                display: none;
+                z-index: 1;
+                width: $submenu-width;
+                text-align: left;
+                list-style: none;
+                background-color: $submenu-light-bg;
+                @include position(absolute, 0 null null 0);
+                @include padding(45px 14px 10px 14px);
+                @include box-shadow(3px 4px 9px 0px rgba(0, 0, 0, 0.15));
+                > li {
+                    border-top: 1px solid $submenu-divider-color;
+                    > a {
+                        font-size: $submenu-link-font-size;
+                    }
+                }
+            }
+            &:hover {
+                .sub-menu {
+                    display: block;
+                    @include animation(dropdown 0.35s);
+                }
+            }
+        }
+    }
+}
+// Dropdown animation
+@include keyframes(dropdown) {
+    from {
+        @include opacity(0);
+        @include transform(translate(-5px, -15px));
+    }
+    to {
+        @include opacity(1);
+        @include transform(translate(0, 0));
+    }
+}
+// Mobile Tools
+.mobile-tools {
+    display: none;
+    padding: $line-height-computed 20px;
+    background-color: $mobile-tools-bg;
+    @include box-shadow(inset 3px 4px 9px 0px rgba(0, 0, 0, 0.15));
+    .search-box {
+        visibility: visible;
+        padding-bottom: 10px;
+        @include opacity(1);
+        @include position(relative, auto auto null null);
+        @include transition(all .35s);
+        input {
+            width: 100%;
+            background-color: transparent;
+            @include margin(0);
+        }
+        button[type="submit"] {
+            font-size: $tool-btn-font-size;
+            color: $brand-default;
+            @include transition(color .25s);
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+    .social-bar { 
+        ul {
+            @include padding(0);
+            @include margin(0);
+            list-style: none;
+        }
+        li { 
+            display: inline-block;
+            > a {
+                color: lighten($gray, 11%);
+                @include transition(color .35s);
+                span { 
+                    color: inherit;
+                    @include transition(color .35s); 
+                }
+            }
+        }
+    }
+}
+// Mobile Menu Toggle
+.nav-toggle {
+    position: relative;
+    display: none;
+    vertical-align: middle;
+    z-index: 1;
+    cursor: pointer;
+    @include margin(null -5px null 11px);
+    @include size($nav-toggle-width, $nav-toggle-height);
+    @include user-select(none);
+    span {
+        margin-top: -1px;
+        background-color: $nav-toggle-color;
+        @include size($nav-toggle-width, 1px);
+        @include position(absolute, 50% null null null);
+        &:before, &:after {
+            content: "";
+            background-color: $nav-toggle-color;
+            @include size($nav-toggle-width, 1px);
+            @include position(absolute, null null null 0);
+            @include transition(all .25s ease-out);
+        }
+        &:before {
+            top: -7px;
+        }
+        &:after {
+            bottom: -7px;
+        }
+    }
+    &.active {
+        span {
+            width: 0px;
+            &:before {
+                top: 0;
+                @include transform(rotateZ(45deg));
+            }
+            &:after {
+                bottom: 0;
+                @include transform(rotateZ(-45deg));
+            }
+        }
+    }
+}
+// Navbar Collapse
+@media #{$nav-collapse} {
+    .site-logo {
+        margin-top: 5px;
+        width: $logo-width - 10;
+    }
+    .mobile-tools {
+        display: block;
+    }
+    .navbar {
+        padding-top: 0;
+        &.navbar-fixed {
+            position: absolute;
+        }
+        .container {
+            @include padding(null 0);
+        }
+        .inner {
+            @include padding(null 15px);
+        }
+        .toolbar {
+            .search-btn, .share-btn, .divider {
+                display: none;
+            }
+        }
+        .mobile-dropdown {
+            display: none;
+            width: 100%;
+            background-color: $mobile-menu-bg;
+            @include position(absolute, 100% null null 0);
+            @include box-shadow(3px 4px 9px 0px rgba(0, 0, 0, 0.15));
+            @include transition(all .45s);
+            .main-navigation {
+                position: relative;
+                top: auto;
+                margin-top: 0;
+                > .menu {
+                    text-align: left;
+                    > li {
+                        display: block;
+                        border-top: 1px solid $submenu-divider-color;
+                        > a {
+                            display: block;
+                            border-left: 2px solid transparent;
+                            @include padding(12px 40px 12px 22px);
+                        }
+                        &.current-menu-item> a, &.current_page_item> a, &.current-menu-ancestor> a, &.current-menu-parent> a {
+                            border-left: 2px solid $nav-link-hover-color;
+                        }
+                        &.menu-item-has-children {
+                            > a {
+                                > span {
+                                    display: none;
+                                }
+                                &:after {
+                                    @include position(absolute, null 22px null null);
+                                }
+                            }
+                            &.active a:after {
+                                @include opacity(1);
+                            }
+                            &.open> a {
+                                color: $nav-link-hover-color;
+                                &:after {
+                                    content: $nav-link-has-dropdown-icon2;
+                                }
+                            }
+                        }
+                        .sub-menu {
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            background-color: $mobile-tools-bg;
+                            overflow: hidden;
+                            max-height: 0;
+                            @include padding(0 14px);
+                            @include transition(all .4s);
+                            @include box-shadow(none);
+                            > li {
+                                border-top: 1px solid darken($submenu-divider-color, 3%);
+                                > a {
+                                    color: $brand-default;
+                                    &:hover {
+                                        color: $nav-link-hover-color;
+                                    }
+                                }
+                                &.current-menu-item> a, &.current_page_item> a {
+                                    color: $nav-link-hover-color;
+                                }
+                            }
+                            &.expanded {
+                                max-height: 1000px;
+                            }
+                        }
+                        &:hover .sub-menu {
+                            @include animation(none);
+                        }
+                    }
+                }
+            }
+            &.expanded {
+                display: block;
+                @include animation(slideDown 0.3s);
+            }
+        }
+        .nav-toggle {
+            display: inline-block;
+        }
+    }
+}
+// slideDown
+@include keyframes(slideDown) {
+    from {
+        @include opacity(0);
+        @include transform(translate3d(0, -20px, 0));
+    }
+    to {
+        @include opacity(1);
+        @include transform(none);
+    }
+}

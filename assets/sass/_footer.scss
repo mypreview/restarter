@@ -1,0 +1,106 @@
+//
+// Footer
+// --------------------------------------------------
+.footer {
+    width: 100%;
+    background-color: $footer-bg;
+    // Copyright
+    .copyright {
+        @include padding(floor($line-height-computed / 1.8) 0);
+        .inner {
+            display: table;
+            width: 100%;
+            .column {
+                display: table-cell;
+                vertical-align: middle;
+                @include padding(null 25px null null);
+                &:last-child {
+                    text-align: right;
+                    @include padding(null 0 null null);
+                }
+            }
+        }
+        .site-logo {
+            vertical-align: middle;
+            @include margin(10px 15px 10px 0);
+        }
+        .copy-text {
+            display: inline-block;
+            vertical-align: middle;
+            color: $text-muted;
+            font-size: $font-size-small;
+            @include margin(10px 0);
+        }
+        .social-bar {
+          ul {
+              @include margin(0);
+              @include padding(0);
+              list-style: none;
+              li {
+                display: inline-block;
+                > a, > a span { 
+                  color: lighten($gray, 10%); 
+                  @include transition(color .25s);
+                }
+                &:last-child {
+                    @include margin(null 0 null null);
+                }
+            }
+          }
+        }
+    }
+    // Footer Navigation
+    .footer-nav {
+        display: block;
+        @include margin(10px 0);
+        > ul {
+            list-style: none;
+            @include margin(0);
+            @include padding(0);
+            > li {
+                display: inline-block;
+                @include margin(null 22px null null);
+                &:last-child {
+                    @include margin(null 0 null null);
+                }
+                > a {
+                    text-decoration: none;
+                    color: $brand-default;
+                    @include transition(color .25s);
+                    &:hover {
+                        color: $link-color;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$tablet-land} {
+        .copyright {
+            .inner,
+            .inner .column {
+                display: block;
+                width: 100%;
+                text-align: center;
+                @include padding(null 0 null null);
+                &:last-child {
+                    text-align: center;
+                }
+            }
+            .social-bar {
+                margin-top: $line-height-computed;
+                li {
+                    @include margin(null 8px);
+                    &:last-child {
+                      @include margin(null 8px null null);
+                    }
+                }
+            }
+        }
+        .footer-nav> ul> li {
+            @include margin(null 11px);
+            &:last-child {
+                @include margin(null 11px null null);
+            }
+        }
+    }
+}

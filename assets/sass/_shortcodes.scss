@@ -1,0 +1,728 @@
+//
+// Shortcodes
+// --------------------------------------------------
+
+// Icon Box / Image Box
+// -------------------------
+.box-with-icon,
+.box-with-image {
+  background-color: transparent;
+  padding: 35px 22px 28px 22px;
+  cursor: default;
+  @include transition(background-color .4s);
+  .box-with-icon-icon,
+  .box-with-image-image {
+    display: inline-block;
+    width: $icon-box-icon-size;
+    height: $icon-box-icon-size;
+    text-align: center;
+    margin-bottom: 22px;
+    color: $icon-box-icon-color;
+    background-color: $icon-box-icon-bg;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    @include transition(all .4s);
+    > i {
+      font-size: $icon-box-icon-font-size;
+      line-height: $icon-box-icon-size - 2;
+    }
+  }
+  .box-with-icon-title,
+  .box-with-image-title {
+    font-size: $icon-box-title-font-size;
+    small {
+      display: block;
+      color: $gray-dark;
+      font-size: floor($font-size-base * 0.9375); // 15px 
+      font-weight: 300;
+      margin-top: 8px;
+    }
+  }
+  .social-bar { padding-top: 5px; }
+  p {
+    color: $icon-box-text-color;
+    margin-bottom: floor($line-height-computed / 1.8);
+  }
+  &:hover {
+    background-color: $icon-box-hover-bg;
+    .box-with-icon-icon {
+      color: $icon-box-hover-icon-color;
+      border-color: $icon-box-hover-icon-color;
+      background-color: transparent;
+    }
+  }
+
+  // Light skin
+  &.light-skin {
+    color: #fff;
+    .box-with-icon-title,
+    .box-with-image-title, p {
+      color: #fff;
+      font-weight: 300;
+    }
+    p { opacity: .6; }
+    .box-with-icon-icon {
+      color: #fff;
+      background-color: rgba(#fff, .15);
+    }
+    &:hover {
+      background-color: rgba(#fff, .15);
+      .box-with-icon-icon {
+        border-color: #fff;
+        background-color: transparent;
+      }
+    }
+  }
+
+  // Horizontal layout
+  &.horizontal-box {
+    display: table;
+    width: 100%;
+    padding: 0;
+    margin-bottom: $line-height-computed;
+    .box-with-icon-icon {
+      display: table-cell;
+      vertical-align: top;
+      text-align: left;
+      width: 80px;
+      padding-left: 15px;
+      background: none;
+      border: none;
+      height: auto;
+      > i { line-height: 1; }
+    }
+    .box-with-icon-content {
+      display: table-cell;
+      vertical-align: top;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+// Clients
+// -------------------------
+.client {
+  display: block;
+  width: 100%;
+  max-width: $client-width;
+  margin: 20px auto;
+  opacity: $client-opacity;
+  @include transition(opacity .3s);
+  &:hover {
+    opacity: $client-hover-opacity;
+  }
+}
+
+// Contacts Split Block
+// -------------------------
+.contacts-split {
+  position: relative;
+  z-index: 1;
+  display: table;
+  width: 100%;
+  height: 300px;
+  background-color: $contacts-bg;
+  @include box-shadow(0px 6px 10px 0px rgba(0,0,0,0.13));
+
+  .column {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  .contact-form {
+    background-color: $contacts-bg;
+    padding: 52px 60px 50px 40px;
+    h1, h2, h3, h4 { margin-bottom: floor($line-height-computed / 2); }
+  }
+
+  &.contacts-reverse {
+    .contact-form {
+      padding: 52px 40px 50px 60px;
+    }
+  }
+  @media #{$desktop} {
+    .contact-form { padding-right: 40px; }
+    &.contacts-reverse {
+      .contact-form { padding-left: 40px; }
+    }
+  }
+  @media #{$tablet-land} {
+    .column {
+      display: block;
+      width: 100%;
+    }
+    .contact-form,
+    &.contacts-reverse .contact-form { padding: 40px 30px; }
+  }
+  @media #{$mobile-land} {
+    .contact-form,
+    &.contacts-reverse .contact-form { padding: 40px 20px; }
+  }
+}
+
+// Split Section
+// -------------------------
+.split-section {
+  position: relative;
+  display: table;
+  width: 100%;
+
+  .image, .content,
+  .tab-content {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+  }
+  .image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  .content {
+    padding: 50px 85px;
+    background-color: #fff;
+  }
+  .tab-content {
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    @include box-shadow(none);
+    overflow: hidden;
+    > .tab-pane {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+    }
+  }
+  @media screen and (max-width: 1480px) {
+    .content { padding: 50px; }
+  }
+  @media #{$desktop} {
+    .tab-content,
+    .tab-content + .content {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    .content { padding: 50px 25px; }
+    .tab-content { height: 500px; }
+  }
+  @media #{$tablet-land} {
+    .image, .image + .content {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    .image { height: 400px; }
+    .content { padding: 50px 15px; }
+  }
+  @media #{$tablet-port} {
+    .image, .tab-content { height: 320px; }
+  }
+  @media #{$mobile-land} {
+    .image, .tab-content { height: 250px; }
+  }
+}
+
+// Full Width Section
+// -------------------------
+.fw-section {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.bg-white { background-color: #fff; }
+  .overlay {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include primary-gradient;
+  }
+  .container,
+  .container-fluid {
+    position: relative;
+    z-index: 5;
+  }
+  &.parallax {
+    background-attachment: fixed;
+  }
+  &.border-top {
+    border-top: 1px solid $hr-border;
+  }
+  &.border-bottom {
+    border-bottom: 1px solid $hr-border;
+  }
+}
+// Disable Parallax for Touch Devices
+.touch .fw-section.parallax {
+  background-attachment: scroll;
+}
+// Disable filter for IE9
+.no-csstransitions {
+  .fw-section .overlay { filter: none; }
+}
+
+// Counters
+// -------------------------
+.counters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include clearfix;
+  > li {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: $line-height-computed 0;
+    padding: 0 50px;
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 80%;
+      background-color: $hr-border;
+      bottom: 0;
+      right: 0;
+      @include transform(rotate(15deg));
+    }
+    &:last-child:before { display: none; }
+    &:first-child { padding-left: 0; }
+    &:last-child { padding-right: 0; }
+    > i {
+      font-size: $counter-icon-size;
+      color: $counter-icon-color;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: $counter-heading-size;
+      margin-bottom: 8px;
+    }
+    span {
+      font-size: $counter-subheading-size;
+      color: $counter-subheading-color;
+      font-weight: 300;
+    }
+  }
+  @media screen and (max-width: 1530px) {
+    > li {
+      padding: 0 40px;
+      &:first-child { padding-left: 0; }
+      &:last-child { padding-right: 0; }
+    }
+  }
+}
+
+// Video Popup
+// -------------------------
+.video-popup-btn {
+  display: inline-block;
+  width: $video-popup-btn-size;
+  height: $video-popup-btn-size;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $video-popup-btn-bg;
+  color: $video-popup-btn-color;
+  border: 1px solid transparent;
+  @include transition(all .35s);
+  > i {
+    font-size: $video-popup-icon-size;
+    line-height: $video-popup-btn-size - 2;
+  }
+  &:focus, &:active { outline: none; }
+  &:hover {
+    color: $video-popup-btn-hover-color;
+    background-color: transparent;
+    border-color: $video-popup-btn-hover-color;
+  }
+
+  //Light skin
+  &.light-skin {
+    color: $video-popup-btn-light-color;
+    background-color: $video-popup-btn-light-bg;
+    &:hover {
+      color: $video-popup-btn-hover-color;
+      background-color: $video-popup-btn-light-hover-bg;
+      border-color: transparent;
+    }
+  }
+}
+
+// Sharing Links
+// -------------------------
+.sharing-links {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  padding-bottom: 5px;
+  @include clearfix;
+  > li {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 9px 23px;
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $hr-border;
+      top: 0;
+      right: 0;
+      @include transform(rotate(15deg));
+    }
+    > a {
+      font-size: $font-size-small;
+      color: $brand-default;
+      text-decoration: none;
+      @include transition(color .3s);
+      > i {
+        font-size: 1.2em;
+        color: $gray;
+        margin-right: 7px;
+        @include transition(color .3s);
+      }
+      &:hover {
+        color: $brand-primary;
+        > i { color: $brand-primary; }
+      }
+    }
+    &:first-child { padding-left: 0; }
+    &:last-child {
+      padding-right: 0;
+      &:before { display: none; }
+    }
+  }
+  &.light-skin {
+    > li {
+      &:before {
+        background-color: #fff;
+        opacity: .25;
+      }
+      > a {
+        color: #fff;
+        > i {
+          color: #fff;
+          opacity: .4;
+          @include transition(opacity .3s);
+        }
+        &:hover > i { opacity: 1; }
+      }
+    }
+  }
+}
+
+
+// Pricing Table
+// -------------------------
+.pricing-table-container {
+  position: relative;
+  width: 100%;
+
+  .pricing-header {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      @include primary-gradient;
+      opacity: $pricing-header-overlay-opacity;
+    }
+  }
+
+  > .container {
+    @media #{$desktop} { width: 100%; }
+  }
+}
+// Disable Parallax for Touch Devices
+.touch .pricing-table-container .pricing-header {
+  background-attachment: scroll;
+}
+// Disable filter for IE9
+.no-csstransitions {
+  .pricing-table-container .pricing-header .overlay { filter: none; }
+}
+.pricing-table {
+  position: relative;
+  z-index: 5;
+  overflow-x: auto;
+  min-height: 0.01%;
+  padding-top: floor($line-height-computed * 2.6);
+
+  > table {
+    width: 100%;
+    min-width: 980px;
+    table-layout: fixed;
+    border: none;
+
+    thead {
+      color: $pricing-header-color;
+      td {
+        vertical-align: top;
+        padding: 20px 20px 0 0;
+        border-bottom: none;
+      }
+      .plan-name {
+        position: relative;
+        display: inline-block;
+        font-size: $plan-name-font-size;
+        color: $pricing-header-color;
+        margin-bottom: 0;
+        .label {
+          display: block;
+          position: absolute;
+          background-color: $gray-base;
+          color: #fff;
+          font-size: 12px;
+          padding: 4px 8px;
+          top: -15px;
+          right: -85px;
+          &.label-primary { background-color: $brand-primary; }
+          &.label-warning { background-color: $brand-warning; }
+          &.label-danger { background-color: $brand-danger; }
+          &.label-success { background-color: $brand-success; }
+        }
+      }
+      .plan-price {
+        position: relative;
+        font-size: $plan-price-font-size;
+        color: $pricing-header-color;
+        font-weight: normal;
+        line-height: 1.3;
+        margin-bottom: 65px;
+        span {
+          font-size: $font-size-h4;
+          font-weight: 300;
+          opacity: .7;
+        }
+        .currency {
+          display: inline-block;
+          vertical-align: top;
+          margin-top: 15px;
+          margin-right: 6px;
+        }
+      }
+    }
+    tbody {
+      font-size: $pricing-table-font-size;
+      color: $pricing-table-font-color;
+      td {
+        padding: 25px;
+        border-left: 1px solid $table-border-color;
+        border-bottom: 1px solid $table-border-color;
+        &:first-child {
+          padding-left: 0;
+          border-left: none;
+        }
+      }
+      tr:last-child td { border-bottom: none; }
+    }
+  }
+
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+    margin-bottom: ($line-height-computed * 0.75);
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    // Tighten up spacing
+    > table {
+      margin-bottom: 0;
+
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td { white-space: nowrap; }
+        }
+      }
+    }
+  }
+}
+@media #{$tablet-port} {
+  .pricing-table-container .pricing-header {
+    height: 350px;
+  }
+  .pricing-table {
+    > table {
+      min-width: 910px;
+      thead {
+        td { padding: 0 20px 0 0; }
+        .plan-name {
+          font-size: floor($plan-name-font-size * 0.85); 
+        }
+        .plan-price {
+          font-size: floor($plan-price-font-size * 0.85);
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+}
+
+// Testimonials Carousel
+// -------------------------
+.testimonials-carousel {
+  width: 100%;
+  max-width: 685px;
+  margin: auto;
+  .inner { padding: 0 50px; }
+  .owl-carousel .owl-controls .owl-nav {
+    .owl-prev { left: 0; }
+    .owl-next { right: 0; }
+  }
+  @media #{$mobile-land} {
+    .inner { padding: 0; }
+    .owl-carousel .owl-controls .owl-nav {
+      display: none;
+    }
+  }
+}
+.testimonial {
+  text-align: center;
+  .testimonial-author-ava {
+    width: $testim-author-ava-size;
+    margin: 0 auto 20px auto;
+    img {
+      border-radius: floor($testim-author-ava-size / 2);
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .testimonial-author-name {
+    font-size: $font-size-base;
+    font-weight: normal;
+  }
+}
+
+// Device Gallery
+// -------------------------
+.device-gallery-thumbs {
+  display: block;
+  overflow: hidden;
+  padding: 12px 0;
+  .mCustomScrollBox,
+  .mCSB_container { padding: 12px 0; }
+  .thumb-list {
+    white-space: nowrap;
+    list-style: none;
+    padding: 0;
+    .thumb {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: $dg-thumb-gap;
+      overflow: hidden;
+      @include box-shadow(0px 0px 18px 0px rgba(0,0,0,0));
+      @include transition(all .3s);
+      a {
+        display: block;
+        width: $dg-thumb-width;
+        height: $dg-thumb-height;
+        background-color: $dg-thumb-bg;
+        > img {
+          opacity: $dg-thumb-opacity;
+          @include transform(scale(1));
+          @include backface-visibility(hidden);
+          @include transition(all .4s);
+        }
+      }
+      &.active a,
+      a:hover {
+        > img {
+          opacity: 1;
+          @include transform(scale(1.1));
+        }
+      }
+      &.active {
+        @include box-shadow(0px 0px 18px 0px rgba(0,0,0,0.2));
+        a { cursor: default; }
+      }
+    }
+  }
+}
+.device-gallery-device {
+  position: relative;
+  width: 100%;
+  max-width: $dg-device-max-width;
+  height: $dg-device-height;
+  margin: auto;
+  overflow: hidden;
+  @include user-select(none);
+  .tab-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25% 6.5% 0 6.6%;
+    margin: 0;
+    background: none;
+    @include box-shadow(none);
+  }
+  @media screen and (max-width: 380px) {
+    height: $dg-device-height - 110;
+  }
+}
+
+// Image Carousel
+// -------------------------
+.image-carousel {
+  .owl-controls .owl-dots {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 30px;
+    margin-top: 0 !important;
+  }
+  &.light-controls {
+    .owl-controls {
+      .owl-nav .owl-prev,
+      .owl-nav .owl-next {
+        color: #fff;
+      }
+      .owl-dots .owl-dot {
+        background-color: #fff;
+        &.active {
+          background-color: transparent;
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}

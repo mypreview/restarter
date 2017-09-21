@@ -1,0 +1,276 @@
+//
+// Buttons
+// --------------------------------------------------
+// Base styles
+// --------------------------------------------------
+.btn {
+    display: inline-block;
+    height: $btn-height;
+    line-height: $btn-height - 3;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    color: $btn-font-color;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: ($btn-height / 2);
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    @include margin(10px 8px 10px 0);
+    @include padding(0 30px);
+    @include user-select(none);
+    @include transition(color 0.3s ease-out, background-color 0.3s ease-out);
+    @include button-variant($btn-default-bg);
+    &:hover {
+        color: $btn-font-color;
+        text-decoration: none;
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled] {
+        cursor: $cursor-disabled;
+        background-color: $gray-light !important;
+        &:hover {
+            background-color: $gray-light !important;
+        }
+    }
+    i,
+    i:before {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        margin-top: -2px;
+        font-size: floor($btn-font-size * 1.2);
+    }
+}
+
+a.btn {
+    &.disabled,
+    fieldset[disabled] & {
+        pointer-events: none;
+        pointer: not-allowed;
+        @include opacity(0.5);
+    }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+.btn-default,
+.btn-default:hover,
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-success,
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus,
+.btn-info,
+.btn-info:hover,
+.btn-info:active,
+.btn-info:focus,
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:focus,
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:focus {
+    color: $btn-font-color;
+}
+
+.btn-default {
+    @include button-variant($btn-default-bg);
+}
+
+.btn-primary {
+    @include button-variant($btn-primary-bg);
+}
+
+.btn-success {
+    @include button-variant($btn-success-bg);
+}
+
+.btn-info {
+    @include button-variant($btn-info-bg);
+}
+
+.btn-warning {
+    @include button-variant($btn-warning-bg);
+}
+
+.btn-danger {
+    @include button-variant($btn-danger-bg);
+}
+
+.btn-light {
+    @include button-variant(#fff);
+    color: $gray-darker;
+    &:hover {
+        color: $gray-darker;
+    }
+}
+
+// Ghost Buttons
+// --------------------------------------------------
+.btn-ghost {
+    @include ghost-button-variant($btn-default-bg, $btn-default-bg);
+    &.btn-default {
+        @include ghost-button-variant($btn-default-bg, $btn-default-bg);
+    }
+    &.btn-primary {
+        @include ghost-button-variant($btn-primary-bg, $btn-primary-bg);
+    }
+    &.btn-success {
+        @include ghost-button-variant($btn-success-bg, $btn-success-bg);
+    }
+    &.btn-info {
+        @include ghost-button-variant($btn-info-bg, $btn-info-bg);
+    }
+    &.btn-warning {
+        @include ghost-button-variant($btn-warning-bg, $btn-warning-bg);
+    }
+    &.btn-danger {
+        @include ghost-button-variant($btn-danger-bg, $btn-danger-bg);
+    }
+    &.btn-light {
+        @include ghost-button-variant(#fff, #fff);
+        &:hover {
+            color: $gray-darker;
+        }
+    }
+}
+
+// Small Button
+// --------------------------------------------------
+.btn-sm {
+    height: $btn-sm-height;
+    font-size: $btn-sm-font-size;
+    font-weight: $btn-sm-font-weight;
+    line-height: $btn-sm-height - 3;
+    border-radius: ($btn-sm-height / 2);
+    @include padding(0 25px);
+    &.btn-ghost {
+        font-weight: $btn-font-weight;
+    }
+}
+
+// Inline Buttons
+// --------------------------------------------------
+.btn-inline {
+    @include margin(0 null);
+}
+
+// Button icons alignment
+// --------------------------------------------------
+.btn {
+    i,
+    i:before {
+        display: inline-block;
+        // font-weight: normal;
+        @include margin(-3px null null null);
+    }
+}
+
+.btn-icon-left {
+    @include padding(null null null 25px);
+    i {
+        @include margin(null 7px null null);
+    }
+    &.btn-sm {
+        @include padding(null null null 18px);
+        i {
+            @include margin(null 5px null null);
+        }
+    }
+}
+
+.btn-icon-right {
+    @include padding(null 25px null null);
+    i {
+        @include margin(null null null 7px);
+    }
+    &.btn-sm {
+        @include padding(null 18px null null);
+        i {
+            @include margin(null null null 5px);
+        }
+    }
+}
+
+// Block button
+// --------------------------------------------------
+.btn-block {
+    display: block;
+    width: 100%;
+    @include padding(null 15px);
+    @include margin(null 0 null null);
+}
+
+// Vertically space out multiple block buttons
+.btn-block+ .btn-block {
+    @include margin(20px null null null);
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-block {
+        width: 100%;
+    }
+}
+
+// Buttons alignment
+.text-center .btn {
+    @include margin(null 5px);
+    &.btn-block {
+        @include margin(null 0);
+    }
+}
+
+.text-right .btn {
+    @include margin(null 0 null 10px);
+    &.btn-block {
+        @include margin(null null null 0);
+    }
+}
+
+// Scroll to Top Button 
+.scroll-to-top-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    z-index: $navbar-zindex;
+    font-size: $scroll-top-btn-size;
+    color: $scroll-top-btn-color;
+    border-radius: 50%;
+    padding-left: 1px;
+    -webkit-transition: right 400ms $ease-in-out-back, opacity .3s, color .3s;
+    /* older webkit */
+    -webkit-transition: right 400ms $ease-in-out-back, opacity .3s, color .3s;
+    -moz-transition: right 400ms $ease-in-out-back, opacity .3s, color .3s;
+    transition: right 400ms $ease-in-out-back, opacity .3s, color .3s;
+    /* easeInOutBack */
+    @include opacity(0);
+    @include position(fixed, null -60px 20px null);
+    &:hover {
+        color: $scroll-top-btn-hover-color;
+    }
+    &.visible {
+        right: 15px;
+        @include opacity(1);
+    }
+}

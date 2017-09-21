@@ -1,0 +1,63 @@
+//
+// Specialty Pages
+// --------------------------------------------------
+// 404 page
+.error404 .page-wrapper {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.page-404 {
+    text-align: center;
+    @include padding(floor($line-height-computed * 10) 0 floor($line-height-computed * 4) 0);
+    h1 {
+        position: relative;
+        font-size: floor($font-size-base * 3.75);
+        font-weight: 300;
+        &:before {
+            display: block;
+            content: "";
+            border-radius: 50%;
+            background-color: $brand-primary;
+            @include square(5px);
+            @include margin(-2px 0 0 -3px);
+            @include position(absolute, 50% null null 50%);
+        }
+    }
+    h2 {
+        font-size: $font-size-h3;
+    }
+    // Light Skin
+    &.light-skin {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: #fff;
+        }
+        .btn-default {
+            background-color: #fff;
+            color: $brand-default;
+            &.btn-ghost {
+                background-color: transparent;
+                border: 1px solid #fff;
+                color: #fff;
+                &:hover {
+                    background-color: #fff;
+                    color: $brand-default;
+                }
+            }
+        }
+    }
+    @media #{$nav-collapse} {
+        @include padding(floor($line-height-computed * 8) 0 floor($line-height-computed * 2) 0);
+    }
+    @media #{$mobile-land} {
+        @include padding(floor($line-height-computed * 7) 0 $line-height-computed 0);
+    }
+}

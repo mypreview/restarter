@@ -1,0 +1,426 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+
+//
+//## Gray and brand colors for use across Theme.
+
+$gray-darker:            #404040;
+$gray-dark:            	 #808080;
+$gray:                   #999;
+$gray-light:             #e2e2e2;
+$gray-lighter:           #f3f3f3;
+
+$brand-default:         #3d4652;
+$brand-primary:         #ff3366;
+$brand-info:		        #3498db;
+$brand-success:         #4fcdbd;
+$brand-warning:         #fcab53;
+$brand-danger:          #e74c3c;
+
+$primary-gradient-color-1: #453f84;
+$primary-gradient-color-2: #3a2d46;
+
+$body-bg: 							$gray-lighter;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-base: 			"Lato", Helvetica, Arial, sans-serif;
+$text-color: 						$gray-dark;
+$text-weight: 					normal;
+
+$font-size-base:          16px;
+$font-size-lead:          floor(($font-size-base * 1.125)); // ~18px
+$font-size-middle: 				floor(($font-size-base * 0.875)); // ~14px
+$font-size-small: 				floor(($font-size-base * 0.8125)); // ~13px
+$font-size-xs:         		floor(($font-size-base * 0.75)); // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.375)); // ~38px
+$font-size-h2:            floor(($font-size-base * 2)); // ~32px
+$font-size-h3:            floor(($font-size-base * 1.5)); // ~24px
+$font-size-h4:            floor(($font-size-base * 1.25)); // ~20px
+$font-size-h5:            $font-size-lead; // ~18px
+$font-size-h6:            $font-size-base; // ~16px
+
+$headings-color:	 				$gray-darker;
+$font-weight-h1:          300;
+$font-weight-h2:          300;
+$font-weight-h3:          300;
+$font-weight-h4:          300;
+$font-weight-h5:          normal;
+$font-weight-h6:          normal;
+
+$font-style-h1:          normal;
+$font-style-h2:          normal;
+$font-style-h3:          normal;
+$font-style-h4:          normal;
+$font-style-h5:          normal;
+$font-style-h6:          normal;
+
+$text-transform-h1:      none;
+$text-transform-h2:      none;
+$text-transform-h3:      none;
+$text-transform-h4:      none;
+$text-transform-h5:      none;
+$text-transform-h6:      none;
+
+$quote-font-size: 				$font-size-lead;
+$quote-border: 						5px solid #e7e7e7;
+$quote-text-transform: 		none;
+$quote-font-weight: 			300;
+$quote-font-style: 				italic;
+$quote-font-color:				$gray-darker;
+$quote-author-font-color: $gray;
+
+$line-height-base:        1.5;
+$headings-line-height:   	1.3;
+$line-height-computed:    ceil(($font-size-base * $line-height-base)); // ~24px
+
+$link-color: 							$brand-primary;
+$link-hover-color: 				$brand-primary;
+
+$text-gray: 							$gray;
+$text-muted: 							darken($gray-light, 7%);
+
+$hr-border: 							$gray-light;
+$border-radius-large: 		18px;
+
+//== Forms
+//
+
+$input-height:								48px;
+$input-font-size: 						$font-size-middle;
+$input-bg: 										transparent;
+$input-color: 								$gray-darker;
+$input-border-color: 					rgba($gray-darker, .25);
+$input-focus-border-color: 		$brand-default;
+$input-color-placeholder: 		$gray-darker;
+$input-icon-size: 						23px;
+$input-icon-color: 						$gray;
+
+$checkbox-radio-bg-color: 						$brand-default;
+$checkbox-checked-bg-color: 					$brand-default;
+$radio-checked-bg-color: 							$brand-default;
+$checkbox-radio-label-color: 					$gray;
+$checkbox-radio-label-font-size: 			$font-size-middle;
+$disabled-color: 											darken($gray-light, 7%);
+
+
+//== Buttons
+//
+
+$btn-font-size: 							$font-size-middle;
+$btn-sm-font-size: 						$font-size-middle;
+$btn-font-weight: 						normal;
+$btn-sm-font-weight: 					normal;
+$btn-font-color: 							#fff;
+
+$btn-height: 									48px;
+$btn-sm-height: 							36px;
+
+$btn-default-bg: 							$brand-default;
+$btn-primary-bg: 							$brand-primary;
+$btn-success-bg: 							$brand-success;
+$btn-info-bg: 								$brand-info;
+$btn-warning-bg: 							$brand-warning;
+$btn-danger-bg: 							$brand-danger;
+$btn-light-bg: 								#fff;
+
+$scroll-top-btn-size: 				24px;
+$scroll-top-btn-color: 				$brand-default;
+$scroll-top-btn-hover-color: 	$brand-primary;
+
+$social-btn-size: 						$font-size-middle;
+
+$border-radius-base: 					6px;
+
+
+//== Tables
+//
+
+$table-border-color: 					$gray-light;
+$table-cell-padding:					15px;
+$table-bg-accent: 						#fff;
+
+
+//== Navbar / Logo
+//
+
+$navbar-zindex: 					9700;
+$navbar-min-height: 			96px;
+$navbar-bg: 							#fff;
+$navbar-padding: 					21px;
+
+$logo-width: 							124px;
+
+$nav-link-font-size: 				  $font-size-middle;
+$nav-link-color: 						  $brand-default;
+$nav-link-hover-color: 			  $brand-primary;
+$nav-link-has-dropdown-icon:  "+";
+$nav-link-has-dropdown-icon2: "–";
+
+$submenu-width: 					195px;
+$submenu-light-bg: 				#fff;
+$submenu-dark-bg: 				$brand-default;
+$submenu-link-font-size: 	$font-size-small; // 13px;
+$submenu-divider-color: 	#eeeeee;
+
+$tool-btn-font-size: 			23px;
+$tool-btn-color: 					rgba($gray-darker, .75);
+$tool-btn-hover-color: 		$brand-primary;
+$tool-divider-height: 		24px;
+$tool-divider-color: 			#e8e8e8;
+$tool-dropdown-width: 		130px;
+$search-box-height: 			40px;
+$search-box-border-color: #d1d1d1;
+
+$nav-toggle-width: 				25px;
+$nav-toggle-height: 			$btn-sm-height;
+$nav-toggle-color: 				$gray-darker;
+$mobile-menu-bg: 					#fff;
+$mobile-tools-bg: 				$gray-lighter;
+
+
+//== Page Title / Breadcrumbs
+//
+
+$page-title-light-bg: 				#ebebeb;
+$page-title-h-font-size: 			floor(($font-size-base * 1.25)); // ~20px
+$page-title-h-text-transform: uppercase;
+$page-title-h-font-style:			normal;
+$page-title-descr-font-size:	$font-size-middle;
+$page-title-descr-color:			$gray;
+$page-title-dark-bg: 					$brand-default;
+$page-title-overlay-opacity: 	.85;
+$breadcrumb-delimiter: 			 	"/";
+
+
+//== Sidebar / Widgets
+//
+$sidebar-max-width: 								340px;
+$sidebar-bg: 												#fff;
+$sidebar-padding: 									24px;
+
+$widget-title-font-size: 						floor($font-size-base * 0.9375); // 15px
+$widget-title-color: 								$gray-darker;
+$widget-title-icon-color: 					$gray;
+
+$widget-border-color: 							#eeeeee;
+
+$widget-insta-icon-size: 						22px;
+$widget-insta-icon-color: 					#fff;
+$widget-insta-overlay-color: 				$brand-default;
+$widget-insta-overlay-opacity: 			.65;
+
+$widget-tag-color: 									$brand-default;
+$widget-tag-hover-color: 						$brand-primary;
+$widget-tag-height: 								30px;
+$widget-tag-border-color: 					#dddddd;
+$widget-tag-counter-bg: 						#eeeeee;
+
+$widget-author-ava-size: 						60px;
+
+
+//== Side Navigation
+//
+$side-nav-max-width:					300px;
+$side-nav-bg: 								#fff;
+$side-nav-dark-bg: 						$brand-default;
+$side-nav-font-size: 					$font-size-middle;
+$side-nav-li-border: 					1px solid #eeeeee;
+$side-nav-color: 							$brand-default;
+$side-nav-active-color: 			$brand-primary;
+
+
+//== Tabs
+//
+
+$nav-tabs-font-size:								floor($font-size-base * 0.9375); // 15px
+$nav-link-padding:									11px 20px;
+$nav-tabs-link-color: 							$brand-default;
+$nav-tabs-link-hover-color:  				$brand-primary;
+$nav-tabs-active-link-hover-bg: 		#fff;
+$nav-tabs-content-bg: 							#fff;
+$prev-next-btn-size: 								37px;
+
+
+//== Filters
+//
+
+$filters-label-color: 							$gray;
+$filters-link-color: 								$brand-default;
+$filters-link-hover-color: 					$brand-primary;
+$filters-link-icon-color: 					$gray;
+$filters-dropdown-width:					  248px;
+$filters-dropdown-bg:								#fff;
+
+
+//== Panels and Accordions
+//
+
+$panel-bg: 									#fff;
+$panel-heading-font-size:  	$font-size-h4; // 20px
+$panel-heading-font-color:  $brand-default;
+$panel-heading-hover-color: $brand-primary;
+$panel-heading-padding-a: 	19px 40px 19px 20px;
+$panel-heading-padding-h:		20px;
+$panel-default-heading-bg: 	transparent;
+$panel-body-padding: 				0 20px 25px 20px;
+
+
+// Intro Section
+$intro-logo-width:   		 		100px;
+$intro-phone-wrap-width: 		1300px;
+$intro-phone-wrap-height: 	520px;
+$intro-phone-width: 		 		400px;
+$intro-phone-screen-width: 	306px;
+$intro-bubble-max-width: 		515px;
+
+
+// == Shortcodes
+//
+
+// Icon Box
+$icon-box-hover-bg: 					rgba($brand-default, .04);
+$icon-box-icon-bg: 						rgba($brand-default, .04);
+$icon-box-icon-color: 				$brand-default;
+$icon-box-title-font-size: 		$font-size-lead;
+$icon-box-icon-size: 					122px;
+$icon-box-icon-font-size: 		48px;
+$icon-box-text-color: 				$gray;
+$icon-box-hover-icon-color: 	$brand-primary;
+
+// Clients
+$client-width: 					150px;
+$client-opacity: 				.4;
+$client-hover-opacity: 	.9;
+
+// Contacts Split Map/Form Block
+$contacts-bg: 					#fff;
+
+//== Pricing Table
+$pricing-header-overlay-opacity: 	.75;
+$table-border-color:							$gray-light;
+$pricing-header-color: 						#fff;
+$pricing-table-font-size: 				floor($font-size-base * 0.9375); // 15px
+$pricing-table-font-color: 				$gray-darker;
+$plan-name-font-size: 						$font-size-h2;
+$plan-price-font-size: 						80px;
+
+// Testimonials
+$testim-author-ava-size: 					72px;
+
+// Counters
+$counter-icon-size: 							48px;
+$counter-icon-color: 							$brand-primary;
+$counter-heading-size: 						floor($font-size-base * 3.125); // 50px
+$counter-subheading-size: 				floor($font-size-base * 1.125); // 18px
+$counter-subheading-color: 				$gray;
+
+// Video Popup Button
+$video-popup-btn-size: 						122px;
+$video-popup-icon-size: 					44px;
+$video-popup-btn-bg: 							rgba($brand-default, .04);
+$video-popup-btn-color: 					$brand-default;
+$video-popup-btn-hover-color:			$brand-primary;
+$video-popup-btn-light-bg: 				rgba(#fff, .15);
+$video-popup-btn-light-color: 		#fff;
+$video-popup-btn-light-hover-bg: 	rgba(#fff, 1);
+
+// Device Gallery
+$dg-device-max-width: 					368px;
+$dg-device-height: 							505px;
+$dg-thumb-width: 								176px;
+$dg-thumb-height: 							144px;
+$dg-thumb-gap: 									18px;
+$dg-thumb-bg: 									#f9f9f9;
+$dg-thumb-opacity: 							.65;
+
+
+//== Tooltips
+//
+
+$tooltip-opacity:    		1;
+$tooltip-max-width:  		200px;
+$tooltip-bg: 				 		#202020;
+$tooltip-arrow-color: 	$tooltip-bg;
+
+
+//== Comments
+//
+
+$comment-author-ava-size: 	98px;
+
+
+//== Progress Bars
+//
+
+$pb-bg-color: 						$gray-light;
+$pb-height: 							6px;
+
+
+//== Footer
+//
+
+$footer-bg: 										#fff;
+$footer-dark-bg: 								$brand-default;
+
+
+//== Tiles
+//
+
+$tile-padding: 						22px;
+$tile-bg: 								#fff;
+$tile-icon-size: 					46px;
+$tile-overlay-opacity: 		.7;
+$tile-gal-icon-circle: 		122px;
+$tile-gal-icon-color: 		#fff;
+$tile-gal-icon-bg: 				rgba(#fff, .15);
+
+
+//== Posts
+//
+
+$post-title-font-size: 								$font-size-h3;		
+$post-meta-color: 										#aeaeae;
+$post-format-size: 										56px;
+$post-format-font-size: 							27px;
+$post-format-color: 									#fff;
+$post-format-bg: 											$brand-primary;
+$post-format-sticky-bg: 							$brand-default;
+
+$share-btn-size: 											42px;
+$share-btn-font-size: 								21px;
+$share-btn-color: 										$brand-default;
+$share-btn-hover-color: 							$brand-primary;
+$share-btn-bg: 												#fff;
+$share-dropup-width: 									130px;
+$share-dropup-bg: 										#fff;
+
+$post-author-ava-size: 								128px;
+
+
+//== Carousel
+//
+
+$carousel-navs-size: 				28px;
+$carousel-navs-color: 			$brand-default;
+$carousel-dots-size: 				6px;
+$carousel-dots-color: 			$brand-default;
+$carousel-controls-opacity: 	.5;
+
+
+//== Media queries (responsive breackpoints)
+//## Descktop, Tablet, Mobile
+
+$desktop:   		   "screen and (max-width: 1200px)";
+$tablet-land:      "screen and (max-width: 991px)";
+$tablet-port:    	 "screen and (max-width: 768px)";
+$mobile-land:		 	 "screen and (max-width: 480px)";
+$mobile-port:		 	 "screen and (max-width: 360px)";
+$nav-collapse: 		 $tablet-land;

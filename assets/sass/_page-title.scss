@@ -1,0 +1,148 @@
+//
+// Page Title
+// --------------------------------------------------
+// Base Class
+.page-title {
+    position: relative;
+    width: 100%;
+    background-color: $page-title-light-bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include margin(null null floor($line-height-computed * 3) null);
+    @include padding(floor($line-height-computed * 9.5) 0 floor($line-height-computed * 3.5) 0);
+    .overlay {
+        display: block;
+        z-index: 1;
+        @include square(100%);
+        @include primary-gradient;
+        @include position(absolute, 0 null null 0);
+        &.darker { @include opacity(0.85); }
+    }
+    .container {
+        position: relative;
+        z-index: 5;
+        @media #{$desktop} {
+            width: 100%;
+        }
+    }
+    .inner {
+        display: table;
+        width: 100%;
+    }
+    .title {
+        position: relative;
+        display: table-cell;
+        vertical-align: top;
+        width: 65%;
+        @include padding(null 30px null 29px);
+        .back-btn {
+            display: block;
+            color: $headings-color;
+            font-size: $font-size-lead;
+            cursor: pointer;
+            @include transition(color .3s);
+            @include position(absolute, 4px null null 0);
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+    h1 {
+        font-size: $page-title-h-font-size;
+        text-transform: $page-title-h-text-transform;
+        font-style: $page-title-h-font-style;
+        @include margin(null floor($line-height-computed / 2) null null);
+    }
+    .page-description {
+        font-size: $page-title-descr-font-size;
+        color: $page-title-descr-color;
+    }
+    // Breadcrumbs
+    .breadcrumbs {
+        position: relative;
+        display: table-cell;
+        vertical-align: top;
+        text-align: right;
+        width: 100%;
+        a, span {
+            display: inline-block;
+            font-size: $font-size-small;
+            font-weight: normal;
+            color: $gray-darker;
+            text-decoration: none;
+            @include transition(color .25s);
+            &:before {
+                display: inline-block;
+                color: $gray-darker;
+                content: $breadcrumb-delimiter;
+                @include margin(0 5px);
+            }
+            &:first-child:before {
+                display: none;
+            }
+        }
+        a:hover {
+            color: $brand-primary;
+        }
+        span {
+            color: $gray;
+            cursor: default;
+        }
+    }
+    // Dark Page Title
+    &.pt-dark {
+        background-color: $page-title-dark-bg;
+        .title .back-btn {
+            color: #fff;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+        h1 {
+            color: #fff;
+        }
+        .breadcrumbs {
+            a, span {
+                color: #fff;
+                &:before {
+                    color: #fff;
+                }
+            }
+            span {
+                color: rgba(#fff, .5);
+            }
+            a:hover {
+                color: $brand-primary;
+            }
+        }
+        .page-description {
+            color: #fff;
+            @include opacity(0.5);
+        }
+    }
+    @media #{$nav-collapse} {
+        @include padding(floor($line-height-computed * 8) 0 floor($line-height-computed * 2.5) 0);
+    }
+    @media #{$tablet-port} {
+        @include margin(null null floor($line-height-computed * 2) null);
+        @include padding(floor($line-height-computed * 7) 0 floor($line-height-computed * 2) 0);
+        .inner, .title, .breadcrumbs {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .title {
+            @include padding(0);
+            .back-btn {
+                display: none;
+            }
+        }
+    }
+}
+// Disable filter for IE9
+.no-csstransitions {
+    .page-title .overlay {
+        filter: none;
+    }
+}

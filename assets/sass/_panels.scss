@@ -1,0 +1,92 @@
+//
+// Panels & Accordions
+// --------------------------------------------------
+// Base class
+.panel {
+    margin-bottom: $line-height-computed;
+    background-color: $panel-bg;
+    border: none;
+    border-radius: 0;
+    @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+    border: none;
+    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.1));
+}
+// Panel contents
+.panel-body {
+    @include clearfix;
+    @include padding($panel-body-padding);
+}
+// Optional heading
+.panel-heading {
+    border-bottom: none;
+    border-radius: 0;
+    .panel-title {
+        display: block;
+        font-size: $panel-heading-font-size;
+        font-weight: 300;
+        border-radius: 0;
+        @include margin(0);
+    }
+    .panel-title:not(a) {
+        padding: $panel-heading-padding-h;
+    }
+    > a {
+        position: relative;
+        text-decoration: none;
+        @include transition(color .3s);
+        @include padding($panel-heading-padding-a);
+        &:before {
+            display: block;
+            content: "–";
+            margin-top: -16px;
+            @include position(absolute, 50% 20px null null)
+        }
+    }
+    .panel-title.collapsed {
+        color: $panel-heading-font-color;
+        &:hover {
+            color: $panel-heading-hover-color;
+            background-color: transparent;
+        }
+        &:before {
+            content: "+";
+        }
+    }
+}
+// Collapsable panels (aka, accordion)
+.panel-group {
+    margin-bottom: $line-height-computed;
+    // Tighten up margin so it's only between panels
+    .panel {
+        margin-bottom: 0;
+        border-radius: 0;
+        + .panel {
+            margin-top: 10px;
+        }
+    }
+    .panel-heading {
+        border-bottom: 0;
+        + .panel-collapse> .panel-body, + .panel-collapse> .list-group {
+            border-top: none;
+        }
+    }
+    .panel-footer {
+        border-top: 0;
+        + .panel-collapse .panel-body {
+            border-bottom: none;
+        }
+    }
+}
+// Component Animation
+.collapse {
+    display: none;
+    &.in {
+        display: block;
+    }
+}
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    @include transition(height .35s ease, visibility .35s ease);
+}

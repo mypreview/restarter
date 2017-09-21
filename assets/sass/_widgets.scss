@@ -1,0 +1,283 @@
+//
+// Widgets (Sidebar)
+// --------------------------------------------------
+// Sidebar
+.sidebar,
+.wpb_widgetised_column {
+    width: 100%;
+    max-width: $sidebar-max-width !important;
+    @media #{$tablet-port} {
+        max-width: none !important;
+    }
+}
+
+.sidebar {
+    background-color: $sidebar-bg;
+    @include padding($sidebar-padding);
+    @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.1));
+}
+
+// Widget title
+.widget-title {
+    font-size: $widget-title-font-size;
+    color: $widget-title-color;
+    font-style: normal;
+    font-weight: normal;
+    border-bottom: 1px solid $widget-border-color;
+    margin-bottom: 11px;
+	margin-left: -($sidebar-padding);
+	margin-right: -($sidebar-padding);
+    @include padding(0 $sidebar-padding floor($line-height-computed / 1.5) $sidebar-padding);
+    &:before {
+    	display: inline-block;
+		vertical-align: middle;
+		color: #999;
+		font-size: 1.3em;
+		font-family: 'Pe-icon-7-stroke';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+    	@include margin(null 4px null null);
+    }
+}
+
+// Base class
+.widget {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    @include margin(null null floor($line-height-computed * 1.6) null);
+    &:last-child {
+        @include margin(null null 5px null);
+    }
+}
+
+// Archive / Categories / Pages / Comments
+.widget_archive,
+.widget_categories,
+.widget_pages,
+.widget_recent_comments {
+    ul {
+        list-style: none;
+    }
+    > ul {
+        font-size: $font-size-base;
+        list-style: none;
+        @include margin(0);
+        @include padding(0);
+        li {
+            border-top: 1px solid $widget-border-color;
+            a {
+                position: relative;
+                display: block;
+                font-size: $font-size-middle;
+                color: $brand-default;
+                text-decoration: none;
+                @include padding(11px 0);
+                .count {
+                    display: block;
+                    height: 20px;
+                    line-height: 20px;
+                    border-radius: 10px;
+                    color: $brand-default;
+                    background-color: $widget-border-color;
+                    @include padding(0 6px);
+                    @include margin(-10px null null null);
+                    @include position(absolute, 50% 0 null null);
+                    @include transition(all .3s);
+                }
+                &:hover {
+                    color: $brand-primary;
+                    .count {
+                        color: #fff;
+                        background-color: $brand-primary;
+                    }
+                }
+            }
+            &:first-child {
+                border-top: none;
+                > a {
+                    @include margin(-11px null null null);
+                }
+            }
+            &:last-child> a {
+                @include padding(null null 6px null);
+            }
+            &.active a,
+            &.current-cat a {
+                color: $brand-primary;
+                text-decoration: none;
+                .count {
+                    color: #fff;
+                    background-color: $brand-primary;
+                }
+            }
+            &:last-child {
+                @include margin(null null 0 null);
+            }
+        }
+    }
+}
+
+.widget_archive,
+.widget_categories {
+    > ul li a {
+        @include padding(null 30px null null);
+    }
+    .widget-title:before {
+    	content: "\e636";
+    }
+}
+
+// Calendar Widget
+.widget_calendar {
+    table {
+        width: 100%;
+        border: none;
+        color: $gray-darker;
+        caption {
+            text-align: right;
+            @include padding(5px 6px null null);
+        }
+        td,
+        th {
+            text-align: center;
+            border: none;
+            line-height: 1.25;
+            @include padding(6px);
+            &#today {
+                color: $brand-primary;
+                font-weight: bold;
+            }
+            > a {
+                color: $brand-default;
+                font-weight: bold;
+                text-decoration: none;
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+        }
+        .pad,
+        #prev,
+        #next {
+            position: relative;
+            > a {
+                font-weight: normal;
+                &:before {
+                    position: absolute;
+                    display: block;
+                    font-family: "feather";
+                }
+            }
+        }
+        #prev {
+            text-align: left;
+            padding-left: 18px;
+            > a:before {
+                content: "\e094";
+                left: 0;
+            }
+        }
+        #next {
+            text-align: right;
+            @include padding(null 18px null null);
+            > a:before {
+                content: "\e095";
+                right: 0;
+            }
+        }
+        tfoot td {
+            @include padding(8px null null null);
+        }
+    }
+    .widget-title:before {
+    	content: "\e660";
+    }
+}
+
+// Recent Comments/Posts Widget
+.widget_recent_comments,
+.widget_recent_posts {
+    > ul li {
+        @include padding(null null 11px null);
+        &:last-child {
+            @include padding(null null 5px null);
+        }
+        > a {
+            font-size: floor($font-size-base * 0.9375); // 15px
+            padding-bottom: 0 !important;
+        }
+    }
+    .comment-meta {
+        display: table;
+        width: 100%;
+        > span {
+            display: table-cell;
+            vertical-align: top;
+            color: $gray;
+            font-size: $font-size-small;
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.widget_recent_comments {
+	.widget-title:before {
+    	content: "\e668";
+    }
+}
+
+// Tags Widget
+.widget_tag_cloud,
+.post-tags {
+    .tag, .tag-cloud-link {
+        display: inline-block;
+        height: $widget-tag-height;
+        line-height: $widget-tag-height - 2;
+        font-size: $font-size-middle !important;
+        color: $widget-tag-color;
+        text-decoration: none;
+        border: 1px solid $widget-tag-border-color;
+        border-radius: floor($widget-tag-height / 2);
+        word-wrap: no-wrap;
+        overflow-wrap: no-wrap;
+        @include padding(0 5px 0 12px);
+        @include margin(0 5px 10px 0);
+        @include transition(color .3s);
+        span {
+            display: inline-block;
+            height: $widget-tag-height - 10;
+            line-height: $widget-tag-height - 10;
+            border-radius: floor(($widget-tag-height - 10) / 2);
+            color: $widget-tag-color;
+            background-color: $widget-tag-counter-bg;
+            @include padding(0 6px);
+            @include margin(null null null 5px);
+            @include transition(all .3s);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $widget-tag-hover-color;
+            span {
+                color: #fff;
+                background-color: $widget-tag-hover-color;
+            }
+        }
+    }
+}
+
+.widget_tag_cloud {
+    @include margin(null null floor(($line-height-computed * 1.6) - 8) null);
+    .widget-title:before {
+    	content: "\e60c";
+    }
+}

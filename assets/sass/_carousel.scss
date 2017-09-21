@@ -1,0 +1,167 @@
+//
+// Carousel
+// --------------------------------------------------
+
+/* 
+ *  Owl Carousel - Auto Height Plugin
+ */
+
+.owl-height {
+    @include transition(height 400ms);
+}
+
+/* 
+ *  Core Owl Carousel Styles
+ */
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1;
+    .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+        &:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+    }
+    .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        /* fix for flashing background */
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    .owl-controls {
+        text-align: center;
+        .owl-nav .owl-prev, .owl-nav .owl-next, .owl-dot {
+            cursor: pointer;
+            @include user-select(none);
+        }
+        .owl-nav {
+            .owl-prev, .owl-next {
+                display: block;
+                margin-top: -$carousel-navs-size / 2;
+                line-height: $carousel-navs-size;
+                text-align: center;
+                font-size: $carousel-navs-size;
+                color: $carousel-navs-color;
+                @include position(absolute, 50% null null null);
+                @include opacity($carousel-controls-opacity);
+                @include square($carousel-navs-size);
+                @include backface-visibility(hidden);
+                @include transition(opacity .3s ease-out);
+                &:before {
+                    font-family: "feather";
+                }
+                &:hover {
+                    @include opacity(1);
+                }
+            }
+            .owl-prev {
+                left: 15px;
+            }
+            .owl-next {
+                right: 15px;
+            }
+            .owl-prev:before, .owl-next:before {
+                display: block;
+                line-height: $carousel-navs-size;
+            }
+            .owl-prev:before {
+                content: "\e094";
+            }
+            .owl-next:before {
+                content: "\e095";
+            }
+        }
+        .owl-dots {
+            position: relative;
+            z-index: 10;
+            @include margin(floor(($line-height-computed / 2.3)) null null null);
+            .owl-dot {
+                display: inline-block;
+                border-radius: 50%;
+                background-color: $carousel-dots-color;
+                border: 1px solid transparent;
+                @include square($carousel-dots-size);
+                @include opacity($carousel-controls-opacity);
+                @include margin(0 4px 7px 4px);
+                @include transform(scale(1));
+                @include transition(all .25s);
+                &.active {
+                    background-color: transparent;
+                    border-color: $carousel-dots-color;
+                    @include transform(scale(1.35));
+                }
+            }
+        }
+    }
+    &.owl-loaded {
+        display: block;
+    }
+    &.owl-loading {
+        @include opacity(0);
+        display: block;
+    }
+    &.owl-hidden {
+        @include opacity(0);
+    }
+    .owl-refresh .owl-item {
+        display: none;
+    }
+    .owl-item {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        @include user-select(none);
+        img {
+            display: block;
+            -webkit-transform-style: preserve-3d;
+            @include margin(0 auto);
+        }
+    }
+    &.owl-text-select-on .owl-item {
+        @include user-select(auto);
+    }
+    .owl-grab {
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -o-grab;
+        cursor: -ms-grab;
+        cursor: grab;
+    }
+    &.owl-rtl {
+        direction: rtl;
+        .owl-item {
+            float: right;
+        }
+    }
+}
+
+/* No Js */
+
+.no-js .owl-carousel {
+    display: block;
+}
+
+/* 
+ *  Owl Carousel - Lazy Load Plugin
+ */
+
+.owl-carousel .owl-item .owl-lazy {
+    @include opacity(0);
+    @include transition(opacity 400ms);
+}
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}

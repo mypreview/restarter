@@ -1,0 +1,79 @@
+While making Restarter theme, we used third-party plugins and resources, and want to thank their creators:
+
+Bourbon - A simple and lightweight mixin library for Sass
+The MIT License - Copyright © 2011-2017 thoughtbot, inc.
+https://github.com/thoughtbot/bourbon/blob/master/LICENSE.md
+
+jQuery - most popular feature-rich JavaScript library
+Copyright JS Foundation and other contributors, https://js.foundation/
+https://github.com/jquery/jquery/blob/master/LICENSE.txt
+
+Modernizr - JavaScript library that detects HTML5 and CSS3 features in the users browser
+The MIT License - Made by Faruk, Paul, Alex, Ryan, Patrick, Stu, and Richard.
+https://github.com/Modernizr/Modernizr/blob/master/LICENSE
+
+Bootstrap - Most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web
+Copyright (c) 2011-2017 Twitter, Inc.
+Copyright (c) 2011-2017 The Bootstrap Authors
+https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE
+
+Velocity.js - Accelerated JavaScript animation
+The MIT License - Copyright (c) 2014 Julian Shapiro
+https://github.com/julianshapiro/velocity/blob/master/LICENSE.md
+
+iCheck - Customizable checkboxes and radio buttons
+The MIT License - Copyright (c) 2013 Fronteed
+https://github.com/fronteed/icheck#license
+
+Stellar.js - Parallax scrolling made easy
+The MIT License - Copyright (c) 2013 Mark Dalgleish
+https://github.com/markdalgleish/stellar.js#license
+
+FitVids.js - A lightweight, easy-to-use jQuery plugin for fluid width video embeds
+The WTFPL License - Version 2, December 2004 Davatron5000
+https://github.com/davatron5000/FitVids.js/issues/173
+
+jQuery Placeholder - A jQuery plugin that enables HTML5 placeholder
+The MIT License - Copyright (c) 2011 Mathias Bynens
+https://github.com/mathiasbynens/jquery-placeholder/blob/gh-pages/LICENSE.txt
+
+Owl Carousel - Touch enabled jQuery plugin that lets you create a beautiful, responsive carousel slider
+The MIT License - Copyright (c) 2013 David Deutsch
+https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+
+Pace - An automatic web page progress bar
+The MIT License - Copyright (c) 2013 HubSpot
+https://github.com/HubSpot/pace/blob/master/LICENSE
+
+Parallax.js - Parallax Engine that reacts to the orientation of a smart device
+The MIT License - Copyright (c) 2014 Matthew Wagerfield
+https://github.com/wagerfield/parallax/blob/master/LICENSE
+
+Font Awesome — The iconic font and CSS toolkit
+The MIT License - Copyright (c) 2010 Dave Gandy
+https://github.com/FortAwesome/Font-Awesome#license
+
+Feather — Simply beautiful open source icons
+The MIT License - Copyright (c) 2017 Cole Bemis
+https://github.com/colebemis/feather#license
+
+Stroke 7 Icon Font Set — Stroke icons inspired by iOS 7
+Royalty free for use in both personal and commercial projects - Copyright (c) 2014 pixeden
+https://www.pixeden.com/icon-fonts/stroke-7-icon-font-set
+
+Twenty Sixteen — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/WordPress/twentysixteen
+
+Twenty Seventeen — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/WordPress/twentyseventeen#twenty-seventeen
+
+WP Bootstrap Navwalker - A custom WordPress nav walker class
+GNU GENERAL PUBLIC LICENSE
+https://github.com/twittem/wp-bootstrap-navwalker/blob/master/LICENSE.txt
+
+Lato Google Font-Family
+Open Font License - Wei Huang
+https://fonts.google.com/specimen/Lato?selection.family=Lato
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web

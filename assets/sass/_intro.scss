@@ -1,0 +1,249 @@
+//
+// Intro Section
+// --------------------------------------------------
+
+.intro-section {
+  position: relative;
+  width: 100%;
+  padding-top: (($line-height-computed * 5) + $navbar-min-height);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include primary-gradient;
+  }
+  .container,
+  .container-fluid,
+  .row {
+    position: relative;
+    z-index: 5;
+  }
+  .intro-logo {
+    display: inline-block;
+    width: 100%;
+    max-width: $intro-logo-width;
+  }
+  .btn { margin: 0; }
+  &.parallax { background-attachment: fixed; }
+  .intro-phone-wrap {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: $intro-phone-wrap-width;
+    height: $intro-phone-wrap-height;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+    .phone {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      max-width: $intro-phone-width;
+      margin: 0 auto;
+      .screen {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 26.5% 11.75% 0 11.75%;
+      }
+    }
+    .screen-first-left,
+    .screen-first-right,
+    .screen-second-left,
+    .screen-second-right {
+      position: absolute;
+      width: 100%;
+      max-width: $intro-phone-screen-width;
+      @include box-shadow(0px 0px 26px 0px rgba(0,0,0,0.4));
+    }
+    .screen-first-left,
+    .screen-first-right {
+      z-index: 3;
+      top: 20% !important;
+    }
+    .screen-first-right {
+      right: 16.8% !important;
+      left: auto !important;
+    }
+    .screen-first-left { left: 16.8% !important; }
+    .screen-second-left,
+    .screen-second-right {
+      z-index: 2;
+      top: 30% !important;
+    }
+    .screen-second-left { left: 15px !important; }
+    .screen-second-right {
+      right: 15px !important;
+      left: auto !important;
+    }
+    @media #{$tablet-land} {
+      .screen-first-left { left: 30px !important; }
+      .screen-first-right { right: 30px !important; }
+      .screen-second-left,
+      .screen-second-right { display: none !important; }
+    }
+    @media screen and (max-width: 720px) {
+      .screen-first-left,
+      .screen-first-right { display: none !important; }
+    }
+    @media screen and (max-width: 400px) {
+      height: $intro-phone-wrap-height - 100;
+    }
+  }
+  .inner-shadow {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: -10px;
+    @include box-shadow(0px -5px 25px 0px rgba(0,0,0,0.16));
+  }
+  @media #{$nav-collapse} {
+    padding-top: (($line-height-computed * 3) + $navbar-min-height);
+  }
+
+  .intro-bubble {
+    position: relative;
+    width: 100%;
+    max-width: $intro-bubble-max-width;
+    padding: 25px;
+    background-color: rgba(#fff, .92);
+    @include box-shadow(0px 4px 8px 0px rgba(0,0,0,0.16));
+    &:before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      bottom: -21px;
+      left: 50%;
+      margin-left: -21px;
+      border-width: 21px 21px 0;
+      border-top-color: rgba(#fff, .92);
+    }
+  }
+
+  // Layers
+  .intro-layers-wrap {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .tablet-layer {
+    top: 0 !important;
+    right: -320px !important;
+    left: auto !important;
+  }
+  @media #{$tablet-land} {
+    .intro-layers-wrap {
+      position: relative;
+      margin-top: -20%;
+    }
+    .tablet-layer { right: 0 !important; }
+  }
+}
+
+// Intro with Phone Carousel
+.phone-carousel {
+  max-width: $intro-phone-width;
+  padding-top: 20px;
+  height: $intro-phone-wrap-height - 10;
+  margin: auto;
+  overflow: hidden;
+  @include user-select(none);
+  .phone {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    .inner {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 26.5% 11.75% 0 11.75%;
+    }
+  }
+  .owl-controls {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -22px;
+  }
+  &.light-controls {
+    .owl-controls .owl-dots {
+      .owl-dot {
+        background-color: #fff;
+        opacity: .9;
+        &.active {
+          background-color: transparent;
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}
+.video-popup-placeholder {
+  display: inline-block;
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+  background-color: #000;
+  @include box-shadow(0px 0px 30px 0px rgba(0,0,0,0.25));
+  margin-bottom: floor($line-height-computed * 1.2);
+  > img { opacity: .8; }
+  .play-btn {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 68px;
+    height: 68px;
+    border: 1px solid $brand-primary;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin: -34px 0 0 -34px;
+    &:focus, &:active { outline: none; }
+    &:before {
+      left: 50%;
+      top: 50%;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-left: 20px solid $brand-primary;
+      margin: -11px 0 0 -7px;
+    }
+  }
+}
+
+// Disable Parallax for Touch Devices
+.touch .intro-section.parallax {
+  background-attachment: scroll;
+}
+
+// Disable filter for IE9
+.no-csstransitions {
+  .intro-section .overlay { filter: none; }
+}
