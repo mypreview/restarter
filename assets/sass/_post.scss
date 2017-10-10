@@ -88,6 +88,16 @@
         }
     }
 }
+.content-none {
+    #searchform {
+        position: relative;
+        visibility: visible;
+        display: block;
+        @include opacity(1);
+        input[name="s"] { width: 100%; }
+        button[type="submit"] { top: 7px; left: 0; }
+    }
+}
 // Post Formats
 .sticky, .format-image, .format-gallery, .format-video, .format-audio, .format-quote, .format-link, .format-chat {
     .post-format {
