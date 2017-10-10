@@ -5,10 +5,10 @@
  * @package 		Hooked into "restarter_before_loop"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.0
+ * @since 		    1.0.1
  */
 
-if (is_active_sidebar('sidebar')):
+if (is_active_sidebar('sidebar') && ! Restarter::is_fluid_template()):
 ?>
 <!-- Container -->
 <div id="restarter-container" class="container space-bottom-2x">
