@@ -35,7 +35,7 @@ $page_numbers = paginate_links(apply_filters('restarter_pagination_args', array(
 			<a class="prev page-numbers disabled" href="#">
             	<i class="icon-arrow-left"></i>
             	<?php esc_html_e('Prev', 'restarter'); ?>
-          	</a>
+          	</a><!-- .prev.page-numbers -->
 			<?php
 			endif;
 			foreach($page_numbers as $page_number):
@@ -60,7 +60,7 @@ $page_numbers = paginate_links(apply_filters('restarter_pagination_args', array(
 			<a class="next page-numbers disabled" href="#">
             	<?php esc_html_e('Next', 'restarter'); ?>
             	<i class="icon-arrow-right"></i>
-          	</a>
+          	</a><!-- .next.page-numbers -->
 			<?php
 			endif;
 		endif;
