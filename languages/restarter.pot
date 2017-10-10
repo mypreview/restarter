@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Restarter\n"
-"POT-Creation-Date: 2017-09-20 21:51+0400\n"
-"PO-Revision-Date: 2017-09-20 21:51+0400\n"
+"POT-Creation-Date: 2017-10-11 01:51+0400\n"
+"PO-Revision-Date: 2017-10-11 01:51+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -133,37 +133,37 @@ msgstr ""
 msgid "Footer Social Links"
 msgstr ""
 
-#: includes/class-restarter.php:277
+#: includes/class-restarter.php:268
 msgid "Sidebar"
 msgstr ""
 
-#: includes/class-restarter.php:279
+#: includes/class-restarter.php:270
 msgid "Widgets added to this region will appear in blog archive pages."
 msgstr ""
 
-#: includes/class-restarter.php:433
+#: includes/class-restarter.php:420
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: includes/class-restarter.php:595
+#: includes/class-restarter.php:582
 msgid "Home"
 msgstr ""
 
-#: includes/class-restarter.php:616 includes/class-restarter.php:623
-#: includes/class-restarter.php:630
+#: includes/class-restarter.php:603 includes/class-restarter.php:610
+#: includes/class-restarter.php:617
 msgid "Archive for "
 msgstr ""
 
-#: includes/class-restarter.php:637
+#: includes/class-restarter.php:624
 msgid "Search results for "
 msgstr ""
 
-#: includes/class-restarter.php:711
+#: includes/class-restarter.php:708
 #, php-format
 msgid "%s Reply"
 msgstr ""
 
-#: includes/class-restarter.php:723
+#: includes/class-restarter.php:720
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -212,6 +212,24 @@ msgstr ""
 
 #: template-parts/loop/paging.php:18
 msgid "Pages:"
+msgstr ""
+
+#: template-parts/none/content.php:12
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/none/content.php:14
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/none/content.php:19
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #: template-parts/post-format/content-gallery.php:22
@@ -281,6 +299,10 @@ msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Restarter"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://demo.mypreview.one/restarter"
 msgstr ""
 
 #. Description of the plugin/theme
