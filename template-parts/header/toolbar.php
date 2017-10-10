@@ -5,7 +5,7 @@
  * @package 		Hooked into "restarter_header"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.0
+ * @since 		    1.0.1
  */
 ?>
 <!-- Toolbar -->
@@ -15,9 +15,11 @@
 		<i class="pe-7s-search"></i>
 		<?php get_search_form(); ?>
 	</div><!-- .search-btn -->
-	<?php endif; ?>
+	<?php 
+	endif;
+	if (apply_filters('restarter_header_social_links', true) && has_nav_menu('header-social-links')):
+	?>
 	<span class="divider"></span>
-	<?php if (apply_filters('restarter_header_social_links', true) && has_nav_menu('header-social-links')): ?>
 	<div class="share-btn">
 		<i class="pe-7s-share"></i>
 		<?php
