@@ -4,11 +4,14 @@
  * @author      	Mahdi Yazdani
  * @package     	Restarter
  * @dependencies 	Bourbon
- * @since       	1.0.0
+ * @since       	1.0.1
  */
 
 // Bourbon SASS Mixins Library
 @import "bourbon/bourbon"; // http://bourbon.io/
+
+// Core required libraries
+@import "core";
 
 // Core variables and mixins
 @import "bs-variables";
@@ -23,7 +26,6 @@
 @import "buttons";
 
 // Components
-@import "preloader";
 @import "social-buttons";
 @import "navbar";
 @import "page-title";
