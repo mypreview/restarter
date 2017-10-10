@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Restarter
- * @since 	    1.0.0
+ * @since 	    1.0.1
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -223,7 +223,7 @@ if (!class_exists('Restarter')):
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0.0
+		 * @since 1.0.1
 		 */
 		public function enqueue()
 
@@ -236,21 +236,12 @@ if (!class_exists('Restarter')):
 				'family' => urlencode('Lato:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i') ,
 				'subset' => urlencode('latin,latin-ext')
 			)) , 'https://fonts.googleapis.com/css') , array() , RestarterThemeVersion);
-			wp_enqueue_style('restarter-styles', $this->public_assets_url . 'css/restarter-core.min.css', array() , RestarterThemeVersion);
-			wp_enqueue_style('restarter-theme-styles', $this->public_assets_url . 'css/restarter.css', array() , RestarterThemeVersion);
+			wp_enqueue_style('restarter-styles', $this->public_assets_url . 'css/restarter.css', array() , RestarterThemeVersion);
 			wp_enqueue_script('jquery');
-			wp_register_script('restarter-scripts', $this->public_assets_url . 'js/restarter-core.min.js', array(
+			wp_register_script('restarter-scripts', $this->public_assets_url . 'js/restarter.js', array(
 				'jquery'
 			) , RestarterThemeVersion, true);
-			wp_localize_script('restarter-scripts', 'restarter_core_vars', array(
-				'is_customize_preview' => (bool) $is_customize_preview ,
-			));
-			wp_enqueue_script('restarter-scripts');
-			wp_register_script('restarter-theme-scripts', $this->public_assets_url . 'js/restarter.js', array(
-				'jquery',
-				'restarter-scripts'
-			) , RestarterThemeVersion, true);
-			wp_localize_script('restarter-theme-scripts', 'restarter_vars', array(
+			wp_localize_script('restarter-scripts', 'restarter_vars', array(
 				'ajaxurl' => admin_url('admin-ajax.php') ,
 				'security' => wp_create_nonce('restarter_theme_nonce') ,
 				'gallery_loop' => apply_filters('restarter_gallery_post_format_loop', true) ,
@@ -259,7 +250,7 @@ if (!class_exists('Restarter')):
 				'gallery_auto_height' => apply_filters('restarter_gallery_post_format_auto_height', false) ,
 				'gallery_dots' => apply_filters('restarter_gallery_post_format_dots', false) ,
 			));
-			wp_enqueue_script('restarter-theme-scripts');
+			wp_enqueue_script('restarter-scripts');
 			if (is_singular() && comments_open() && get_option('thread_comments')):
 				wp_enqueue_script('comment-reply');
 			endif;
@@ -323,7 +314,7 @@ if (!class_exists('Restarter')):
 		/**
 		 * Adds custom classes to the array of body classes.
 		 *
-		 * @since 1.0.0
+		 * @since 1.0.1
 		 */
 		public function body_classes($classes)
 
@@ -339,10 +330,6 @@ if (!class_exists('Restarter')):
 			// Enabling/disabling background parallax effect.
 			if (apply_filters('restarter_body_parallax', true)):
 				$classes[] = 'parallax';
-			endif;
-			// Used for page preloading animation.
-			if (apply_filters('restarter_preloader', true) && ! is_customize_preview()):
-				$classes[] = 'is-preloader';
 			endif;
 			return $classes;
 		}
@@ -585,7 +572,7 @@ if (!class_exists('Restarter')):
 		/**
 		 * Display the breadcrumbs for the current page.
 		 *
-		 * @since 1.0.0
+		 * @since 1.0.1
 		 */
 		public static function the_breadcrumb()
 
@@ -599,7 +586,7 @@ if (!class_exists('Restarter')):
 				elseif (is_page()):
 					the_title('<span>', '</span>');
 				elseif (is_single()):
-					$categories = get_categories();
+					$categories = get_the_category();
 					if (is_array($categories) && ! empty($categories)):
 						foreach ((array) $categories as $category):
 							$category_id = absint($category->term_id);
@@ -669,6 +656,16 @@ if (!class_exists('Restarter')):
 		{
 			global $multipage;
 			return 0 !== $multipage;
+		}
+		/**
+		 * Query fluid template usage.
+		 *
+		 * @since 1.0.0
+		 */
+		public static function is_fluid_template()
+
+		{
+			return is_page_template('page-templates/template-fluid.php') ? true : false;
 		}
 		/**
 		 * Comments list template.
