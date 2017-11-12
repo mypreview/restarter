@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Restarter\n"
-"POT-Creation-Date: 2017-10-11 01:51+0400\n"
-"PO-Revision-Date: 2017-10-11 01:51+0400\n"
+"POT-Creation-Date: 2017-11-11 20:02+0400\n"
+"PO-Revision-Date: 2017-11-11 20:02+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -104,8 +104,212 @@ msgstr ""
 msgid "Add a menu"
 msgstr ""
 
-#: includes/class-restarter-customizer.php:46
+#: includes/class-restarter-customizer-custom-controls.php:175
+msgid "Add / Edit Gallery"
+msgstr ""
+
+#: includes/class-restarter-customizer-custom-controls.php:176
+msgid "Clear"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:75
 msgid "Footer Logo"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:90
+msgid "Jumbotron"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:91
+msgid ""
+"A jumbotron indicates a big box for calling extra attention to some special "
+"content or information."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:109
+msgid "Content"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:114
+msgid "Device"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:119
+msgid "Slider"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:128
+msgid "Background"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:145
+msgid "Heading"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:146
+msgid "Enter text to be displayed in the jumbotron component header."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:176
+msgid "Description"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:177
+msgid ""
+"Specify the text to be displayed in the jumbotron component content area. "
+"The output is processed with \"wp_kses_post\", which means you can insert "
+"HTML."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:211
+msgid "Button Text"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:212
+msgid ""
+"Specify the text displayed on the button in the jumbotron component. If this "
+"field is empty, no button will be displayed."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:235
+msgid "Button URL"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:236
+msgid "Specify the URL the button in the jumbotron component links to."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:259
+msgid "URL Target"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:260
+msgid ""
+"Specify if the linked document or page should open in a new window or tab."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:282
+msgid "Button Icon"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:283
+msgid "Select an icon from the collection below."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:308
+msgid "Button Icon Float"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:309
+msgid "Specify the button icon float to the left or right side of the text."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:315
+msgid "Right"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:316
+msgid "Left"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:336
+msgid "Device Frame"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:337
+msgid ""
+"Use WordPress Media Uploader to upload and select an image from your "
+"computer or use an existing photo from your media library to create carousel "
+"within frame."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:359
+msgid "Slider Images"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:360
+msgid ""
+"Use WordPress Media Uploader to upload and select multiple images from your "
+"computer or use existing photos from your media library."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:378
+msgid "Loop"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:379
+msgid "Infinity loop. Duplicate last and first items to get loop illusion."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:397
+msgid "Autoplay"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:398
+msgid "Slider can switch its slides automatically."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:416
+msgid "Autoplay Timeout"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:417
+msgid "Autoplay interval timeout (Delay) between slides."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:444
+msgid "Background Image"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:466
+msgid "Parallax Effect"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:467
+msgid ""
+"Toggle the parallax effect applied to the background image. If no background "
+"image is set, this setting does nothing."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:485
+msgid "Parallax Scroll Speed"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:486
+msgid ""
+"If you want the background image to reposition on scroll, Lower down the "
+"following attribute. The ratio is relative to the natural scroll speed."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:514
+msgid "Overlay Opacity"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:515
+msgid ""
+"Specify the overlay opacity. This setting is useful if you are using a "
+"visually noisy background image and finding the text in your jumbotron "
+"component difficult to read."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:531
+msgid "Layout"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:550
+msgid "General Layout"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:551
+msgid "Reposition sidebar area from right to left or vice versa."
+msgstr ""
+
+#: includes/class-restarter-customizer.php:568
+msgid "Restater Plus"
+msgstr ""
+
+#: includes/class-restarter-customizer.php:569
+msgid "Upgrade Now!"
 msgstr ""
 
 #: includes/class-restarter-recent-comments-widget.php:27
@@ -117,53 +321,53 @@ msgstr ""
 msgid "by "
 msgstr ""
 
-#: includes/class-restarter.php:151
+#: includes/class-restarter.php:163
 msgid "Primary"
 msgstr ""
 
-#: includes/class-restarter.php:152
+#: includes/class-restarter.php:164
 msgid "Footer"
 msgstr ""
 
-#: includes/class-restarter.php:153
+#: includes/class-restarter.php:165
 msgid "Header Social Links"
 msgstr ""
 
-#: includes/class-restarter.php:154
+#: includes/class-restarter.php:166
 msgid "Footer Social Links"
 msgstr ""
 
-#: includes/class-restarter.php:268
+#: includes/class-restarter.php:277
 msgid "Sidebar"
 msgstr ""
 
-#: includes/class-restarter.php:270
+#: includes/class-restarter.php:279
 msgid "Widgets added to this region will appear in blog archive pages."
 msgstr ""
 
-#: includes/class-restarter.php:420
+#: includes/class-restarter.php:440
 msgid "Please define default parameters in the form of an array."
 msgstr ""
 
-#: includes/class-restarter.php:582
+#: includes/class-restarter.php:619
 msgid "Home"
 msgstr ""
 
-#: includes/class-restarter.php:603 includes/class-restarter.php:610
-#: includes/class-restarter.php:617
+#: includes/class-restarter.php:641 includes/class-restarter.php:648
+#: includes/class-restarter.php:655
 msgid "Archive for "
 msgstr ""
 
-#: includes/class-restarter.php:624
+#: includes/class-restarter.php:666
 msgid "Search results for "
 msgstr ""
 
-#: includes/class-restarter.php:708
+#: includes/class-restarter.php:849
 #, php-format
 msgid "%s Reply"
 msgstr ""
 
-#: includes/class-restarter.php:720
+#: includes/class-restarter.php:861
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -216,8 +420,7 @@ msgstr ""
 
 #: template-parts/none/content.php:12
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? %1$sGet started here%2$s."
 msgstr ""
 
 #: template-parts/none/content.php:14
@@ -259,32 +462,32 @@ msgstr ""
 msgid "View all % comments"
 msgstr ""
 
-#: template-parts/post-format/content-gallery.php:64
+#: template-parts/post-format/content-gallery.php:68
 #: template-parts/post-format/content-image.php:61
-#: template-parts/post-format/content-quote.php:71
-#: template-parts/post-format/content-video.php:66
-#: template-parts/post-format/content.php:66 template-parts/post/meta.php:27
+#: template-parts/post-format/content-quote.php:73
+#: template-parts/post-format/content-video.php:70
+#: template-parts/post-format/content.php:70 template-parts/post/meta.php:27
 msgid "in "
 msgstr ""
 
-#: template-parts/post-format/content-gallery.php:71
-#: template-parts/post-format/content-gallery.php:73
+#: template-parts/post-format/content-gallery.php:75
+#: template-parts/post-format/content-gallery.php:77
 #: template-parts/post-format/content-image.php:68
 #: template-parts/post-format/content-image.php:70
-#: template-parts/post-format/content-quote.php:78
 #: template-parts/post-format/content-quote.php:80
-#: template-parts/post-format/content-video.php:73
-#: template-parts/post-format/content-video.php:75
-#: template-parts/post-format/content.php:73
-#: template-parts/post-format/content.php:75
+#: template-parts/post-format/content-quote.php:82
+#: template-parts/post-format/content-video.php:77
+#: template-parts/post-format/content-video.php:79
+#: template-parts/post-format/content.php:77
+#: template-parts/post-format/content.php:79
 msgid "Edit"
 msgstr ""
 
-#: template-parts/post-format/content-gallery.php:77
+#: template-parts/post-format/content-gallery.php:81
 #: template-parts/post-format/content-image.php:74
-#: template-parts/post-format/content-quote.php:84
-#: template-parts/post-format/content-video.php:79
-#: template-parts/post-format/content.php:79
+#: template-parts/post-format/content-quote.php:86
+#: template-parts/post-format/content-video.php:83
+#: template-parts/post-format/content.php:83
 msgid "Read More"
 msgstr ""
 
@@ -306,7 +509,16 @@ msgid "https://demo.mypreview.one/restarter"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Harmonious, clean and user friendly"
+msgid ""
+"The Restarter is an amazingly tech-savvy and incredibly visually polished, "
+"harmonious, seamless and flexible, fast and responsive WordPress creative "
+"mobile application showcase theme which has a vast collection of UI "
+"components that works seamlessly on all major web browsers, tablets, and "
+"phones. The primary purpose of the Restarter theme is to showcase your "
+"mobile application, with an overall aesthetic that entices users explore the "
+"functionality and features of your application. Furthermore, the theme is "
+"SEO optimized and comes with full support of Schema.org markup. Rise to a "
+"new business level and go for Restarter!"
 msgstr ""
 
 #. Author of the plugin/theme
