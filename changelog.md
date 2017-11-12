@@ -1,3 +1,9 @@
+= 1.1.0 =
+* Updated language file.
+* Updated main stylesheet.
+* Added homepage template.
+* Added jumbotron component.
+
 = 1.0.1 =
 * Updated language file.
 * Updated main stylesheet.
