@@ -7,7 +7,7 @@
  * @package 		Hooked into "restarter_footer"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.0
+ * @since 		    1.1.0
  */
 ?>
 <div class="column">
@@ -21,10 +21,10 @@
 	<?php endif; ?>
 	<span class="copy-text">
 		<?php 
-		echo apply_filters('restarter_copyright_text', $content = '&copy; ' . date_i18n(__('Y','restarter'))); 
+		echo '<span>' . apply_filters('restarter_copyright_text', $content = '&copy; ' . date_i18n(__('Y','restarter'))) . '</span>'; 
 		if (apply_filters('restarter_credit_link', true)):
             // You `HAVE` to keep this credit link. We really do appreciate it ;)
-            printf(esc_attr__(' | Get %1$s for free.', 'restarter') , '<a href="' . esc_url(RestarterThemeURI) . '" rel="author" target="_blank">' . esc_attr(RestarterThemeName) . '</a>');
+            printf(esc_attr__(' | Get %1$s for free.', 'restarter') , '<a href="' . esc_url(RESTARTER_THEME_URI) . '" rel="author" target="_blank">' . esc_attr(RESTARTER_THEME_NAME) . '</a>');
         endif;
 		?>
 	</span>
