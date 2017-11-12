@@ -37,17 +37,17 @@ jQuery Placeholder - A jQuery plugin that enables HTML5 placeholder
 The MIT License - Copyright (c) 2011 Mathias Bynens
 https://github.com/mathiasbynens/jquery-placeholder/blob/gh-pages/LICENSE.txt
 
+Smooth Scroll - An extension for smooth scrolling in Google Chrome
+The MIT License - Copyright (c) 2010-2016 Balazs Galambosi
+https://github.com/galambalazs/smoothscroll/blob/master/LICENSE
+
 Owl Carousel - Touch enabled jQuery plugin that lets you create a beautiful, responsive carousel slider
 The MIT License - Copyright (c) 2013 David Deutsch
 https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
 
-Pace - An automatic web page progress bar
-The MIT License - Copyright (c) 2013 HubSpot
-https://github.com/HubSpot/pace/blob/master/LICENSE
-
-Parallax.js - Parallax Engine that reacts to the orientation of a smart device
-The MIT License - Copyright (c) 2014 Matthew Wagerfield
-https://github.com/wagerfield/parallax/blob/master/LICENSE
+File skip link focus fix - Helps with accessibility for keyboard only users.
+The GPL version 2 or (at your option) any later version
+https://git.io/vWdr2
 
 Font Awesome — The iconic font and CSS toolkit
 The MIT License - Copyright (c) 2010 Dave Gandy
@@ -69,11 +69,43 @@ Twenty Seventeen — Free WordPress Theme
 The GPL version 2 or (at your option) any later version
 https://github.com/WordPress/twentyseventeen#twenty-seventeen
 
+Storefront — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/woocommerce/storefront
+
 WP Bootstrap Navwalker - A custom WordPress nav walker class
 GNU GENERAL PUBLIC LICENSE
 https://github.com/twittem/wp-bootstrap-navwalker/blob/master/LICENSE.txt
+
+Customizer Range Value Control - A generic range with value control you can use to replace the range control.
+GNU GENERAL PUBLIC LICENSE
+https://github.com/soderlind/class-customizer-range-value-control#copyright-and-license
+
+Customizer Toggle Control - A generic toggle control you can use to replace the checkbox control.
+GNU GENERAL PUBLIC LICENSE
+https://github.com/soderlind/class-customizer-toggle-control#copyright-and-license
+
+Pure CSS toggle buttons - A PEN BY Mauricio Allende
+https://codepen.io/mallendeo/pen/eLIiG
+https://github.com/soderlind/class-customizer-toggle-control/blob/master/pure-css-toggle-buttons/license.txt
+
+"Pro" theme section for the customizer - Examples of using the Customize API to make pro sections, controls, etc.
+The GPL version 2 or (at your option) any later version
+https://github.com/justintadlock/trt-customizer-pro#copyright-and-license
 
 Lato Google Font-Family
 Open Font License - Wei Huang
 https://fonts.google.com/specimen/Lato?selection.family=Lato
 http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+
+IPhone6 silver - frontface
+https://commons.wikimedia.org/wiki/File:IPhone6_silver_frontface.png
+Licensed under the Creative Commons Attribution-Share Alike Unported license.
+
+Western side of the Matterhorn mountain in the storm weather
+https://www.splitshire.com/western-side-matterhorn/
+SplitShire images can be included in your final product to sell. Ex. Templates, Photoshop Files, Video Projects, Graphic Templates, Mockups etc.
+https://www.splitshire.com/licence/
+
+https://www.pexels.com/photo/adventure-alpine-altitude-austria-355241/
+Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0
