@@ -68,6 +68,9 @@ img {
     vertical-align: middle;
     @include img-responsive;
 }
+iframe {
+    border: none;
+}
 // Rounded corners
 .img-rounded {
     border-radius: $border-radius-large;
@@ -261,6 +264,9 @@ kbd {
         text-align: center !important;
     }
 }
+.text-italic {
+    font-style: italic;
+}
 
 /* Text meant only for screen readers. */
 
@@ -298,6 +304,14 @@ kbd {
     margin-left: auto;
     margin-right: auto;
     padding: 0 15px;
+}
+.page-template-template-homepage section[id^="restarter-homepage-"] + .scroll-to-top-btn + footer.footer {
+    margin-top: 0 !important;
+    padding-top: 48px !important;
+}
+#restarter-container .bs3-grid-builder-container.container,
+.homepage-content > .bs3-grid-builder-container.container {
+    width: auto;
 }
 // WordPress core classes
 .wp-caption {
