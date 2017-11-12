@@ -148,6 +148,14 @@
     }
 }
 
+.post-tile.format-gallery {
+    .gallery {
+        .owl-prev, .owl-next {
+            color: $gray-lighter;
+        }
+    }
+}
+
 /* No Js */
 
 .no-js .owl-carousel {
