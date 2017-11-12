@@ -1,0 +1,383 @@
+/**
+ * Restarter Customizer Styles
+ *
+ * @author      Mahdi Yazdani
+ * @package     Restarter
+ * @since       1.1.0
+ */
+.restarter-toggle > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+.restarter-toggle > div > .customize-control-title {
+	flex: 2 0 0;
+	vertical-align: middle;
+}
+.restarter-toggle input[type=checkbox].tgl {
+	display: none;
+}
+.restarter-toggle input[type=checkbox].tgl, input[type=checkbox].tgl:after, input[type=checkbox].tgl:before, input[type=checkbox].tgl *, input[type=checkbox].tgl *:after, input[type=checkbox].tgl *:before, input[type=checkbox].tgl + .tgl-btn {
+	box-sizing: border-box;
+}
+.restarter-toggle input[type=checkbox].tgl::-moz-selection, input[type=checkbox].tgl:after::-moz-selection, input[type=checkbox].tgl:before::-moz-selection, input[type=checkbox].tgl *::-moz-selection, input[type=checkbox].tgl *:after::-moz-selection, input[type=checkbox].tgl *:before::-moz-selection, input[type=checkbox].tgl + .tgl-btn::-moz-selection {
+	background: none;
+}
+.restarter-toggle input[type=checkbox].tgl::selection, input[type=checkbox].tgl:after::selection, input[type=checkbox].tgl:before::selection, input[type=checkbox].tgl *::selection, input[type=checkbox].tgl *:after::selection, input[type=checkbox].tgl *:before::selection, input[type=checkbox].tgl + .tgl-btn::selection {
+	background: none;
+}
+.restarter-toggle input[type=checkbox].tgl + .tgl-btn {
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+	display: block;
+	height: 2em;
+	outline: 0;
+	position: relative;
+	user-select: none;
+	width: 4em;
+}
+.restarter-toggle input[type=checkbox].tgl + .tgl-btn:after, input[type=checkbox].tgl + .tgl-btn:before {
+	content: "";
+	display: block;
+	height: 100%;
+	position: relative;
+	width: 50%;
+}
+.restarter-toggle input[type=checkbox].tgl + .tgl-btn:after {
+	left: 0;
+}
+.restarter-toggle input[type=checkbox].tgl + .tgl-btn:before {
+	display: none;
+}
+.restarter-toggle input[type=checkbox].tgl:checked + .tgl-btn:after {
+	left: 50%;
+}
+.restarter-toggle input[type=checkbox].tgl-light + .tgl-btn {
+	-webkit-transition: all .4s ease;
+	background: #f0f0f0;
+	border-radius: 2em;
+	padding: 2px;
+	transition: all .4s ease;
+}
+.restarter-toggle input[type=checkbox].tgl-light + .tgl-btn:after {
+	-webkit-transition: all .2s ease;
+	background: #fff;
+	border-radius: 50%;
+	transition: all .2s ease;
+}
+.restarter-toggle input[type=checkbox].tgl-light:checked + .tgl-btn {
+	background: #9FD6AE;
+}
+.restarter-toggle input[type=checkbox].tgl-ios + .tgl-btn {
+	-webkit-transition: all .4s ease;
+	background: #fbfbfb;
+	border: 1px solid #e8eae9;
+	border-radius: 2em;
+	padding: 2px;
+	transition: all .4s ease;
+}
+.restarter-toggle input[type=checkbox].tgl-ios + .tgl-btn:after {
+	-webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+	background: #fbfbfb;
+	border-radius: 2em;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+	transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+}
+.restarter-toggle input[type=checkbox].tgl-ios + .tgl-btn:hover:after {
+	will-change: padding;
+}
+.restarter-toggle input[type=checkbox].tgl-ios + .tgl-btn:active {
+	box-shadow: inset 0 0 0 2em #e8eae9;
+}
+.restarter-toggle input[type=checkbox].tgl-ios + .tgl-btn:active:after {
+	padding-right: .8em;
+}
+.restarter-toggle input[type=checkbox].tgl-ios:checked + .tgl-btn {
+	background: #86d993;
+}
+.restarter-toggle input[type=checkbox].tgl-ios:checked + .tgl-btn:active {
+	box-shadow: none;
+}
+.restarter-toggle input[type=checkbox].tgl-ios:checked + .tgl-btn:active:after {
+	margin-left: -.8em;
+}
+.restarter-toggle input[type=checkbox].tgl-flat + .tgl-btn {
+	-webkit-transition: all .2s ease;
+	background: #fff;
+	border: 4px solid #f2f2f2;
+	border-radius: 2em;
+	padding: 2px;
+	transition: all .2s ease;
+}
+.restarter-toggle input[type=checkbox].tgl-flat + .tgl-btn:after {
+	-webkit-transition: all .2s ease;
+	background: #f2f2f2;
+	border-radius: 1em;
+	content: "";
+	transition: all .2s ease;
+}
+.restarter-toggle input[type=checkbox].tgl-flat:checked + .tgl-btn {
+	border: 4px solid #7FC6A6;
+}
+.restarter-toggle input[type=checkbox].tgl-flat:checked + .tgl-btn:after {
+	background: #7FC6A6;
+	left: 50%;
+}
+.restarter-toggle .disabled-control-title {
+	color: #a0a5aa !important;
+}
+.restarter-toggle > .customize-control-description {
+	margin-top: 10px;
+}
+.restarter-toggle input[type=checkbox].tgl-light:checked + .tgl-btn {
+	background: #0085ba;
+}
+.restarter-toggle input[type=checkbox].tgl-light + .tgl-btn {
+	background: #a0a5aa;
+}
+.restarter-toggle input[type=checkbox].tgl-light + .tgl-btn:after {
+	background: #f7f7f7;
+}
+.restarter-toggle input[type=checkbox].tgl-ios:checked + .tgl-btn {
+	background: #0085ba;
+}
+.restarter-toggle input[type=checkbox].tgl-flat:checked + .tgl-btn {
+	border: 4px solid #0085ba;
+}
+.restarter-toggle input[type=checkbox].tgl-flat:checked + .tgl-btn:after {
+	background: #0085ba;
+}
+.restarter-range-slider {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 100%;
+}
+.restarter-range-slider .range-slider-range {
+	-webkit-appearance: none;
+	background: #d7dcdf;
+	border-radius: 5px;
+	height: 10px;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	width: calc(100% - (95px));
+}
+.restarter-range-slider .range-slider-range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	-webkit-transition: background .15s ease-in-out;
+	appearance: none;
+	background: #0085ba;
+	border-radius: 50%;
+	cursor: pointer;
+	height: 20px;
+	transition: background .15s ease-in-out;
+	width: 20px;
+}
+.restarter-range-slider .range-slider-range::-webkit-slider-thumb:hover {
+	background: #0085ba;
+}
+.restarter-range-slider .range-slider-range:active::-webkit-slider-thumb {
+	background: #0085ba;
+}
+.restarter-range-slider .range-slider-range::-moz-range-thumb {
+	-webkit-transition: background .15s ease-in-out;
+	background: #0085ba;
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	height: 20px;
+	transition: background .15s ease-in-out;
+	width: 20px;
+}
+.restarter-range-slider .range-slider-range::-moz-range-thumb:hover {
+	background: #0085ba;
+}
+.restarter-range-slider .range-slider-range:active::-moz-range-thumb {
+	background: #0085ba;
+}
+.restarter-range-slider > span {
+	flex: 1 0 0;
+	vertical-align: middle;
+	width: 100%;
+}
+.restarter-range-slider .range-slider-value {
+	background: #0085ba;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	line-height: 20px;
+	margin-left: 8px;
+	padding: 5px 10px;
+	position: relative;
+	text-align: center;
+	width: 60px;
+}
+.restarter-range-slider .range-slider-value:after {
+	border-bottom: 7px solid transparent;
+	border-right: 7px solid #0085ba;
+	border-top: 7px solid transparent;
+	content: '';
+	height: 0;
+	left: -7px;
+	position: absolute;
+	top: 8px;
+	width: 0;
+}
+.restarter-range-slider ::-moz-range-track {
+	background: #d7dcdf;
+	border: 0;
+}
+.restarter-range-slider input::-moz-focus-inner, .restarter-range-slider input::-moz-focus-outer {
+	border: 0;
+}
+.restarter-gallery .gallery-screenshot {
+	display: block;
+	margin-bottom: 10px;
+	margin-left: -5px;
+	margin-right: -5px;
+	overflow: hidden;
+	position: relative;
+}
+.restarter-gallery .gallery-screenshot .screen-thumb {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	padding: 5px;
+	width: 50%;
+}
+.restarter-gallery .gallery-screenshot .screen-thumb:nth-child(2n+1) {
+	clear: both;
+}
+.restarter-gallery .gallery-screenshot .screen-thumb img {
+	border: 1px solid #EEE;
+	vertical-align: middle;
+}
+.restarter-gallery #clear-gallery {
+	float: right;
+}
+.restarter-type-icon {
+	overflow: hidden;
+}
+.restarter-selected-icon {
+	background: #F6F6F6;
+	border: 1px solid #EEE;
+	cursor: pointer;
+	font-size: 28px;
+	height: 45px;
+	line-height: 45px;
+	margin-right: 45px;
+	position: relative;
+	text-align: center;
+}
+.restarter-selected-icon [class^="icon-"] {
+	display: block;
+	line-height: 45px;
+}
+.restarter-selected-icon span {
+	background: #F6F6F6;
+	border: 1px solid #EEE;
+	font-size: 20px;
+	height: 45px;
+	position: absolute;
+	right: -45px;
+	top: -1px;
+	width: 45px;
+}
+.restarter-icon-list {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid #EEE;
+	border-right: 0;
+	border-top: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: none;
+	font-size: 18px;
+	height: 215px;
+	overflow-y: scroll;
+	padding-bottom: 4%;
+}
+.restarter-icon-list li {
+	border: 1px solid #b2b2b2;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin: 4% 2% 0;
+	text-align: center;
+	width: 20%;
+}
+.restarter-icon-list li:hover {
+	background: #333;
+	border: 1px solid #333;
+	color: #FFF;
+}
+.restarter-icon-list li.icon-active {
+	background: #0073aa;
+	border: 1px solid #0073aa;
+	color: #FFF;
+}
+.restarter-radio-image input[type=radio] {
+	display: none;
+}
+.restarter-radio-image div.image.ui-buttonset {
+	margin-top: 20px;
+}
+.restarter-radio-image div.image.ui-buttonset label img {
+	border: none;
+	cursor: pointer;
+	max-width: 100%;
+	opacity: .5;
+	transition: opacity 0.3s ease;
+}
+.restarter-radio-image div.image.ui-buttonset input[type=radio]:first-of-type + label {
+	display: block;
+	float: left;
+	margin-right: 4%;
+	width: 48%;
+}
+.restarter-radio-image div.image.ui-buttonset input[type=radio]:last-of-type + label {
+	display: block;
+	float: left;
+	margin-right: 0;
+	width: 48%;
+}
+.restarter-radio-image div.image.ui-buttonset input[type=radio]:checked + label img, .restarter-radio-image div.image.ui-buttonset label img:hover {
+	opacity: 1;
+}
+#accordion-section-restarter_go_plus_control {
+	display: list-item !important;
+	position: relative !important;
+	height: auto !important;
+}
+#accordion-section-restarter_go_plus_control .accordion-section-title:hover, #accordion-section-restarter_go_plus_control .accordion-section-title:focus {
+	background-color: #FFF;
+}
+#accordion-section-restarter_go_plus_control .accordion-section-title .button {
+	border: none;
+	box-shadow: none;
+	background-color: #ff3366;
+	text-transform: uppercase;
+	min-width: 98% !important;
+	margin: 10px 0;
+	height: 36px !important;
+	line-height: 36px;
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+	text-align: center;
+	display: block;
+	float: left;
+	text-shadow: none;
+	font-weight: 600;
+}
+.control-section-restarter-plus .accordion-section-title {
+	padding-bottom: 60px;
+	text-align: center;
+}
+#accordion-section-restarter_go_plus_control .accordion-section-title .button:hover {
+	background-color: #ff668c;
+}
