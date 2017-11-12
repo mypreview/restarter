@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Restarter
- * @since       1.0.0
+ * @since       1.1.0
  */
 (function(window, $, undefined) {
 	'use strict';
@@ -138,16 +138,6 @@
 	    $shareToggle.removeClass('active').find('.dropdown').removeClass('expanded');
 	});
 
-	// Tabs Prev/Next Controls
-	var $bulletTabs = $('.custom-controls .bullets li');
-	$('.custom-controls .prev-btn').on('click', function() {
-	    $bulletTabs.filter('.active').prev('li').find('a[data-toggle="tab"]').tab('show');
-	});
-
-	$('.custom-controls .next-btn').on('click', function() {
-	    $bulletTabs.filter('.active').next('li').find('a[data-toggle="tab"]').tab('show');
-	});
-
 	// Tooltips
 	var $tooltip = $('[data-toggle="tooltip"]');
 	if ($tooltip.length > 0) {
@@ -186,6 +176,26 @@
 				autoHeight: autoheight
 			} );
 		} );
+	}
+
+	// Phone Carousel
+	var $phoneCarousel = $('.phone-carousel .inner');
+	if ($phoneCarousel.length > 0) {
+	    $phoneCarousel.each(function() {
+	        var dataLoop = $(this).parents('.phone-carousel').data('loop'),
+	            autoPlay = $(this).parents('.phone-carousel').data('autoplay'),
+	            timeOut = $(this).parents('.phone-carousel').data('interval');
+	        $(this).owlCarousel({
+	            items: 1,
+	            loop: dataLoop,
+	            margin: 1,
+	            nav: false,
+	            dots: true,
+	            navText: [, ],
+	            autoplay: autoPlay,
+	            autoplayTimeout: timeOut
+	        });
+	    });
 	}
 
 	// if adminbar exist (should check for visible?) then add margin to our navbar
