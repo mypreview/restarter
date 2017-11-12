@@ -189,10 +189,6 @@ $widget-title-font-size: floor($font-size-base * 0.9375);
 $widget-title-color: $gray-darker;
 $widget-title-icon-color: $gray;
 $widget-border-color: #eeeeee;
-$widget-insta-icon-size: 22px;
-$widget-insta-icon-color: #fff;
-$widget-insta-overlay-color: $brand-default;
-$widget-insta-overlay-opacity: .65;
 $widget-tag-color: $brand-default;
 $widget-tag-hover-color: $brand-primary;
 $widget-tag-height: 30px;
@@ -208,26 +204,6 @@ $side-nav-font-size: $font-size-middle;
 $side-nav-li-border: 1px solid #eeeeee;
 $side-nav-color: $brand-default;
 $side-nav-active-color: $brand-primary;
-//== Tabs
-//
-
-$nav-tabs-font-size: floor($font-size-base * 0.9375);
-// 15px
-$nav-link-padding: 11px 20px;
-$nav-tabs-link-color: $brand-default;
-$nav-tabs-link-hover-color: $brand-primary;
-$nav-tabs-active-link-hover-bg: #fff;
-$nav-tabs-content-bg: #fff;
-$prev-next-btn-size: 37px;
-//== Filters
-//
-
-$filters-label-color: $gray;
-$filters-link-color: $brand-default;
-$filters-link-hover-color: $brand-primary;
-$filters-link-icon-color: $gray;
-$filters-dropdown-width: 248px;
-$filters-dropdown-bg: #fff;
 //== Panels and Accordions
 //
 
@@ -247,60 +223,6 @@ $intro-phone-wrap-height: 520px;
 $intro-phone-width: 400px;
 $intro-phone-screen-width: 306px;
 $intro-bubble-max-width: 515px;
-// == Shortcodes
-//
-
-// Icon Box
-$icon-box-hover-bg: rgba($brand-default, .04);
-$icon-box-icon-bg: rgba($brand-default, .04);
-$icon-box-icon-color: $brand-default;
-$icon-box-title-font-size: $font-size-lead;
-$icon-box-icon-size: 122px;
-$icon-box-icon-font-size: 48px;
-$icon-box-text-color: $gray;
-$icon-box-hover-icon-color: $brand-primary;
-// Clients
-$client-width: 150px;
-$client-opacity: .4;
-$client-hover-opacity: .9;
-// Contacts Split Map/Form Block
-$contacts-bg: #fff;
-//== Pricing Table
-$pricing-header-overlay-opacity: .75;
-$table-border-color: $gray-light;
-$pricing-header-color: #fff;
-$pricing-table-font-size: floor($font-size-base * 0.9375);
-// 15px
-$pricing-table-font-color: $gray-darker;
-$plan-name-font-size: $font-size-h2;
-$plan-price-font-size: 80px;
-// Testimonials
-$testim-author-ava-size: 72px;
-// Counters
-$counter-icon-size: 48px;
-$counter-icon-color: $brand-primary;
-$counter-heading-size: floor($font-size-base * 3.125);
-// 50px
-$counter-subheading-size: floor($font-size-base * 1.125);
-// 18px
-$counter-subheading-color: $gray;
-// Video Popup Button
-$video-popup-btn-size: 122px;
-$video-popup-icon-size: 44px;
-$video-popup-btn-bg: rgba($brand-default, .04);
-$video-popup-btn-color: $brand-default;
-$video-popup-btn-hover-color: $brand-primary;
-$video-popup-btn-light-bg: rgba(#fff, .15);
-$video-popup-btn-light-color: #fff;
-$video-popup-btn-light-hover-bg: rgba(#fff, 1);
-// Device Gallery
-$dg-device-max-width: 368px;
-$dg-device-height: 505px;
-$dg-thumb-width: 176px;
-$dg-thumb-height: 144px;
-$dg-thumb-gap: 18px;
-$dg-thumb-bg: #f9f9f9;
-$dg-thumb-opacity: .65;
 //== Tooltips
 //
 
@@ -354,9 +276,9 @@ $post-author-ava-size: 128px;
 //
 
 $carousel-navs-size: 28px;
-$carousel-navs-color: $gray-lighter;
+$carousel-navs-color: $brand-default;
 $carousel-dots-size: 6px;
-$carousel-dots-color: $gray-lighter;
+$carousel-dots-color: $brand-default;
 $carousel-controls-opacity: .5;
 //== Media queries (responsive breackpoints)
 //## Descktop, Tablet, Mobile
