@@ -22,11 +22,11 @@
  */
 // Assign the "Restarter" info to constants.
 $restarter_theme = wp_get_theme('restarter');
-define('RestarterThemeName', $restarter_theme->get('Name'));
-define('RestarterThemeURI', $restarter_theme->get('ThemeURI'));
-define('RestarterThemeAuthor', $restarter_theme->get('Author'));
-define('RestarterThemeAuthorURI', $restarter_theme->get('AuthorURI'));
-define('RestarterThemeVersion', $restarter_theme->get('Version'));
+define('RESTARTER_THEME_NAME', $restarter_theme->get('Name'));
+define('RESTARTER_THEME_URI', $restarter_theme->get('ThemeURI'));
+define('RESTARTER_THEME_AUTHOR', $restarter_theme->get('Author'));
+define('RESTARTER_THEME_AUTHOR_URI', $restarter_theme->get('AuthorURI'));
+define('RESTARTER_THEME_VERSION', $restarter_theme->get('Version'));
 // Restarter only works in WordPress 4.7 or later.
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')):
 	require get_template_directory() . '/includes/back-compat.php';
@@ -38,7 +38,7 @@ endif;
  * @since 1.0.0
  */
 $restarter = (object)array(
-	'version' 			=> 		RestarterThemeVersion,
+	'version' 			=> 		RESTARTER_THEME_VERSION,
 	'main' 				=> 		require 'includes/class-restarter.php',
 	'customizer' 		=> 		require 'includes/class-restarter-customizer.php',
 	'bs_navwalker' 		=> 		require 'includes/class-restarter-bootstrap-navwalker.php',
