@@ -5,7 +5,7 @@
  * @package 		Hooked into "restarter_after_post_content"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.0
+ * @since 		    1.1.0
  */
 ?>
 <!-- Post Author -->
@@ -22,7 +22,7 @@
 			<div class="author-info">
 				<h3 class="author-name"><?php echo esc_html(get_the_author()); ?></h3>
 				<a class="author-view-all author-link" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" rel="author">
-					<?php printf(__('View all posts by %s', 'restarter'), get_the_author()); ?>
+					<?php printf(esc_attr__('View all posts by %s', 'restarter'), get_the_author()); ?>
 				</a><!-- .author-link -->
 				<p><?php the_author_meta('description'); ?></p>
 			</div><!-- .author-info -->

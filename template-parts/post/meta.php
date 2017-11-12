@@ -11,7 +11,7 @@
 <div class="single-post-toolbar space-top-2x space-bottom-2x">
 	<div class="column">
 		<?php Restarter::entry_date(); ?>
-		<span class="post-author">
+		<span class="post-author" itemscope="itemscope" itemtype="https://schema.org/Person">
 			<?php 
 			esc_html_e('by ', 'restarter');
 			the_author_posts_link(); 
@@ -22,7 +22,7 @@
 		if(! empty($get_categories)):
 		?>
 		<span class="delimiter">|</span>
-		<span class="post-taxonomy">
+		<span class="post-taxonomy" itemprop="about">
 			<?php
 			esc_html_e('in ', 'restarter');
 			the_category(', '); 
@@ -34,7 +34,7 @@
 		if(! empty($get_tags)):
 		?>
 		<span class="delimiter">|</span>
-		<span class="post-taxonomy">
+		<span class="post-taxonomy" itemprop="keywords">
 			<?php
 			the_tags('#', ' #', ''); 
 			?>

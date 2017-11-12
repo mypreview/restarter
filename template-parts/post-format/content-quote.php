@@ -5,11 +5,11 @@
  *
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.0
+ * @since 		    1.1.0
  */
 ?>
 <!-- Post -->
-<article id="post-<?php the_ID(); ?>" <?php post_class('tile post-tile format-quote'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('tile post-tile format-quote'); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<?php 
     $get_content = trim(get_the_content());
     preg_match('/<blockquote.*?>/', $get_content, $quote_matches);
@@ -44,9 +44,10 @@
 			</span><!-- .comments-count -->
 			<?php endif; ?>
 		</div>
+		<div itemprop="text">
 		<?php 
 		endif;
-		the_title('<h3 class="post-title"><a href="' . esc_url(get_the_permalink()) . '" target="_self">', '</a></h3>');
+		the_title('<h3 class="post-title" itemprop="headline"><a href="' . esc_url(get_the_permalink()) . '" target="_self" rel="bookmark" itemprop="url">', '</a></h3>');
 		if (empty($quote_matches)):
 		?>
 		<blockquote><?php the_content(''); ?></blockquote>
@@ -55,9 +56,10 @@
 			the_content('');
 		endif;
 		?>
+		</div>
 		<div class="post-meta">
-			<?php if (get_post_type() === 'post'): ?>
-			<span class="post-author">
+			<?php if ('post' === get_post_type()): ?>
+			<span class="post-author" itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
 				<?php the_author_posts_link(); ?>
 			</span><!-- .post-author -->
 			<?php
@@ -66,7 +68,7 @@
 			if(! empty($get_categories)):
 			?>
 			<span class="delimiter">|</span>
-			<span class="post-taxonomy">
+			<span class="post-taxonomy" itemprop="about">
 				<?php
 				esc_html_e('in ', 'restarter');
 				the_category(', '); 

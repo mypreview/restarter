@@ -5,11 +5,11 @@
  *
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.0
+ * @since 		    1.1.0
  */
 ?>
 <!-- Post -->
-<article id="post-<?php the_ID(); ?>" <?php post_class('tile post-tile format-gallery'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('tile post-tile format-gallery'); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<?php if (get_post_gallery() && ! post_password_required() && ! is_attachment()): ?>
 	<div class="post-thumb">
 		<?php echo get_post_gallery(); ?>
@@ -41,16 +41,20 @@
 		</div>
 		<?php 
 		endif;
-		the_title('<h3 class="post-title"><a href="' . esc_url(get_the_permalink()) . '" target="_self">', '</a></h3>');
+		the_title('<h3 class="post-title" itemprop="headline"><a href="' . esc_url(get_the_permalink()) . '" target="_self" rel="bookmark" itemprop="url">', '</a></h3>');
+		?>
+		<div itemprop="text">
+		<?php
 		if (strpos(get_the_content(), 'more-link') === false):
 			the_excerpt();
 		else:
 			the_content('');
 		endif;
 		?>
+		</div>
 		<div class="post-meta">
-			<?php if (get_post_type() === 'post'): ?>
-			<span class="post-author">
+			<?php if ('post' === get_post_type()): ?>
+			<span class="post-author" itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
 				<?php the_author_posts_link(); ?>
 			</span><!-- .post-author -->
 			<?php
@@ -59,7 +63,7 @@
 			if(! empty($get_categories)):
 			?>
 			<span class="delimiter">|</span>
-			<span class="post-taxonomy">
+			<span class="post-taxonomy" itemprop="about">
 				<?php
 				esc_html_e('in ', 'restarter');
 				the_category(', '); 
