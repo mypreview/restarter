@@ -5,12 +5,12 @@
  * @package 		Hooked into "restarter_after_loop"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.1
+ * @since 		    1.1.0
  */
 
 if (is_active_sidebar('sidebar') && ! Restarter::is_fluid_template()):
 ?>
-		</div><!-- .col-lg-3.col-md-4.col-sm-5 -->
+		</div><!-- .<?php echo esc_attr(apply_filters('restarter_content_wrapper_cls', 'col-lg-9 col-md-8 col-sm-7')); ?> -->
 		<?php get_sidebar(); ?>
 	</div><!-- .row -->
 </div><!-- .container -->

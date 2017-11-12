@@ -5,7 +5,7 @@
  * @package 		Hooked into "restarter_before_loop"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.1
+ * @since 		    1.1.0
  */
 
 if (is_active_sidebar('sidebar') && ! Restarter::is_fluid_template()):
@@ -14,7 +14,7 @@ if (is_active_sidebar('sidebar') && ! Restarter::is_fluid_template()):
 <div id="restarter-container" class="container space-bottom-2x">
 	<div class="row">
 		<!-- Content -->
-		<div class="col-lg-9 col-md-8 col-sm-7">
+		<div class="<?php echo esc_attr(apply_filters('restarter_content_wrapper_cls', 'col-lg-9 col-md-8 col-sm-7')); ?>">
 <?php else: ?>
 <!-- Content -->
 <div id="restarter-container" class="content-no-sidebar space-bottom-2x">
