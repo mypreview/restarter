@@ -3,8 +3,8 @@
  *
  * @author      	Mahdi Yazdani
  * @package     	Restarter
- * @dependencies 	Bourbon
- * @since       	1.0.1
+ * @dependencies 	Bourbon, Bootstrap, Feather, Font Awesome, PIXEDEN
+ * @since       	1.1.0
  */
 
 // Bourbon SASS Mixins Library
@@ -36,9 +36,7 @@
 @import "shortcodes";
 @import "widgets";
 @import "tooltips";
-@import "navs";
 @import "panels";
 @import "carousel";
-@import "components";
 @import "footer";
 @import "specialty";
