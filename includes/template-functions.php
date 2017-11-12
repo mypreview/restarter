@@ -4,7 +4,7 @@
  *
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.0
+ * @since 		    1.1.0
  */
 // ======================================================================
 // Hooked into "restarter_before_header"
@@ -62,6 +62,38 @@ if (!function_exists('restarter_header_toolbar')):
 
 	{
 		get_template_part('template-parts/header/toolbar');
+	}
+endif;
+// ======================================================================
+// Hooked into "restarter_before_homepage"
+// ======================================================================
+/**
+ * Homepage jumbotron.
+ *
+ * @package Hooked into "restarter_before_homepage".
+ * @since 1.1.0
+ */
+if (!function_exists('restarter_jumbotron')):
+	function restarter_jumbotron()
+
+	{
+		get_template_part('template-parts/homepage/jumbotron');
+	}
+endif;
+// ======================================================================
+// Hooked into "restarter_homepage"
+// ======================================================================
+/**
+ * Homepage content.
+ *
+ * @package Hooked into "restarter_homepage".
+ * @since 1.1.0
+ */
+if (!function_exists('restarter_homepage_content')):
+	function restarter_homepage_content()
+
+	{
+		get_template_part('template-parts/homepage/content');
 	}
 endif;
 // ======================================================================
