@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Restarter
- * @since 	    1.0.0
+ * @since 	    1.1.0
  */
 /**
  * Header
@@ -19,6 +19,15 @@ add_action('restarter_before_header', 'restarter_skip_links', 0);
 add_action('restarter_header', 'restarter_site_brand', 10);
 add_action('restarter_header', 'restarter_primary_navigation', 20);
 add_action('restarter_header', 'restarter_header_toolbar', 30);
+/**
+ * Homepage
+ *
+ * @see  restarter_jumbotron()					-> template-functions.php
+ * @see  restarter_homepage_content()			-> template-functions.php
+ * @since 1.1.0
+ */
+add_action('restarter_before_homepage', 'restarter_jumbotron', 10);
+add_action('restarter_homepage', 'restarter_homepage_content', 80);
 /**
  * Loop
  *
