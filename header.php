@@ -10,10 +10,10 @@
  * @since       1.0.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+<html <?php language_attributes(); ?> class="no-js no-svg" <?php Restarter::html_tag_schema(); ?>>
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>" />
-		<meta name="author" content="<?php echo esc_attr(RestarterThemeAuthor); ?>" />
+		<meta name="author" content="<?php echo esc_attr(RESTARTER_THEME_AUTHOR); ?>" />
 		<!--Mobile Specific Meta Tag-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<meta name="mobile-web-app-capable" content="yes" />
@@ -35,7 +35,7 @@
 		<!-- Page Wrapper -->
 		<div class="page-wrapper">
 			<!-- Navbar -->
-			<header class="navbar<?php echo esc_attr(apply_filters('restarter_header_extra_cls', '')); ?>" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+			<header class="navbar<?php echo esc_attr(apply_filters('restarter_header_extra_cls', '')); ?>" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
 				<div class="container">
 					<div class="inner">
 						<?php
