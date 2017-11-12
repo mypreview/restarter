@@ -13,8 +13,9 @@
 	<!-- Mobile Tools -->
 	<div class="mobile-tools">
 		<?php 
-		get_search_form(); 
-		
+		if (apply_filters('restarter_header_search', true)): 
+			get_search_form(); 
+		endif;
 		if (apply_filters('restarter_header_social_links', true) && has_nav_menu('header-social-links')):
 			wp_nav_menu(apply_filters('restarter_header_social_links_args', array(
 				'depth' => 1,
