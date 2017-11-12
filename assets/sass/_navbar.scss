@@ -58,9 +58,6 @@ header .site-logo-text { width: 300px; }
         @include margin(null 10px null null);
         @include size(1px, $tool-divider-height);
     }
-    .btn {
-        @include margin(null 0 null 6px);
-    }
     // Search
     .search-btn {
         @include margin(null 10px null null);
@@ -226,7 +223,7 @@ header .site-logo-text { width: 300px; }
                         @include transition(opacity .25s);
                     }
                 }
-                &.active {
+                &.active:hover {
                     > a {
                         z-index: 5;
                         &:after {
