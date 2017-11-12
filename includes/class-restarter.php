@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Restarter
- * @since 	    1.0.1
+ * @since 	    1.1.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -20,7 +20,7 @@ if (!class_exists('Restarter')):
 		/**
 		 * Setup class.
 		 *
-		 * @since 1.0.0
+		 * @since 1.1.0
 		 */
 		public function __construct()
 
@@ -63,6 +63,10 @@ if (!class_exists('Restarter')):
 				$this,
 				'change_logo_class'
 			) , 10);
+			add_filter('nav_menu_link_attributes', array(
+				$this,
+				'add_attribute'
+			) , 10, 3);
 			add_filter('excerpt_length', array(
 				$this,
 				'custom_excerpt_length'
@@ -98,6 +102,14 @@ if (!class_exists('Restarter')):
 			add_filter('comment_form_fields', array(
 				$this,
 				'move_comment_field_to_bottom'
+			) , 10, 1);
+			add_filter('restarter_content_wrapper_cls', array(
+				$this,
+				'content_wrapper_cls'
+			) , 10, 1);
+			add_filter('restarter_sidebar_wrapper_cls', array(
+				$this,
+				'sidebar_wrapper_cls'
 			) , 10, 1);
 		}
 		/**
@@ -223,24 +235,21 @@ if (!class_exists('Restarter')):
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0.1
+		 * @since 1.1.0
 		 */
 		public function enqueue()
 
 		{
-			$is_customize_preview = false;
-			if (is_customize_preview()):
-				$is_customize_preview = true;
-			endif;
 			wp_enqueue_style('restarter-font', add_query_arg(apply_filters('restarter_default_font_family', array(
 				'family' => urlencode('Lato:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i') ,
 				'subset' => urlencode('latin,latin-ext')
-			)) , 'https://fonts.googleapis.com/css') , array() , RestarterThemeVersion);
-			wp_enqueue_style('restarter-styles', $this->public_assets_url . 'css/restarter.css', array() , RestarterThemeVersion);
+			)) , 'https://fonts.googleapis.com/css') , array() , RESTARTER_THEME_VERSION);
+			wp_enqueue_style('restarter-styles', $this->public_assets_url . 'css/restarter.css', array() , RESTARTER_THEME_VERSION);
+			wp_add_inline_style('restarter-styles', Restarter_Customizer::inline_style());
 			wp_enqueue_script('jquery');
 			wp_register_script('restarter-scripts', $this->public_assets_url . 'js/restarter.js', array(
 				'jquery'
-			) , RestarterThemeVersion, true);
+			) , RESTARTER_THEME_VERSION, true);
 			wp_localize_script('restarter-scripts', 'restarter_vars', array(
 				'ajaxurl' => admin_url('admin-ajax.php') ,
 				'security' => wp_create_nonce('restarter_theme_nonce') ,
@@ -308,7 +317,7 @@ if (!class_exists('Restarter')):
 
 		{
 			if (is_singular() && pings_open()):
-				printf('<link rel="pingback" href="%s">' . "\n", get_bloginfo('pingback_url'));
+				printf('<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo('pingback_url')));
 			endif;
 		}
 		/**
@@ -359,6 +368,17 @@ if (!class_exists('Restarter')):
 			$html = str_replace('class="custom-logo"', 'class="img-responsive"', $html);
 			$html = str_replace('class="custom-logo-link"', 'class="site-logo custom-logo-link"', $html);
 			return $html;
+		}
+		/**
+		 * Add itemprop="url" markup to each link in the navigation menu
+		 *
+		 * @since 1.1.0
+		 */
+		public function add_attribute($atts, $item, $args)
+
+		{
+			$atts['itemprop'] = 'url';
+			return $atts;
 		}
 		/**
 		 * Control Excerpt Length Using Filters.
@@ -454,7 +474,7 @@ if (!class_exists('Restarter')):
 		 *
 		 * @since 1.0.0
 		 */
-		private function get_social_links_icons()
+		public static function get_social_links_icons()
 
 		{
 			$social_links_icons = array(
@@ -572,58 +592,83 @@ if (!class_exists('Restarter')):
 		/**
 		 * Display the breadcrumbs for the current page.
 		 *
-		 * @since 1.0.1
+		 * @since 1.1.0
 		 */
 		public static function the_breadcrumb()
 
 		{
+			$is_front_page_configured = Restarter::is_front_page_configured();
+			$get_front_page_title = Restarter::get_front_page_title();
+			$get_front_page_url = Restarter::get_front_page_url();
+			$is_posts_page_configured = Restarter::is_posts_page_configured();
+			$get_posts_page_title = Restarter::get_posts_page_title();
+			$get_posts_page_url = Restarter::get_posts_page_url();
+			if ($is_front_page_configured):
+			?>
+			<a href="<?php echo esc_url($get_front_page_url); ?>" target="_self"><?php echo esc_html($get_front_page_title); ?></a>
+			<?php if (is_home()): ?>
+			<span><?php echo esc_html($get_posts_page_title); ?></span>
+			<?php elseif (! is_page()): ?>
+			<a href="<?php echo esc_url($get_posts_page_url); ?>" target="_self"><?php echo esc_html($get_posts_page_title); ?></a>
+			<?php
+				endif;
+			endif;
 			if (!is_home()):
+				if (!$is_front_page_configured):
 				?>
 				<a href="<?php echo esc_url(home_url()); ?>" target="_self"><?php esc_html_e('Home', 'restarter'); ?></a>
 				<?php
-				if (is_category() && ! is_single()):
+				endif;
+				if (is_category() && !is_single()):
 					single_cat_title('<span>', '</span>');
 				elseif (is_page()):
 					the_title('<span>', '</span>');
 				elseif (is_single()):
 					$categories = get_the_category();
-					if (is_array($categories) && ! empty($categories)):
-						foreach ((array) $categories as $category):
+					if (is_array($categories) && !empty($categories)):
+						foreach((array)$categories as $category):
 							$category_id = absint($category->term_id);
-						?>
-						<a href="<?php echo esc_url(get_category_link($category_id)); ?>" target="_self"><?php echo esc_html($category->name); ?></a>
-						<?php
+				?>
+							<a href="<?php echo esc_url(get_category_link($category_id)); ?>" target="_self"><?php echo esc_html($category->name); ?></a>
+				<?php
 						endforeach;
 					endif;
 					the_title('<span>', '</span>');
 				elseif (is_day()):
 				?>
 				<span>
-					<?php 
+					<?php
 					esc_html_e('Archive for ', 'restarter');
-					the_time('F jS, Y'); 
+					$format_day = apply_filters('restarter_breadcrumbs_archive_day', 'F jS, Y');
+					the_time($format_day);
 					?>
 				</span>
 				<?php elseif (is_month()): ?>
 				<span>
-					<?php 
+					<?php
 					esc_html_e('Archive for ', 'restarter');
-					the_time('F, Y'); 
+					$format_month = apply_filters('restarter_breadcrumbs_archive_month', 'F, Y');
+					the_time($format_month);
 					?>
 				</span>
 				<?php elseif (is_year()): ?>
 				<span>
-					<?php 
+					<?php
 					esc_html_e('Archive for ', 'restarter');
-					the_time('Y'); 
+					$format_year = apply_filters('restarter_breadcrumbs_archive_month', 'Y');
+					the_time($format_year);
 					?>
+				</span>
+				<?php elseif (is_author()): ?>
+				<span>
+				<?php echo get_the_author(); ?>
 				</span>
 				<?php elseif (is_search()): ?>
 				<span>
-					<?php 
-					esc_html_e('Search results for ', 'restarter');
-					echo esc_html(wp_unslash($_GET['s'])); 
-					?>
+				<?php
+				esc_html_e('Search results for ', 'restarter');
+				echo esc_html(wp_unslash($_GET['s']));
+				?>
 				</span>
 				<?php
 				elseif (is_tag()):
@@ -640,8 +685,8 @@ if (!class_exists('Restarter')):
 
 		{
 			$format_prefix = '%2$s';
-			$date = sprintf('<span class="post-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span><!-- .post-date -->', esc_url(get_permalink()) , esc_attr(get_the_date('c')) , esc_html(sprintf($format_prefix, get_post_format_string(get_post_format()) , get_the_date())));
-			if ($echo && get_post_type() === 'post'):
+			$date = sprintf('<span class="post-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" itemprop="datePublished">%3$s</time></a></span><!-- .post-date -->', esc_url(get_permalink()) , esc_attr(get_the_date('c')) , esc_html(sprintf($format_prefix, get_post_format_string(get_post_format()) , get_the_date())));
+			if ($echo && 'post' === get_post_type()):
 				echo $date;
 			endif;
 			return $date;
@@ -658,6 +703,16 @@ if (!class_exists('Restarter')):
 			return 0 !== $multipage;
 		}
 		/**
+		 * Homepage callback
+		 *
+		 * @since 1.1.0
+		 */
+		public static function is_homepage_template()
+
+		{
+			return is_page_template('page-templates/template-homepage.php') ? true : false;
+		}
+		/**
 		 * Query fluid template usage.
 		 *
 		 * @since 1.0.0
@@ -666,6 +721,95 @@ if (!class_exists('Restarter')):
 
 		{
 			return is_page_template('page-templates/template-fluid.php') ? true : false;
+		}
+		/**
+		 * Query if the static front page already configured and exists.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function is_front_page_configured()
+
+		{
+			$get_front_page = get_option('page_on_front', true);
+			return (!empty($get_front_page)) ? true : false;
+		}
+		/**
+		 * Get front page title.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function get_front_page_title()
+
+		{
+			$get_front_page = get_option('page_on_front', true);
+			($get_front_page) ? $front_page_title = get_the_title($get_front_page) : $front_page_title = '';
+			return $front_page_title;
+		}
+		/**
+		 * Get front page direct slug / URL.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function get_front_page_url()
+
+		{
+			$get_front_page = get_option('page_on_front', true);
+			($get_front_page) ? $front_page_url = get_permalink($get_front_page) : $front_page_url = '';
+			return $front_page_url;
+		}
+		/**
+		 * Query if the blog posts page already configured and exists.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function is_posts_page_configured()
+
+		{
+			$get_posts_page = get_option('page_for_posts', true);
+			return (!empty($get_posts_page)) ? true : false;
+		}
+		/**
+		 * Get blog page title.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function get_posts_page_title()
+
+		{
+			$get_posts_page = get_option('page_for_posts', true);
+			($get_posts_page) ? $posts_page_title = get_the_title($get_posts_page) : $posts_page_title = '';
+			return $posts_page_title;
+		}
+		/**
+		 * Get blog page direct slug / URL.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function get_posts_page_url()
+
+		{
+			$get_posts_page = get_option('page_for_posts', true);
+			($get_posts_page) ? $posts_page_url = get_permalink($get_posts_page) : $posts_page_url = '';
+			return $posts_page_url;
+		}
+		/**
+		 * Schema type.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function html_tag_schema()
+
+		{
+			$schema = 'https://schema.org/';
+			$type = 'WebPage';
+			if (is_singular('post')):
+				$type = 'Article';
+			elseif (is_author()):
+				$type = 'ProfilePage';
+			elseif (is_search()):
+				$type = 'SearchResultsPage';
+			endif;
+			echo 'itemscope="itemscope" itemtype="' . esc_attr($schema) . esc_attr($type) . '"';
 		}
 		/**
 		 * Comments list template.
@@ -723,6 +867,34 @@ if (!class_exists('Restarter')):
 					</div><!-- .comment-body -->
 				</div><!-- .inner -->
 			<?php
+		}
+		/**
+		 * Overriding content wrapper CSS class names.
+		 *
+		 * @since 1.1.0
+		 */
+		public function content_wrapper_cls($cls) 
+
+		{
+			$layout = esc_html(get_theme_mod('restarter_layout_sidebar', 'right'));
+			if (isset($layout) && !empty($layout) && 'left' === $layout):
+				$cls = 'col-lg-9 col-md-8 col-sm-7 col-lg-push-3 col-md-push-4 col-sm-push-5';
+			endif;
+			return $cls;
+		}
+		/**
+		 * Overriding sidebar wrapper CSS class names.
+		 *
+		 * @since 1.1.0
+		 */
+		public function sidebar_wrapper_cls($cls) 
+
+		{
+			$layout = esc_html(get_theme_mod('restarter_layout_sidebar', 'right'));
+			if (isset($layout) && !empty($layout) && 'left' === $layout):
+				$cls = 'col-lg-3 col-md-4 col-sm-5 col-lg-pull-9 col-md-pull-8 col-sm-pull-7';
+			endif;
+			return $cls;
 		}
 	}
 endif;
