@@ -280,7 +280,7 @@ if (!class_exists('Restarter_Radio_Image_Control')):
 			<div class="restarter-radio-image">
 	            <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
 	            <span class="description customize-control-description"><?php echo esc_html($this->description); ?></span>
-	            <div id="input_<?php echo esc_attr($this->id); ?>" class="image">
+	            <div id="input_<?php echo esc_attr($this->id); ?>" class="image ui-buttonset">
 					<?php foreach ($this->choices as $value => $label ) : ?>
 						<input class="image-select" type="radio" value="<?php echo esc_attr($value); ?>" id="<?php echo esc_attr($this->id . $value); ?>" name="<?php echo esc_attr($name); ?>" <?php $this->link(); checked($this->value(), $value); ?>>
 							<label for="<?php echo esc_attr($this->id) . esc_attr($value); ?>">
