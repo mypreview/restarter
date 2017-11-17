@@ -1,3 +1,8 @@
+= 1.1.1 =
+* Compatibility with WordPress 4.9.
+* Updated main stylesheet.
+* Updated font icon picker Customizer control.
+
 = 1.1.0 =
 * Updated language file.
 * Updated main stylesheet.
