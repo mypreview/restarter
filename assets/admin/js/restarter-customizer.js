@@ -3,9 +3,9 @@
  *
  * @author      Mahdi Yazdani
  * @package     Restarter
- * @since       1.1.0
+ * @since       1.1.1
  */
-(function(window, $, undefined, api) {
+(function(window, $, undefined) {
     jQuery(document).ready(function($) {
         'use strict';
         // Gallery control.
@@ -72,15 +72,19 @@
         });
         $('body').on('click', '.restarter-selected-icon', function() {
             $(this).next().slideToggle();
-        });
-        // Extends our custom section.
-        api.sectionConstructor['restarter_go_plus_control'] = api.Section.extend({
-            // No events for this type of section.
-            attachEvents: function() {},
-            // Always make the section active.
-            isContextuallyActive: function() {
-                return true;
-            }
+            $(this).find('span > i').toggleClass('icon-arrow-up icon-arrow-down');
         });
     });
-})(this, jQuery, wp.customize);
+})(this, jQuery);
+
+(function(api) {
+    // Extends our custom section.
+    api.sectionConstructor['restarter_go_plus_control'] = api.Section.extend({
+        // No events for this type of section.
+        attachEvents: function() {},
+        // Always make the section active.
+        isContextuallyActive: function() {
+            return true;
+        }
+    });
+})(wp.customize);
