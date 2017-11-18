@@ -1,6 +1,6 @@
 ![logo](img/mypreview-logo.png)
 
-# Restarter <small>1.4.1</small>
+# Restarter <small>1.1.2</small>
 
 > 
 
