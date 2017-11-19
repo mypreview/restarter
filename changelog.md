@@ -1,3 +1,7 @@
+= 1.1.2 =
+* Updated main stylesheet.
+* Updated post format template files.
+
 = 1.1.1 =
 * Compatibility with WordPress 4.9.
 * Updated main stylesheet.
