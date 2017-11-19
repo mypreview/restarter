@@ -5,10 +5,11 @@
  * @package 		Hooked into "restarter_homepage"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.1.0
+ * @since 		    1.1.2
  */
+$container_cls = apply_filters('restarter_homepage_container_cls', 'fw-section padding-top-3x');
 ?>
-<section id="restarter-homepage-<?php the_ID(); ?>" <?php post_class('fw-section bg-white padding-top-3x'); ?>>
+<section id="restarter-homepage-<?php the_ID(); ?>" <?php post_class(esc_attr($container_cls)); ?>>
 	<div class="container">
 	<?php
 	if (have_posts() && '' !== get_post()->post_content):
