@@ -5,7 +5,7 @@
  * @author        Mahdi Yazdani
  * @package       Restarter
  * @dependencies  Bourbon, Bootstrap, Feather, Font Awesome, PIXEDEN
- * @since         1.1.0
+ * @since         1.1.2
  */
 /*!
  * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=320e42696d9c88f5a22805b34ee83bd3)
@@ -4610,8 +4610,8 @@ kbd {
   padding: 0 15px; }
 
 .page-template-template-homepage section[id^="restarter-homepage-"] + .scroll-to-top-btn + footer.footer {
-  margin-top: 0 !important;
-  padding-top: 48px !important; }
+  margin-top: 48px !important;
+  padding-top: 0 !important; }
 
 #restarter-container .bs3-grid-builder-container.container,
 .homepage-content > .bs3-grid-builder-container.container {
