@@ -61,6 +61,10 @@ Stroke 7 Icon Font Set — Stroke icons inspired by iOS 7
 Royalty free for use in both personal and commercial projects - Copyright (c) 2014 pixeden
 https://www.pixeden.com/icon-fonts/stroke-7-icon-font-set
 
+Twenty Thirteen — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/WordPress/WordPress/tree/master/wp-content/themes/twentythirteen
+
 Twenty Sixteen — Free WordPress Theme
 The GPL version 2 or (at your option) any later version
 https://github.com/WordPress/twentysixteen
