@@ -2,10 +2,13 @@
 /**
  * The default template for displaying content.
  * Used for index/archive/search only.
+ * Inspired by Twenty Thirteen content-gallery.php
  *
+ * @see 			https://developer.wordpress.org/reference/functions/get_post_gallery/
+ * @see 			https://github.com/WordPress/WordPress/tree/master/wp-content/themes/twentythirteen
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.1.0
+ * @since 		    1.1.2
  */
 ?>
 <!-- Post -->

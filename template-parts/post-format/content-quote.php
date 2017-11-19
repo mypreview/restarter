@@ -3,9 +3,10 @@
  * The default template for displaying content.
  * Used for index/archive/search only.
  *
+ * @see 			http://justintadlock.com/archives/2012/08/27/post-formats-quote
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.1.0
+ * @since 		    1.1.2
  */
 ?>
 <!-- Post -->

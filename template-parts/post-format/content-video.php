@@ -3,14 +3,16 @@
  * The default template for displaying content.
  * Used for index/archive/search only.
  *
+ * @see 			https://developer.wordpress.org/reference/functions/get_media_embedded_in_content/
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.1.0
+ * @since 		    1.1.2
  */
 ?>
 <!-- Post -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('tile post-tile format-video'); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<?php 
+	// A list of found HTML media embeds.
     $get_videos = get_media_embedded_in_content(apply_filters('the_content', get_the_content()), array('video', 'iframe'));
 	if (is_array($get_videos) && ! empty($get_videos) && ! post_password_required() && ! is_attachment()): ?>
 	<div class="post-thumb">
