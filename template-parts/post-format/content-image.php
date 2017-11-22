@@ -3,17 +3,27 @@
  * The default template for displaying content.
  * Used for index/archive/search only.
  *
+ * @see 			https://developer.wordpress.org/reference/functions/get_media_embedded_in_content/
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.1.0
+ * @since 		    1.1.3
  */
 ?>
 <!-- Post -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('tile post-tile format-image'); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
-	<?php if (has_post_thumbnail() && ! post_password_required() && ! is_attachment()): ?>
+	<?php 
+	// A list of found HTML images.
+	$get_images = get_media_embedded_in_content(apply_filters('the_content', get_the_content()), array('img'));
+	if ((has_post_thumbnail() || !empty($get_images)) && ! post_password_required() && ! is_attachment()): ?>
 	<div class="post-thumb">
 		<a href="<?php the_permalink(); ?>" target="_self">
-			<?php the_post_thumbnail('full', array('itemprop' => 'image')); ?>
+			<?php 
+			if (has_post_thumbnail()):
+				the_post_thumbnail('full', array('itemprop' => 'image')); 
+			elseif (!has_post_thumbnail() && !empty($get_images)):
+				echo $get_images[0];
+			endif;
+			?>
 		</a>
 		<div class="post-meta">
 			<?php 
@@ -28,7 +38,7 @@
 	</div><!-- .post-thumb -->
 	<?php endif; ?>
 	<div class="tile-body post-body">
-		<?php if (has_post_thumbnail() && ! post_password_required() && ! is_attachment()): ?>
+		<?php if ((has_post_thumbnail() || !empty($get_images)) && ! post_password_required() && ! is_attachment()): ?>
 		<div class="post-format"></div>
 		<?php else: ?>
 		<div class="post-meta">
