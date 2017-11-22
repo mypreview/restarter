@@ -5,7 +5,7 @@
  * @see 			http://codex.wordpress.org/Template_Hierarchy
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.0.1
+ * @since 		    1.1.3
  */
 /**
  * Functions hooked into "restarter_before_post" action
@@ -16,14 +16,7 @@
  */
 do_action('restarter_before_post');
 
-// Start the Loop
-while (have_posts()): the_post();
-
-	do_action('restarter_before_post_content');
-
-	get_template_part('template-parts/none/content');
-
-endwhile;
+get_template_part('template-parts/none/content');
 
 /**
  * Functions hooked into "restarter_after_post" action
