@@ -1,3 +1,8 @@
+= 1.1.3 =
+* Updated main stylesheet.
+* Updated not found search result page content.
+* Updated image post format template.
+
 = 1.1.2 =
 * Updated main stylesheet.
 * Updated post format template files.
