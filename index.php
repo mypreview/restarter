@@ -16,9 +16,9 @@
 get_header();
 
 if (have_posts()) :
-	get_template_part( 'loop-templates/content', 'loop' );
+	get_template_part('loop-templates/content', 'loop');
 else :
-	get_template_part( 'loop-templates/content', 'none' );
+	get_template_part('loop-templates/content', 'none');
 endif;
 
 get_footer();
