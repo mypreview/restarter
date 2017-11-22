@@ -48,6 +48,7 @@
         position: relative;
         z-index: 2;
         overflow: hidden;
+        & > a > img { @include margin(0); }
         &:before {
             z-index: 10;
             display: block;
