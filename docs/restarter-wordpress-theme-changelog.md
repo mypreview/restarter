@@ -1,3 +1,6 @@
+# 1.1.4/ 2017-11-22
+  * Fixed customize_changeset_uuid issue while closing the Customizer.
+
 # 1.1.3/ 2017-11-22
 
   * Updated main stylesheet.
