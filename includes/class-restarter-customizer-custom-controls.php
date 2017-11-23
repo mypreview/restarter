@@ -9,6 +9,15 @@
 if (!class_exists('WP_Customize_Control')):
 	return NULL;
 endif;
+/**
+ * A generic toggle control you can use to replace the checkbox control.
+ * Enable / disable the control title by toggeling its .disabled-control-title style class on or off.
+ *
+ * @see         https://github.com/soderlind/class-customizer-toggle-control/blob/master/js/customizer-toggle-control.js
+ * @author  	Mahdi Yazdani
+ * @package 	Restarter
+ * @since 	    1.1.4
+ */
 if (!class_exists('Restarter_Toggle_Control')):
 	class Restarter_Toggle_Control extends WP_Customize_Control
 
@@ -30,31 +39,9 @@ if (!class_exists('Restarter_Toggle_Control')):
         	parent::__construct($manager, $id, $args);
     	}
 		/**
-         * Enqueue scripts and styles.
-         *
-         * @since 1.1.0
-         */
-		public function enqueue() 
-
-		{
-			wp_register_script('restarter-customizer-toggle-control', get_stylesheet_directory_uri() . '/assets/admin/js/restarter-customizer-toggle-control.js', array(
-				'jquery',
-				'customize-preview'
-			) , RESTARTER_THEME_VERSION, true);
-			wp_localize_script('restarter-customizer-toggle-control', 'restarter_customizer_toggle_control_vars', array(
-				'toggle_controllers' => apply_filters('restarter_customizer_toggle_controllers', json_encode(array(
-					'restarter_jumbotron_btn_url_target',
-					'restarter_jumbotron_background_parallax',
-					'restarter_jumbotron_slider_loop',
-					'restarter_jumbotron_slider_autoplay'
-				)))
-			));
-			wp_enqueue_script('restarter-customizer-toggle-control');
-		}
-		/**
 		 * Render the content of the "Toggle" field type.
 		 *
-		 * @since 1.1.0
+		 * @since 1.1.4
 		 */
 		public function render_content()
 
@@ -72,6 +59,14 @@ if (!class_exists('Restarter_Toggle_Control')):
 		}
 	}
 endif;
+/**
+ * A generic range with value control you can use to replace the range control.
+ * 
+ * @see         https://github.com/soderlind/class-customizer-range-value-control/blob/master/js/customizer-range-value-control.js
+ * @author  	Mahdi Yazdani
+ * @package 	Restarter
+ * @since 	    1.1.4
+ */
 if (!class_exists('Restarter_Range_Control')):
 	class Restarter_Range_Control extends WP_Customize_Control
 
@@ -93,22 +88,9 @@ if (!class_exists('Restarter_Range_Control')):
         	parent::__construct($manager, $id, $args);
     	}
 		/**
-         * Enqueue scripts and styles.
-         *
-         * @since 1.1.0
-         */
-		public function enqueue() 
-
-		{
-			wp_enqueue_script('restarter-customizer-range-value-control', get_stylesheet_directory_uri() . '/assets/admin/js/restarter-customizer-range-value-control.js', array(
-                'jquery',
-                'customize-preview'
-            ) , RESTARTER_THEME_VERSION, true);
-		}
-		/**
 		 * Render the content of the "Range" field type.
 		 *
-		 * @since 1.1.0
+		 * @since 1.1.4
 		 */
 		public function render_content()
 
@@ -234,6 +216,15 @@ if (!class_exists('Restarter_Font_Icon_Control')):
 		}
 	}
 endif;
+/**
+ * Create a Radio-Image control
+ * Inspired by Storefront class-storefront-customizer-control-radio-image.php
+ *
+ * @see 		https://github.com/woocommerce/storefront
+ * @author  	Mahdi Yazdani
+ * @package 	Restarter
+ * @since 	    1.1.0
+ */
 if (!class_exists('Restarter_Radio_Image_Control')):
 	class Restarter_Radio_Image_Control extends WP_Customize_Control
 
@@ -295,6 +286,15 @@ if (!class_exists('Restarter_Radio_Image_Control')):
 		}
 	}
 endif;
+/**
+ * "Plus" theme section
+ * Using the Customize API for adding a "plus" link to the customizer.
+ *
+ * @see         https://github.com/justintadlock/trt-customizer-pro/blob/master/example-1/class-customize.php
+ * @author  	Mahdi Yazdani
+ * @package 	Restarter
+ * @since 	    1.1.0
+ */
 if (!class_exists('Restarter_Go_Plus_Control')):
 	class Restarter_Go_Plus_Control extends WP_Customize_Section
 
