@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Restarter
- * @since       1.1.1
+ * @since       1.1.4
  */
 (function(window, $, undefined) {
     jQuery(document).ready(function($) {
@@ -55,14 +55,6 @@
             );
             return false;
         });
-        if ($('#customize-header-actions a.customize-controls-close').length > 0) {
-            var closeBTN = $('#customize-header-actions a.customize-controls-close').attr('href'),
-                closeBTNURL = closeBTN.substring(0, closeBTN.indexOf('/?customize_changeset_uuid') + '/?customize_changeset_uuid'.length).replace('?customize_changeset_uuid', '');
-            $('#customize-header-actions a.customize-controls-close').click(function(e) {
-                e.preventDefault();
-                window.location.href = closeBTNURL;
-            });
-        }
         // Font icons control.
         $('body').on('click', '.restarter-icon-list li', function() {
             var icon_class = $(this).find('i').attr('class');
@@ -76,7 +68,15 @@
         });
     });
 })(this, jQuery);
-
+/**
+ * "Plus" theme section
+ * Using the Customize API for adding a "plus" link to the customizer.
+ *
+ * @see         https://github.com/justintadlock/trt-customizer-pro/blob/master/example-1/class-customize.php
+ * @author      Mahdi Yazdani
+ * @package     Restarter
+ * @since       1.1.0
+ */
 (function(api) {
     // Extends our custom section.
     api.sectionConstructor['restarter_go_plus_control'] = api.Section.extend({
@@ -88,3 +88,71 @@
         }
     });
 })(wp.customize);
+/**
+ * A generic toggle control you can use to replace the checkbox control.
+ * Enable / disable the control title by toggeling its .disabled-control-title style class on or off.
+ *
+ * @see         https://github.com/soderlind/class-customizer-toggle-control/blob/master/js/customizer-toggle-control.js
+ * @author      Mahdi Yazdani
+ * @package     Restarter
+ * @since       1.1.4
+ */
+(function(wp, $) {
+    // Bail if the customizer isn't initialized
+    if (!wp || !wp.customize) {
+        return;
+    }
+    // Toggle control
+    wp.customize.bind('ready', function() { 
+        // Customize object alias.
+        var customize = this; 
+        // Array with the control names
+        var toggleControls = $.parseJSON(restarter_customizer_vars.toggle_controllers);
+        $.each(toggleControls, function(index, control_name) {
+            customize(control_name, function(value) {
+                // Get control  title.
+                var controlTitle = customize.control(control_name).container.find('.customize-control-title'),
+                    controlDescription = customize.control(control_name).container.find('.customize-control-description'); 
+                // 1. On loading.
+                controlTitle.toggleClass('disabled-control-title', !value.get());
+                controlDescription.toggleClass('disabled-control-title', !value.get());
+                // 2. Binding to value change.
+                value.bind(function(to) {
+                    controlTitle.toggleClass('disabled-control-title', !value.get());
+                    controlDescription.toggleClass('disabled-control-title', !value.get());
+                });
+            });
+        });
+    });
+})(window.wp, jQuery);
+/**
+ * A generic range with value control you can use to replace the range control.
+ * 
+ * @see         https://github.com/soderlind/class-customizer-range-value-control/blob/master/js/customizer-range-value-control.js
+ * @author      Mahdi Yazdani
+ * @package     Restarter
+ * @since       1.1.4
+ */
+(function(wp, $) {
+    // Range control
+    wp.customize.bind('ready', function() {
+        RestarterRangeSlider();
+    });
+
+})(window.wp, jQuery);
+function RestarterRangeSlider() {
+    var slider = jQuery('.restarter-range-slider'),
+        range = jQuery('.range-slider-range'),
+        value = jQuery('.range-slider-value');
+    slider.each(function() {
+        value.each(function() {
+            var value = jQuery(this).prev().attr('value');
+            var suffix = (jQuery(this).prev().attr('suffix')) ? jQuery(this).prev().attr('suffix') : '';
+            jQuery(this).html(value + suffix);
+        });
+        range.on('input', function() {
+            var suffix = (jQuery(this).attr('suffix')) ? jQuery(this).attr('suffix') : '';
+            jQuery(this).next(value).html(this.value + suffix);
+        });
+    });
+}
