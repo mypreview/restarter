@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Restarter
- * @since       1.1.0
+ * @since       1.1.4
  */
 if (!defined('ABSPATH')):
     exit;
@@ -40,16 +40,25 @@ if (!class_exists('Restarter_Customizer')):
         /**
          * Enqueue scripts and styles.
          *
-         * @since 1.1.0
+         * @since 1.1.4
          */
         public function enqueue_customizer()
 
         {
             wp_enqueue_style('feather-icons', $this->public_assets_url . 'css/vendor/feather-icons.css', array() , RESTARTER_THEME_VERSION);
             wp_enqueue_style('restarter-customizer-styles', $this->admin_assets_url . 'css/restarter-customizer.css', array() , RESTARTER_THEME_VERSION);
-            wp_enqueue_script('restarter-customizer-scripts', $this->admin_assets_url . 'js/restarter-customizer.js', array(
+            wp_register_script('restarter-customizer-scripts', $this->admin_assets_url . 'js/restarter-customizer.js', array(
                 'jquery'
             ) , RESTARTER_THEME_VERSION, true);
+            wp_localize_script('restarter-customizer-scripts', 'restarter_customizer_vars', array(
+                'toggle_controllers' => apply_filters('restarter_customizer_toggle_controllers', json_encode(array(
+                    'restarter_jumbotron_btn_url_target',
+                    'restarter_jumbotron_background_parallax',
+                    'restarter_jumbotron_slider_loop',
+                    'restarter_jumbotron_slider_autoplay'
+                )))
+            ));
+            wp_enqueue_script('restarter-customizer-scripts');
         }
         /**
          * Theme Customizer along with several other settings.
