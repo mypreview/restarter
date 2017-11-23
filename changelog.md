@@ -1,3 +1,6 @@
+= 1.1.4 =
+* Fixed customize_changeset_uuid issue while closing the Customizer.
+
 = 1.1.3 =
 * Updated main stylesheet.
 * Updated not found search result page content.
