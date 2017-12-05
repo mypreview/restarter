@@ -1,4 +1,4 @@
-# Restarter  [![Compatible with ThemeCheck](https://img.shields.io/badge/ThemeCheck-Passed-c4d658.svg)](http://themecheck.org/score/wordpress-theme-restarter.html) [![Stable Version](https://img.shields.io/badge/Stable%20version-1.1.4-77cde3.svg)](https://wp.me/p8930x-8q)
+# Restarter  [![Compatible with ThemeCheck](https://img.shields.io/badge/ThemeCheck-Passed-c4d658.svg)](http://themecheck.org/score/wordpress-theme-restarter.html) [![Stable Version](https://img.shields.io/badge/Stable%20version-1.1.5-FF33AA.svg)](https://wp.me/p8930x-8q)
 
 Restarter is an amazingly tech-savvy and incredibly visually polished, harmonious, seamless and flexible, fast and responsive WordPress creative mobile application showcase theme.
 
