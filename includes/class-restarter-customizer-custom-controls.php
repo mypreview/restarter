@@ -13,7 +13,7 @@ endif;
  * A generic toggle control you can use to replace the checkbox control.
  * Enable / disable the control title by toggeling its .disabled-control-title style class on or off.
  *
- * @see         https://github.com/soderlind/class-customizer-toggle-control/blob/master/js/customizer-toggle-control.js
+ * @see         https://github.com/soderlind/class-customizer-toggle-control
  * @author  	Mahdi Yazdani
  * @package 	Restarter
  * @since 	    1.1.4
@@ -62,7 +62,7 @@ endif;
 /**
  * A generic range with value control you can use to replace the range control.
  * 
- * @see         https://github.com/soderlind/class-customizer-range-value-control/blob/master/js/customizer-range-value-control.js
+ * @see         https://github.com/soderlind/class-customizer-range-value-control
  * @author  	Mahdi Yazdani
  * @package 	Restarter
  * @since 	    1.1.4
@@ -256,7 +256,7 @@ if (!class_exists('Restarter_Radio_Image_Control')):
 			wp_enqueue_script('jquery-ui-button');
 		}
 		/**
-		 * Render the content of the "Font Icon" field type.
+		 * Render the content of the "Radio-Image" field type.
 		 *
 		 * @since 1.1.0
 		 */
