@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Restarter
- * @since       1.1.0
+ * @since       1.1.5
  */
 (function(window, $, undefined) {
 	'use strict';
@@ -185,6 +185,9 @@
 	        var dataLoop = $(this).parents('.phone-carousel').data('loop'),
 	            autoPlay = $(this).parents('.phone-carousel').data('autoplay'),
 	            timeOut = $(this).parents('.phone-carousel').data('interval');
+	        if ($phoneCarousel.find('img').length === 1) {
+                dataLoop = false;
+            }
 	        $(this).owlCarousel({
 	            items: 1,
 	            loop: dataLoop,
