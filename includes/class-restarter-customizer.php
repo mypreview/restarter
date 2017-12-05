@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Restarter
- * @since       1.1.4
+ * @since       1.1.5
  */
 if (!defined('ABSPATH')):
     exit;
@@ -64,7 +64,7 @@ if (!class_exists('Restarter_Customizer')):
          * Theme Customizer along with several other settings.
          *
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-         * @since 1.1.0
+         * @since 1.1.5
          */
         public function customize_register($wp_customize)
 
@@ -376,10 +376,10 @@ if (!class_exists('Restarter_Customizer')):
              * "Slider" section
              * Slider loop
              *
-             * @since 1.1.0
+             * @since 1.1.5
              */
             $wp_customize->add_setting('restarter_jumbotron_slider_loop', array(
-                'default' => apply_filters('restarter_jumbotron_slider_loop_default_value', true) ,
+                'default' => apply_filters('restarter_jumbotron_slider_loop_default_value', false) ,
                 'capability' => 'edit_theme_options',
                 'sanitize_callback' => 'sanitize_text_field'
             ));
