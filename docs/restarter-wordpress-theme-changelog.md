@@ -1,3 +1,6 @@
+# 1.1.5/ 2017-12-05
+  * Fixed jumbotron carousel issue when it has 1 or less item to display.
+
 # 1.1.4/ 2017-11-23
   * Fixed customize_changeset_uuid issue while closing the Customizer.
 
