@@ -5,7 +5,7 @@
  * @package 		Hooked into "restarter_before_homepage"
  * @author  		Mahdi Yazdani
  * @package 		Restarter
- * @since 		    1.1.0
+ * @since 		    1.1.5
  */
 
 $heading = esc_html(get_theme_mod('restarter_jumbotron_heading', ''));
@@ -26,7 +26,7 @@ $background_image = absint(get_theme_mod('restarter_jumbotron_background_image',
 if (false === $parallax):
 	$scroll_speed = 1;
 endif;
-$loop = (bool) get_theme_mod('restarter_jumbotron_slider_loop', true);
+$loop = (bool) get_theme_mod('restarter_jumbotron_slider_loop', false);
 (true === $loop) ? $loop = 'true' : $loop = 'false';
 $autoplay = (bool) get_theme_mod('restarter_jumbotron_slider_autoplay', true);
 (true === $autoplay) ? $autoplay = 'true' : $autoplay = 'false';
