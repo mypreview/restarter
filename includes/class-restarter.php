@@ -158,7 +158,7 @@ if (!class_exists('Restarter')):
 			* @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 			*/
 			add_theme_support('post-thumbnails');
-			// This theme uses wp_nav_menu() in one location.
+			// This theme uses wp_nav_menu() in four location.
 			register_nav_menus(array(
 				'primary' => __('Primary', 'restarter') ,
 				'footer' => __('Footer', 'restarter') ,
