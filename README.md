@@ -2,6 +2,8 @@
 
 Restarter is an amazingly tech-savvy and incredibly visually polished, harmonious, seamless and flexible, fast and responsive WordPress creative mobile application showcase theme.
 
+![Restarter WordPress Theme](docs/img/restarter-plus-home2.png)
+
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
 ►► If you are not a developer, please use the Offical theme post page on wordpress.org.
