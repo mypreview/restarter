@@ -1,5 +1,11 @@
 - Installation
   - [WordPress Installation](wordpress-installation.md)
+- Credits
+  - [Restarter](restarter-wordpress-theme-credits.md)
+  - [Restarter Plus](restarter-plus-plugin-credits.md)
+- License
+  - [Restarter](restarter-wordpress-theme-license.md)
+  - [Restarter Plus](restarter-plus-plugin-license.md)
 - Changelog
   - [Restarter](restarter-wordpress-theme-changelog.md)
   - [Restarter Plus](restarter-plus-plugin-changelog.md)
