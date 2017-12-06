@@ -4,9 +4,9 @@
 
 > Tech-Savvy & Visually Polished WordPress Theme
 
-- 
-- 
-- 
+- Harmonious, clean & user-friendly
+- Build fast using Customizer live preview
+- Present your beautiful app the way you want
 
 
 [Live Preview](https://demo.mypreview.one/restarter/)
