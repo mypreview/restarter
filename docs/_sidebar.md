@@ -1,5 +1,9 @@
 - Installation
   - [WordPress Installation](wordpress-installation.md)
+- Miscellaneous
+  - [Minimum Requirements](minimum-requirements.md)
+  - [WordPress Memory Limit](wp-memory-limit.md)
+  - [Update your PHP Version](update-php-version.md)
 - Credits
   - [Restarter](restarter-wordpress-theme-credits.md)
   - [Restarter Plus](restarter-plus-plugin-credits.md)
