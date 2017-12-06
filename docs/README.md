@@ -12,6 +12,14 @@ See the [Installation](install-restarter-wordpress-theme) for more details.
 
 Check out the [Live Demo](https://demo.mypreview.one/restarter) to visit Restarter theme in action.
 
+## Get the Theme
+
+Install Restarter theme from the [WordPress.org](https://wordpress.org/themes/restarter) themes directory for free.
+
+## Get the Plugin
+
+The Restarter Plus plugin is only available to purchase from [mypreview.one](https://www.mypreview.one/restarter-plus.html). :moneybag:
+
 ## Something missing?
 
 We would love to connect with you and hear your thoughts about anything we are doing. Join our [support forums](https://support.mypreview.one) and let us help you.
