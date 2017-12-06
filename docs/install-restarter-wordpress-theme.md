@@ -4,7 +4,7 @@
 
 If you’re looking to install the [Restarter](https://wordpress.org/themes/restarter/) WordPress theme from the [wordpress.org themes directory](https://wordpress.org/themes/), then the easiest way is by using the WordPress admin theme search functionality.
 
-s
+![Install Restarter WordPress Theme](img/install-restarter-wordpress-theme.png)
 
 ## Official directory 
 
