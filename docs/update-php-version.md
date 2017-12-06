@@ -17,7 +17,7 @@ Contacting your hosting company is usually the easiest way to find out how you c
 <blockquote>
 Dear service provider,<br/><br/>
 
-I’m running a WooCommerce webshop on one of your servers and Restarter Plus plugin has recommended using at least PHP 7.0 or above. Also, WordPress, the content management system that Restarter Plus plugin uses, has listed PHP 7 as the recommended version on their requirements page:<br/><br/>
+I’m running a WordPress website on one of your servers and Restarter Plus plugin has recommended using at least PHP 7.0 or above. Also, WordPress, the content management system that Restarter Plus plugin uses, has listed PHP 7 as the recommended version on their requirements page:<br/><br/>
 
 https://wordpress.org/about/requirements/<br/>
 https://mahdiyazdani.github.io/Restarter/#/minimum-requirements
