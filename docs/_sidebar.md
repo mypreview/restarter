@@ -1,6 +1,7 @@
 - Installation
   - [WordPress Installation](wordpress-installation.md)
   - [Theme Installation](install-restarter-wordpress-theme.md)
+  - [Child Theme Installation](install-restarter-wordpress-child-theme.md)
 - Miscellaneous
   - [Minimum Requirements](minimum-requirements.md)
   - [WordPress Memory Limit](wp-memory-limit.md)
