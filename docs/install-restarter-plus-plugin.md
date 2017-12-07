@@ -17,7 +17,7 @@
 * After you have selected the file, you need to click on the **install** now button.
 * WordPress will now upload the plugin file from your computer and install it for you. You will see a success message after installation is finished.
 * Once installed, you need to click on the **Activate Plugin** button to start using the plugin.
-* To get started, visit the **Customizer** or plugin **Settings** page.
+* To get started, visit the **Customizer** window.
 
 <hr/>
 
