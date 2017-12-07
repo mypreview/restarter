@@ -8,6 +8,48 @@ New to Extra? Get started here with a collection of tutorials that cover the bas
 
 See the [Installation](install-restarter-wordpress-theme) for more details.
 
+## Main Features
+
+* Bootstrap based
+* Valid HTML code
+* Footer logo
+* Brands
+* Jumbotron
+* Layout alignment
+* Sticky navigation
+* Header search field
+* Blurbs
+* Team members
+* Video pop-up
+* Breadcrumbs
+* Credits removal
+* Retina ready
+* Editor style
+* Testimonials
+* Homepage control
+* Social network menu
+* Layered parallax
+* Flexible header
+* Left Sidebar
+* Right Sidebar
+* Automatic updates
+* Pricing table
+* Split gallery
+* Device gallery
+* Frame carousel
+* Download buttons
+* Threaded comments
+* Translation ready
+* Image post format
+* Video post format
+* Quote post format
+* Gallery post format
+* Header call to action
+* Submenu alter appearance
+* Fluid post & page template
+* Well documented
+* Free updates every month
+
 ## Live Demo
 
 Check out the [Live Demo](https://demo.mypreview.one/restarter) to visit Restarter theme in action.
