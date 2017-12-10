@@ -43,4 +43,4 @@ Translations can be filed in the ```/languages/``` directory.<br/>
 It is however recommended that you use the global WordPress language directory and install your translations like so: ```/wp-content/languages/themes/restarter-it_IT.mo```.<br/>
 *That way they will not be lost or overwritten during Restarter updates.*
 
-Alternatively you can put translations in your [child theme](https://mahdiyazdani.github.io/Restarter/#/install-restarter-wordpress-child-theme):<br/>```/wp-content/themes/restarter-child/languages/it_IT.mo```.
+Alternatively you can put translations in your [child theme](install-restarter-wordpress-child-theme):<br/>```/wp-content/themes/restarter-child/languages/it_IT.mo```.
