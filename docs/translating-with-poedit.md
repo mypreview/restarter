@@ -1,0 +1,1 @@
+# Translating with Poedit
