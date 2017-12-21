@@ -1,6 +1,6 @@
 # Install and activate Restarter theme
 
-!> Take a moment to review the [minimum requirements](https://mahdiyazdani.github.io/Restarter/#/minimum-requirements) before installation or you may encounter issues when using the theme. 
+!> Take a moment to review the [minimum requirements](minimum-requirements) before installation or you may encounter issues when using the theme. 
 
 If you’re looking to install the [Restarter](https://wordpress.org/themes/restarter/) WordPress theme from the [wordpress.org themes directory](https://wordpress.org/themes/), then the easiest way is by using the WordPress admin theme search functionality.
 
