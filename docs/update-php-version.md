@@ -20,7 +20,7 @@ Dear service provider,<br/><br/>
 I’m running a WordPress website on one of your servers and Restarter Plus plugin has recommended using at least PHP 7.0 or above. Also, WordPress, the content management system that Restarter Plus plugin uses, has listed PHP 7 as the recommended version on their requirements page:<br/><br/>
 
 https://wordpress.org/about/requirements/<br/>
-https://mahdiyazdani.github.io/Restarter/#/minimum-requirements
+https://mypreview.github.io/Restarter/#/minimum-requirements
 
 <br/><br/>
 
