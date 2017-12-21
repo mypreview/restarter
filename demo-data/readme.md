@@ -1,4 +1,4 @@
-Install [WordPress Importer](https://wordpress.org/plugins/wordpress-importer/) plugin, go to **Tools** > ** Import** then choose ```WordPress``` from the list and upload ```content.xml``` file then click on upload file and import button. The plugin will now load dummy content from the imported file.
+Install [WordPress Importer](https://wordpress.org/plugins/wordpress-importer/) plugin, go to **Tools** > **Import** then choose ```WordPress``` from the list and upload ```content.xml``` file then click on upload file and import button. The plugin will now load dummy content from the imported file.
 
 <hr/>
 
