@@ -14,7 +14,7 @@ Posts are entries that display in reverse order on your blog page. Posts usually
 
 <hr/>
 
-?> At the moment, this list of supported post formats by Restarter theme consists of:
+?> At the moment, list of supported post formats by Restarter theme consists of:
 
 * **Gallery**: A post containing a gallery of images.
 * **Image**: A single image, rather than a gallery.
