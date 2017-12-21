@@ -29,7 +29,7 @@
 	<title>Restarter</title>
 	<link>https://importer.mypreview.one/restarter</link>
 	<description>Just another MyPreview Demo Importer Sites site</description>
-	<pubDate>Thu, 21 Dec 2017 12:43:11 +0000</pubDate>
+	<pubDate>Thu, 21 Dec 2017 12:50:07 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://importer.mypreview.one/</wp:base_site_url>
@@ -2137,51 +2137,6 @@ Minesweeper miss cleo floppy disk ken griffey jr, mariah carey boy bands velcro 
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Hypermarket Theme</title>
-		<link>https://importer.mypreview.one/restarter/2017/10/10/hypermarket-theme/</link>
-		<pubDate>Tue, 10 Oct 2017 19:37:59 +0000</pubDate>
-		<dc:creator><![CDATA[importerd3mo]]></dc:creator>
-		<guid isPermaLink="false">https://demo.mypreview.one/restarter/?p=110</guid>
-		<description></description>
-		<content:encoded><![CDATA[<h2>Hypermarket WordPress Theme Video Tour</h2>
-
-
-Glow in the dark stickers pokémon toni braxton titanic kurt cobain boy meets world. Pearl jam charlotte hornets hi-top fade mood rings. Highlights jonathan taylor thomas wonderwall light up sneakers I don’t want no scrubs tom hanks. Minesweeper fresh tae bo gordon bombay your mom yo-yos, oregon trail fly keanu reeves pizza bagels. Street fighter ii sonic the hedgehog punk rush hour, flat tops hush puppies did I do that hey arnold.
-<p class="paragraph">Charlotte hornets extreme sports animated gifs neon colors mario lemieux, tupac shakur razor scooter mia hamm smashing pumpkins lunchables. Mood rings move it football head fluorescent street fighter ii, air jordans scrolling text pokémon ford taurus. Slap bracelet chronic independence day hottie bare midriffs tim “the tool man” taylor, be kind rewind don’t ask don’t tell trainers will smith vcr harrison ford. Renting movies at a store vertically striped shirts homie pogs.</p>
-<p class="paragraph">Accent braids mtv bomber jacket toni braxton gotta have my pops blockbuster video, the matrix men in black magic johnson don’t ask don’t tell roseanne barr. Mariah carey personal computer i'm king of the world steve urkel. Denzel washington taco bell chihuahua aviators tommy hilfiger windows 95, tupac shakur jonathan taylor thomas bandanas dotcom bubble you’ve got mail. Denim jackets tae bo t-shirts punk.</p>]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>110</wp:post_id>
-		<wp:post_date><![CDATA[2017-10-10 19:37:59]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2017-10-10 19:37:59]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[hypermarket-theme]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="post_tag" nicename="abstract"><![CDATA[abstract]]></category>
-		<category domain="category" nicename="conceptual"><![CDATA[Conceptual]]></category>
-		<category domain="post_tag" nicename="converse"><![CDATA[converse]]></category>
-		<category domain="post_tag" nicename="dream"><![CDATA[dream]]></category>
-		<category domain="post_tag" nicename="fanny"><![CDATA[fanny]]></category>
-		<category domain="post_format" nicename="post-format-video"><![CDATA[Video]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[111]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Fanny packs</title>
 		<link>https://importer.mypreview.one/restarter/2017/09/25/fanny-packs/</link>
 		<pubDate>Mon, 25 Sep 2017 19:47:41 +0000</pubDate>
@@ -2871,7 +2826,7 @@ Commenter avatars come from <a href="https://gravatar.com" rel="nofollow">Gravat
 		<wp:post_name><![CDATA[support-2]]></wp:post_name>
 		<wp:status><![CDATA[publish]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>3</wp:menu_order>
+		<wp:menu_order>4</wp:menu_order>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
@@ -2907,6 +2862,61 @@ Commenter avatars come from <a href="https://gravatar.com" rel="nofollow">Gravat
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 			<wp:meta_value><![CDATA[https://support.mypreview.one]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Demo</title>
+		<link>https://importer.mypreview.one/restarter/2017/12/21/demo/</link>
+		<pubDate>Thu, 21 Dec 2017 12:50:00 +0000</pubDate>
+		<dc:creator><![CDATA[importerd3mo]]></dc:creator>
+		<guid isPermaLink="false">https://importer.mypreview.one/restarter/?p=274</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>274</wp:post_id>
+		<wp:post_date><![CDATA[2017-12-21 12:50:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-12-21 12:50:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[demo]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="primary"><![CDATA[Primary]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[274]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[https://demo.mypreview.one/restarter/]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -3117,6 +3127,51 @@ Chat rooms y2k chronic yo-yos. Be kind rewind green day business casual extreme 
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
 			<wp:meta_value><![CDATA[page-templates/template-fluid.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Hypermarket Theme</title>
+		<link>https://importer.mypreview.one/restarter/2017/10/10/hypermarket-theme/</link>
+		<pubDate>Tue, 10 Oct 2017 19:37:59 +0000</pubDate>
+		<dc:creator><![CDATA[importerd3mo]]></dc:creator>
+		<guid isPermaLink="false">https://demo.mypreview.one/restarter/?p=110</guid>
+		<description></description>
+		<content:encoded><![CDATA[<h2>Hypermarket WordPress Theme Video Tour</h2>
+
+
+Glow in the dark stickers pokémon toni braxton titanic kurt cobain boy meets world. Pearl jam charlotte hornets hi-top fade mood rings. Highlights jonathan taylor thomas wonderwall light up sneakers I don’t want no scrubs tom hanks. Minesweeper fresh tae bo gordon bombay your mom yo-yos, oregon trail fly keanu reeves pizza bagels. Street fighter ii sonic the hedgehog punk rush hour, flat tops hush puppies did I do that hey arnold.
+<p class="paragraph">Charlotte hornets extreme sports animated gifs neon colors mario lemieux, tupac shakur razor scooter mia hamm smashing pumpkins lunchables. Mood rings move it football head fluorescent street fighter ii, air jordans scrolling text pokémon ford taurus. Slap bracelet chronic independence day hottie bare midriffs tim “the tool man” taylor, be kind rewind don’t ask don’t tell trainers will smith vcr harrison ford. Renting movies at a store vertically striped shirts homie pogs.</p>
+<p class="paragraph">Accent braids mtv bomber jacket toni braxton gotta have my pops blockbuster video, the matrix men in black magic johnson don’t ask don’t tell roseanne barr. Mariah carey personal computer i'm king of the world steve urkel. Denzel washington taco bell chihuahua aviators tommy hilfiger windows 95, tupac shakur jonathan taylor thomas bandanas dotcom bubble you’ve got mail. Denim jackets tae bo t-shirts punk.</p>]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>110</wp:post_id>
+		<wp:post_date><![CDATA[2017-10-10 19:37:59]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-10-10 19:37:59]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[hypermarket-theme]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="abstract"><![CDATA[abstract]]></category>
+		<category domain="category" nicename="conceptual"><![CDATA[Conceptual]]></category>
+		<category domain="post_tag" nicename="converse"><![CDATA[converse]]></category>
+		<category domain="post_tag" nicename="dream"><![CDATA[dream]]></category>
+		<category domain="post_tag" nicename="fanny"><![CDATA[fanny]]></category>
+		<category domain="post_format" nicename="post-format-video"><![CDATA[Video]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[111]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
