@@ -1,6 +1,6 @@
 # Install and activate Restarter Plus plugin
 
-!> Take a moment to review the [minimum requirements](https://mahdiyazdani.github.io/Restarter/#/minimum-requirements) before installation or you may encounter issues when using the plugin. 
+!> Take a moment to review the [minimum requirements](minimum-requirements) before installation or you may encounter issues when using the plugin. 
 
 ?> Note that paid WordPress plugins (e.g. Restarter Plus) are not listed in the WordPress plugin directory. These plugins cannot be installed using the official wordpress repository and that’s why WordPress has the Upload method to install such plugins.
 
