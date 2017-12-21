@@ -26,11 +26,11 @@ Translators are welcome to contribute to the theme. Please use the [WordPress tr
 
 ## Get Involved
 
-Want to contribute? Here's the [GitHub development repository](https://github.com/mahdiyazdani/Restarter "GitHub development repository").
+Want to contribute? Here's the [GitHub development repository](https://github.com/mypreview/Restarter "GitHub development repository").
 
 ## Documentation
 
-Get started [here](https://mahdiyazdani.github.io/Restarter) with a collection of tutorials that cover the basics.
+Get started [here](https://mypreview.github.io/Restarter/) with a collection of tutorials that cover the basics.
 
 ## Free Support
 
