@@ -4,6 +4,9 @@
   - [Child Theme Installation](install-restarter-wordpress-child-theme.md)
   - [Plugin Installation](install-restarter-plus-plugin.md)
   - [Translating with Poedit](translating-with-poedit.md)
+- First Steps
+  - [Create Post](create-post.md)
+  - [Create Page](create-page.md)
 - How To's
   - [Adding Custom CSS](add-custom-css.md)
   - [Uninstalling Restarter Plus](uninstalling-restarter-plus.md)
