@@ -7,6 +7,7 @@
 - First Steps
   - [Create Post](create-post.md)
   - [Create Page](create-page.md)
+  - [Set Up Homepage](setup-homepage-template.md)
 - How To's
   - [Adding Custom CSS](add-custom-css.md)
   - [Uninstalling Restarter Plus](uninstalling-restarter-plus.md)
