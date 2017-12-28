@@ -16,9 +16,17 @@ The primary purpose of the Restarter theme is to showcase your mobile applicatio
 
 Furthermore, the theme is SEO optimized and comes with full support of Schema.org markup. Rise to a new business level and go for Restarter!
 
-[Offical theme post page](https://wordpress.org/themes/restarter)
+## Live Demo
 
-[Visit live/online demo](https://demo.mypreview.one/restarter)
+Check out the [Live Demo](https://demo.mypreview.one/restarter) to visit Restarter theme in action.
+
+## Get the Theme
+
+Install Restarter theme from the [WordPress.org](https://wordpress.org/themes/restarter) themes directory for free.
+
+## Get the Plugin
+
+The Restarter Plus plugin is only available to purchase from [mypreview.one](https://www.mypreview.one/restarter-plus.html). :moneybag:
 
 ## Translators & Non-English Speakers
 
