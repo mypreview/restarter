@@ -1,3 +1,6 @@
+= 1.1.6 =
+* Removed iCheck 3rd party JS library.
+
 = 1.1.5 =
 * Fixed jumbotron carousel issue when it has 1 or less item to display.
 
