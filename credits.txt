@@ -21,10 +21,6 @@ Velocity.js - Accelerated JavaScript animation
 The MIT License - Copyright (c) 2014 Julian Shapiro
 https://github.com/julianshapiro/velocity/blob/master/LICENSE.md
 
-iCheck - Customizable checkboxes and radio buttons
-The MIT License - Copyright (c) 2013 Fronteed
-https://github.com/fronteed/icheck#license
-
 Stellar.js - Parallax scrolling made easy
 The MIT License - Copyright (c) 2013 Mark Dalgleish
 https://github.com/markdalgleish/stellar.js#license
@@ -113,3 +109,5 @@ https://www.splitshire.com/licence/
 
 https://www.pexels.com/photo/adventure-alpine-altitude-austria-355241/
 Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0
+
+All images used on the demo site (https://demo.mypreview.one/restarter) are for demonstration purposes only and are NOT included in the download package due to licensing rights.
