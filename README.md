@@ -44,6 +44,6 @@ Get started [here](https://mypreview.github.io/Restarter/) with a collection of 
 
 If you have any question(s) about using theme, please do not hesitate to check out our [support forums](https://support.mypreview.one/t/restarter) and start a new discussion for further assistance or clarification.
 
-## Support this theme
+## Support this Theme
 
 Don't forget to rate this theme [5 shining stars](https://wordpress.org/support/theme/restarter/reviews/ "5 shining stars") if you like it, thanks!
