@@ -3,7 +3,7 @@
 
 By default after fresh installation of [Restarter](https://wordpress.org/themes/restarter/) theme, the homepage will look like a **blog**, and this is how WordPress is intended to work. This is the same page template used on the [Restarter Demo](https://demo.mypreview.one/restarter/).
 
-?> Restarter theme comes with a unique **Homepage template** which is perfect for e-commerce websites and shop owners, as it displays a lot of products and product categories to visitors as soon as they land on your website.
+?> Restarter theme comes with a unique **Homepage template** which is perfect for mobile application showcase websites, as it displays a lot of block-level contents and variety of UI components to visitors as soon as they land on your website.
 
 ![Setup a homepage template](img/setup-homepage-template.png)
 
@@ -12,7 +12,7 @@ By default after fresh installation of [Restarter](https://wordpress.org/themes/
 * **Publish** the page.
 * Navigate to **Settings** » **Reading** and set the newly created page as a **front page**.
 
-The page that you created and added the homepage page template to will now be displayed when anyone visits your site's homepage. Assuming you added some products to your shop, you should see links to them and links to the top level product categories when visiting the **front page** of your website.
+The page that you created and added the homepage page template to will now be displayed when anyone visits your site's homepage.
 
 ?> If you’d like to reorder the components on the homepage, purchase a copy of [Restarter Plus](https://www.mypreview.one) plugin and use **homepage control section** to customize the homepage template layout, add new components, rearrange or hide sections, toggle components and much more.
 
