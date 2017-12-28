@@ -1,6 +1,6 @@
 ![logo](img/mypreview-logo.png)
 
-# Restarter <small>1.1.5</small>
+# Restarter <small>1.1.6</small>
 
 > Tech-Savvy & Visually Polished WordPress Theme
 
