@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Restarter
- * @since       1.1.5
+ * @since       1.1.6
  */
 (function(window, $, undefined) {
 	'use strict';
@@ -142,12 +142,6 @@
 	var $tooltip = $('[data-toggle="tooltip"]');
 	if ($tooltip.length > 0) {
 	    $tooltip.tooltip();
-	}
-
-	// Custom checkboxes and radios
-	var $checkbox = $('input[type="checkbox"], input[type="radio"]');
-	if($checkbox.length) {
-		$('input').iCheck();
 	}
 
 	// Fluid width video embeds.
