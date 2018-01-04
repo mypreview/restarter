@@ -7,7 +7,7 @@ Homepage control is a lightweight option that allows you to toggle the visibilit
 
 Homepage control components can be adjusted with a few clicks via the WordPress **customizer**. Log into your website and then:
 
-![Homepage Control](img/homepage-control.gif)
+![Homepage Control](img/homepage-control.jpg)
 
 * On the frontend, in the Admin bar, click **Site Name** » **Customize**.
 * On the backend, click **Appearance** » **Customize**.
