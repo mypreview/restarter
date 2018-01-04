@@ -11,6 +11,8 @@
 - How To's
   - [Adding Custom CSS](add-custom-css.md)
   - [Uninstalling Restarter Plus](uninstalling-restarter-plus.md)
+- Features
+  - [Homepage Control](homepage-control.md)
 - Miscellaneous
   - [Minimum Requirements](minimum-requirements.md)
   - [WordPress Memory Limit](wp-memory-limit.md)
