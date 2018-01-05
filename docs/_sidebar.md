@@ -13,6 +13,7 @@
   - [Uninstalling Restarter Plus](uninstalling-restarter-plus.md)
 - Features
   - [Homepage Control](homepage-control.md)
+  - [Fluid Template](fluid-template.md)
 - Miscellaneous
   - [Minimum Requirements](minimum-requirements.md)
   - [WordPress Memory Limit](wp-memory-limit.md)
