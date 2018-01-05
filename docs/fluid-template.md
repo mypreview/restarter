@@ -6,7 +6,7 @@ Restarter theme requires a containing element to wrap site contents and house th
 
 The **page attributes** meta box allows you to select a parent page for the page and assign its order in the page hierarchy. The middle option allows you to change the template. All you have to do is select the template you want your page to use and then update the page.
 
---
+![Create a post](img/fluid-post-and-page-template-restarter-theme.png)
 
 * Default Page Template - View [live demo](https://demo.mypreview.one/restarter/default).<br/>
 *(Use for a responsive fixed width container)*
