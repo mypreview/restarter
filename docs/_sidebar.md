@@ -12,6 +12,7 @@
   - [Adding Custom CSS](add-custom-css.md)
   - [Uninstalling Restarter Plus](uninstalling-restarter-plus.md)
 - Features
+  - [Sticky Navigation](sticky-navigation.md)
   - [Fluid Template](fluid-template.md)
   - [Homepage Control](homepage-control.md)
 - Miscellaneous
