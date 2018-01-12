@@ -13,5 +13,5 @@ Sticky navigation option can be enabled with one click via the WordPress **custo
 * On the backend, click **Appearance** » **Customize**.
 * Navigate to **Navigation** panel.
 * Click on the **Settings** section.
-* Optionally, toggle sticky navigation option.
+* Optionally, toggle **Sticky Navigation** option.
 * **Save & Publish**.
