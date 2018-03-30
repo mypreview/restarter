@@ -10,4 +10,4 @@
 
 
 [Live Preview](https://demo.mypreview.one/restarter/)
-[Documentation](#hypermarket-wordpress-theme)
+[Documentation](#restarter-wordpress-theme)
