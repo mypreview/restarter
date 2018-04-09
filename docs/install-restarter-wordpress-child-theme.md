@@ -19,7 +19,7 @@ If you answered **Yes** to any of these questions, you need a child theme.
 
 *(Recommended)*
 
-* Start by [downloading the Restarter child theme](https://github.com/mahdiyazdani/Restarter-Child/releases).
+* Start by [downloading the Restarter child theme](https://github.com/mypreview/Restarter-Child/releases).
 * Go to **Appearance** » **Themes** and Click on the **Add New** button at the top.
 * Click **Upload Theme** button.
 * Click **Browse** and choose the file you just downloaded, then click **Install Now**.
@@ -29,7 +29,7 @@ If you answered **Yes** to any of these questions, you need a child theme.
 
 ## Manually - FTP method
 
-* Start by [downloading the Restarter child theme](https://github.com/mahdiyazdani/Restarter-Child/releases).
+* Start by [downloading the Restarter child theme](https://github.com/mypreview/Restarter-Child/releases).
 * Upload the extracted folder of **restarter-child.zip** to the ```/wp-content/themes/``` dir on your server via FTP.
 * Go to **Appearance** » **Themes**. 
 * Activate Restarter child theme by clicking on the **activate** button.
